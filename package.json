@@ -1,0 +1,19 @@
+{
+  "name": "angular-trip-together",
+  "version": "1.0.0",
+  "description": "This is my Angular project Trip Together",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TodorYBorisov/Angular-Trip-Together.git"
+  },
+  "author": "Todor Borisov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TodorYBorisov/Angular-Trip-Together/issues"
+  },
+  "homepage": "https://github.com/TodorYBorisov/Angular-Trip-Together#readme"
+}
