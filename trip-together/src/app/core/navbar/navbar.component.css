@@ -1,5 +1,6 @@
 .example-spacer {
     flex: 1 1 auto;
+    
 }
 
 .button-spacing {
@@ -12,6 +13,7 @@
 }
 #background {
     background-color: rgb(129, 192, 222);
-
+    
 }
+
 

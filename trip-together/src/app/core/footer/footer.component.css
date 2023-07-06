@@ -2,6 +2,10 @@
     background-color: rgb(129, 192, 222);
     padding: 10px;
     text-align: center;
+    /* margin-top: 1em; */
+    /* position: relative;
+    bottom: 0;
+    width: 100%; */
   }
   
   .footer-content {
@@ -29,3 +33,13 @@
   .social-media-icons a:hover {
     color: #00aced; /* Example hover color for Twitter */
   }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 99%;
+    height: px
+   
+}
+
+/* margin-top: 1em; */
