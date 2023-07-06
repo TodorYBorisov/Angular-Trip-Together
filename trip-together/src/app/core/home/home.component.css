@@ -4,3 +4,17 @@
     
   } */
   
+  section div.container.home {
+    padding-top: 0;
+  }
+  
+  .home h1,
+  .home p {
+    text-align: center;
+    color: white;
+  }
+  
+  .home p.lead {
+    font-size: 24px;
+    font-style: italic;
+  }
