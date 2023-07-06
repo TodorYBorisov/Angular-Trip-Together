@@ -16,6 +16,7 @@ import {MatCardModule} from '@angular/material/card';
     HomeComponent,
     ErrorComponent,
     NavbarComponent,
+  
   ],
   imports: [
     CommonModule,
@@ -27,7 +28,8 @@ import {MatCardModule} from '@angular/material/card';
     NavbarComponent,
     HomeComponent,
     FooterComponent,
-    ErrorComponent
+    ErrorComponent,
+  
   ]
 })
 export class CoreModule { }
