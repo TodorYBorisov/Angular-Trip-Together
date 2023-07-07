@@ -1,45 +1,36 @@
-.footer {
-    background-color: rgb(129, 192, 222);
-    padding: 10px;
-    text-align: center;
-    /* margin-top: 1em; */
-    /* position: relative;
-    bottom: 0;
-    width: 100%; */
-  }
+#footer {
+  background-color: rgb(129, 192, 222);
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   
-  .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   
-  .footer p {
-    margin-bottom: 10px;
-  }
-  
-  .social-media-icons {
-    margin-top: 10px;
-  }
-  
-  .social-media-icons a {
-    display: inline-block;
-    margin: 0 5px;
-    color: #333;
-    font-size: 24px;
-    transition: color 0.2s;
-  }
-  
-  .social-media-icons a:hover {
-    color: #00aced; /* Example hover color for Twitter */
-  }
-
-  footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: px
-   
+}
+.footer-content p {
+  text-align: center;
+  margin: 0; 
 }
 
-/* margin-top: 1em; */
+.social-media-icons {
+  margin-top: 10px;
+}
+.social-media-icons a {
+  display: inline-block;
+  margin: 0 5px;
+  color: #333;
+  font-size: 24px;
+  transition: color 0.2s;
+}
