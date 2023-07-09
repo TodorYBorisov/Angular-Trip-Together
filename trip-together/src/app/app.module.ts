@@ -8,6 +8,7 @@ import { CoreModule } from './core/core.module';
 import { FeaturesModule } from './features/features.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,8 @@ import { FeaturesModule } from './features/features.module';
     BrowserAnimationsModule,
     CoreModule,
     FeaturesModule,
+   
+
  
   ],
   providers: [],
