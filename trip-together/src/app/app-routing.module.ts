@@ -26,8 +26,8 @@ const routes: Routes = [
   { path: 'edit/:tripId', component: EditComponent, title: 'Edit Page' },
   { path: 'details/:tripId', component: DetailsComponent, title: 'Details Page' },
   { path: 'search', component: SearchComponent, title: 'Search Page' },
-  { path: 'not-found', component: PageNotFoundComponent, title: '404 Page' },
-  { path: '**', redirectTo: 'not-found', title: '404 Page' },
+  { path: '**', component: PageNotFoundComponent, title: '404 Page' },
+  // { path: '**', redirectTo: 'not-found', title: '404 Page' },
 
 ];
 
