@@ -1,0 +1,22 @@
+body {
+    position: relative;
+  
+  }
+  
+  main {
+    position: relative;
+  }
+  
+  .home-img::before{
+    content: "";
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+  
+  }
