@@ -7,6 +7,11 @@ import { RegisterComponent } from './auth/register/register.component';
 import { ProfileComponent } from './auth/profile/profile.component';
 import { PageNotFoundComponent } from './auth/page-not-found/page-not-found.component';
 import { ErrorComponent } from './core/error/error.component';
+import { CatalogComponent } from './features/catalog/catalog.component';
+import { CreateComponent } from './features/create/create.component';
+import { EditComponent } from './features/edit/edit.component';
+import { DetailsComponent } from './features/details/details.component';
+import { SearchComponent } from './features/search/search.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
@@ -15,6 +20,13 @@ const routes: Routes = [
   { path: 'auth/login', component: LoginComponent },
   { path: 'auth/register', component: RegisterComponent },
   { path: 'auth/profile', component: ProfileComponent },
+  { path: 'catalog', component: CatalogComponent },
+  { path: 'create', component: CreateComponent },
+  { path: 'edit/:tripId', component: EditComponent },
+  { path: 'details/:tripId', component: DetailsComponent },
+  { path: 'search', component: SearchComponent },
+
+
   { path: 'auth/page-not-found', component: PageNotFoundComponent },
   { path: '**', component: ErrorComponent },
 
