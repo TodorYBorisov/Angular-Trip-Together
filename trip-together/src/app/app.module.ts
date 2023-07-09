@@ -20,9 +20,7 @@ import { FeaturesModule } from './features/features.module';
     BrowserAnimationsModule,
     CoreModule,
     FeaturesModule,
-   
-
- 
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

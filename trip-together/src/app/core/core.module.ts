@@ -26,7 +26,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MaterialModule,
     MatButtonModule,
     MatCardModule,
-    RouterModule
+    RouterModule,
+    AuthModule
+
   ],
   exports: [
     NavbarComponent,
@@ -34,7 +36,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     FooterComponent,
     ErrorComponent,
     PageNotFoundComponent,
-    AuthModule
   
   ]
 })
