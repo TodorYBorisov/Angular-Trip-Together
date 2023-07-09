@@ -6,7 +6,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { ProfileComponent } from './auth/profile/profile.component';
 
-import { ErrorComponent } from './core/error/error.component';
+// import { ErrorComponent } from './core/error/error.component';
 import { CatalogComponent } from './features/catalog/catalog.component';
 import { CreateComponent } from './features/create/create.component';
 import { EditComponent } from './features/edit/edit.component';
