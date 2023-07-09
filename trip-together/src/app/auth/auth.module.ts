@@ -18,6 +18,8 @@ import { ProfileComponent } from './profile/profile.component';
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports:[ProfileComponent]
+  
 })
 export class AuthModule { }

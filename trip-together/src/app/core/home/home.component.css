@@ -3,8 +3,8 @@
     background-size: cover;
     
   } */
-  
-  /* section div.container.home {
+
+/* section div.container.home {
     padding-top: 0;
   }
   
@@ -18,3 +18,41 @@
     font-size: 24px;
     font-style: italic;
   } */
+
+.site-home {
+  text-align: center;
+  padding: 150px;
+  color: white;
+}
+
+h1 {
+  text-align: center; 
+}
+
+.center-button {
+  padding: 10px 20px;
+}
+
+/* ================================== */
+body {
+  position: relative;
+
+}
+
+main {
+  position: relative;
+}
+
+.home-img::before{
+  content: "";
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../assets/images/background2.jpg');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 100px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+
+}

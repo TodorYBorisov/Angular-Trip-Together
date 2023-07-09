@@ -7,6 +7,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MaterialModule } from '../material.module';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import { RouterModule } from '@angular/router';
+import { AuthModule } from '../auth/auth.module';
+
 
 
 
@@ -22,13 +25,15 @@ import {MatCardModule} from '@angular/material/card';
     CommonModule,
     MaterialModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    RouterModule
   ],
   exports: [
     NavbarComponent,
     HomeComponent,
     FooterComponent,
     ErrorComponent,
+    AuthModule
   
   ]
 })

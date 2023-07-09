@@ -10,6 +10,7 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+/* ================================================================================= */
 /* body {
   position: relative;
 
@@ -17,7 +18,7 @@ body {
 
 body::before {
   content: "";
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('./assets/images/background2.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/images/background2.jpg');
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -25,7 +26,7 @@ body::before {
   right: 0px;
   bottom: 0px;
   left: 0px;
-
+  z-index: -1;
 
 }
 
