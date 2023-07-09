@@ -6,7 +6,6 @@ import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 
 
-
 @NgModule({
   declarations: [
     LoginComponent,
@@ -15,9 +14,13 @@ import { ProfileComponent } from './profile/profile.component';
     ProfileComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
-  exports:[ProfileComponent]
-  
+  exports: [
+    ProfileComponent,
+    RegisterComponent,
+    LoginComponent
+  ]
+
 })
 export class AuthModule { }
