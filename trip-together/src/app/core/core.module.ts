@@ -9,8 +9,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { RouterModule } from '@angular/router';
 import { AuthModule } from '../auth/auth.module';
-
-
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -19,6 +18,7 @@ import { AuthModule } from '../auth/auth.module';
     HomeComponent,
     ErrorComponent,
     NavbarComponent,
+    PageNotFoundComponent,
   
   ],
   imports: [
@@ -33,6 +33,7 @@ import { AuthModule } from '../auth/auth.module';
     HomeComponent,
     FooterComponent,
     ErrorComponent,
+    PageNotFoundComponent,
     AuthModule
   
   ]
