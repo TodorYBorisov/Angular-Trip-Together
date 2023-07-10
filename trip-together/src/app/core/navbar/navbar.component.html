@@ -1,7 +1,7 @@
 <nav id="nav">
   <mat-toolbar color="is-dark">
     <mat-toolbar-row id="background-col">
-      <span><a routerLink='/'><mat-icon>directions_car</mat-icon></a>TripTogether</span>
+      <span ><a class="logo" routerLink='/'><mat-icon>directions_car</mat-icon></a>TripTogether</span>
 
       <div class="example-spacer"></div>
       <a mat-stroked-button routerLink="/home" class="button-spacing"><mat-icon>home</mat-icon>Home</a>
@@ -11,7 +11,7 @@
       <a mat-stroked-button routerLink="/create" class="button-spacing"><mat-icon>add</mat-icon>Create</a>
       <a mat-stroked-button routerLink="/search" class="button-spacing"><mat-icon>search</mat-icon>Search</a>
       <a mat-stroked-button routerLink="/auth/profile" class="button-spacing"><mat-icon>account_circle</mat-icon>Profile</a>
-      <a mat-stroked-button class="button-spacing"><mat-icon>logout</mat-icon>Logout</a>
+      <a mat-stroked-button routerLink="/auth/logout" class="button-spacing"><mat-icon>logout</mat-icon>Logout</a>
       <a mat-stroked-button routerLink="/auth/login" class="button-spacing"><mat-icon>login</mat-icon>Login</a>
       <a mat-stroked-button routerLink="/auth/register" class="button-spacing" id="button"><mat-icon>person_add</mat-icon>Sing Up</a>
     </mat-toolbar-row>

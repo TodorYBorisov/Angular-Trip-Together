@@ -19,6 +19,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, title: 'Home Page' },
   { path: 'about', component: AboutComponent, title: 'About Page' },
   { path: 'auth/login', component: LoginComponent, title: 'Login Page' },
+  { path: 'auth/logout', redirectTo: 'home', title: 'Home Page' },
   { path: 'auth/register', component: RegisterComponent, title: 'Sing Up' },
   { path: 'auth/profile', component: ProfileComponent, title: 'Profile Page' },
   { path: 'create', component: CreateComponent, title: 'Create Page' },
