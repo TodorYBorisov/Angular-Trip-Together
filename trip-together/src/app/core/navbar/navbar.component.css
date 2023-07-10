@@ -1,7 +1,5 @@
 .example-spacer {
     flex: 1 1 auto;
-    
-
 }
 
 .button-spacing {
@@ -37,6 +35,8 @@ a{
 a.logo{
     background-color: rgb(129, 192, 222);
 }
+
+
 
 /* .site-header {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("/trip-together/src/assets/images/background2.jpg");

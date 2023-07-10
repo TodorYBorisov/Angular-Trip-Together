@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { FeaturesModule } from './features/features.module';
+import { AuthModule } from './auth/auth.module';
 
 
 
@@ -15,6 +16,7 @@ import { FeaturesModule } from './features/features.module';
 
   ],
   imports: [
+    AuthModule,
     BrowserModule,
     BrowserAnimationsModule,
     CoreModule,

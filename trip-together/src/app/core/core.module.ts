@@ -26,8 +26,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MaterialModule,
     MatButtonModule,
     MatCardModule,
+    AuthModule,
     RouterModule,
-    AuthModule
 
   ],
   exports: [

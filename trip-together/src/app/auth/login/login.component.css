@@ -1,0 +1,92 @@
+main {
+    padding-top: 50px;
+}
+
+.login-box {
+    color: white;
+    width: 360px;
+    height: 330px;
+    margin: auto;
+    background-color: rgba(186, 163, 223, 0.300);
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.login-box h1 {
+    text-align: center;
+    padding-top: 15px;
+}
+
+h4 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+form {
+    width: 300px;
+    margin-left: 20px;
+}
+
+form label {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+form input {
+    width: 320px;
+    height: 30px;
+    padding-left: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 8px;
+    outline: none;
+}
+
+input[type="submit"] {
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: rgb(112, 150, 230);
+    color: white;
+    font-size: 15px;
+}
+
+.login-box p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+
+}
+
+.login-box p>a {
+    color: rgb(112, 150, 230);
+    text-decoration: none;
+}
+
+
+/* ========== */
+body {
+    position: relative;
+  
+  }
+  
+  main {
+    position: relative;
+  }
+  
+  .login-box::before{
+    content: "";
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../assets/images/background2.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+  
+  }
