@@ -16,10 +16,10 @@ import { FeaturesModule } from './features/features.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule,
     FeaturesModule,
+    AppRoutingModule,
     
   ],
   providers: [],
