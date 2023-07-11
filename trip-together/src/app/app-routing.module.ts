@@ -15,7 +15,8 @@ import { SearchComponent } from './features/search/search.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', component: HomeComponent, title: 'TripTogether' },
+  // { path: '', pathMatch: 'full', component: HomeComponent, title: 'TripTogether' },
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', component: HomeComponent, title: 'Home Page' },
   { path: 'about', component: AboutComponent, title: 'About Page' },
   // { path: 'auth/login', component: LoginComponent, title: 'Login Page' },
