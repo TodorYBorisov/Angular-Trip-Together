@@ -9,6 +9,7 @@ import { SearchComponent } from './search/search.component';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { tripRoutingModule } from './trip-routing.module';
 
 
 
@@ -24,7 +25,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     CommonModule,
     RouterModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    tripRoutingModule
   ],
   exports:[
     CatalogComponent,

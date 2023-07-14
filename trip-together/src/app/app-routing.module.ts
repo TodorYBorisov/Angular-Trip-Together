@@ -7,10 +7,10 @@ import { AboutComponent } from './about/about.component'
 // import { ProfileComponent } from './auth/profile/profile.component';
 
 // import { ErrorComponent } from './core/error/error.component';
-import { CatalogComponent } from './features/catalog/catalog.component';
-import { CreateComponent } from './features/create/create.component';
-import { EditComponent } from './features/edit/edit.component';
-import { DetailsComponent } from './features/details/details.component';
+// import { CatalogComponent } from './features/catalog/catalog.component';
+// import { CreateComponent } from './features/create/create.component';
+// import { EditComponent } from './features/edit/edit.component';
+// import { DetailsComponent } from './features/details/details.component';
 import { SearchComponent } from './features/search/search.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 
@@ -23,11 +23,11 @@ const routes: Routes = [
   // { path: 'auth/register', component: RegisterComponent, title: 'Sing Up' },
   // { path: 'auth/logout', redirectTo: 'home', title: 'Home Page' },
   // { path: 'auth/profile', component: ProfileComponent, title: 'Profile Page' },
-  { path: 'create', component: CreateComponent, title: 'Create Page' },
-  { path: 'catalog', component: CatalogComponent, title: 'Trips Catalog' },
+  // { path: 'create', component: CreateComponent, title: 'Create Page' },
+  // { path: 'catalog', component: CatalogComponent, title: 'Trips Catalog' },
   // { path: 'catalog/id', component: TripDetailsComponent, title: 'Trips Details' },
-  { path: 'edit/:id', component: EditComponent, title: 'Edit Page' },
-  { path: 'details/:id', component: DetailsComponent, title: 'Details Page' },
+  // { path: 'edit/:id', component: EditComponent, title: 'Edit Page' },
+  // { path: 'details/:id', component: DetailsComponent, title: 'Details Page' },
   { path: 'search', component: SearchComponent, title: 'Search Page' },
   { path: '**', component: PageNotFoundComponent, title: '404 Page' },
   // { path: '**', redirectTo: 'not-found', title: '404 Page' },
