@@ -7,6 +7,9 @@ import { DetailsComponent } from './details/details.component';
 import { RouterModule } from '@angular/router';
 import { SearchComponent } from './search/search.component';
 
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+
 
 
 @NgModule({
@@ -19,7 +22,9 @@ import { SearchComponent } from './search/search.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MatCardModule,
+    MatGridListModule
   ],
   exports:[
     CatalogComponent,

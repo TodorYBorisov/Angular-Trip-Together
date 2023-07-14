@@ -24,7 +24,7 @@ const routes: Routes = [
   // { path: 'auth/logout', redirectTo: 'home', title: 'Home Page' },
   // { path: 'auth/profile', component: ProfileComponent, title: 'Profile Page' },
   { path: 'create', component: CreateComponent, title: 'Create Page' },
-  { path: 'catalog', component: CatalogComponent, title: 'Trips Page' },
+  { path: 'catalog', component: CatalogComponent, title: 'Trips Catalog' },
   // { path: 'catalog/id', component: TripDetailsComponent, title: 'Trips Details' },
   { path: 'edit/:id', component: EditComponent, title: 'Edit Page' },
   { path: 'details/:id', component: DetailsComponent, title: 'Details Page' },

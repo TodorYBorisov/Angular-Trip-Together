@@ -46,3 +46,22 @@ a.logo{
     background-repeat: no-repeat;
 
 } */
+
+
+
+
+
+
+#nav .nav-list {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+  }
+  
+  #nav .nav-list li {
+    margin-left: 5px;
+  }
+  
+  #nav .nav-list li:first-child {
+    margin-left: 0;
+  }

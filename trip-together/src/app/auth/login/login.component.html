@@ -4,10 +4,10 @@
     <h1>Login</h1>
     <form action="#" method="">
         <label>Email</label>
-        <input type="text" name="" placeholder="Email..">
+        <input type="text" name="" placeholder="Email.." #inputEmail>
         <label>Password</label>
-        <input type="password" name="" placeholder="Password..">
-        <input type="submit" value="Submit">
+        <input type="password" name="" placeholder="Password.." #inputPassword>
+        <input type="submit" value="Submit" (click)="login(inputEmail.value,inputPassword.value)" routerLink="/home">
     </form>
     <p>Not have an account? <a routerLink="/auth/register">Register here</a></p>
 </div>
