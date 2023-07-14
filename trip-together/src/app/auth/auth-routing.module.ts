@@ -2,7 +2,6 @@ import { RouterModule, Routes } from "@angular/router";
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
 import { ProfileComponent } from "./profile/profile.component";
-import { LogoutComponent } from "./logout/logout.component";
 import { AuthActivate } from "../shared/guards/authActivate";
 
 
@@ -21,14 +20,15 @@ const routes: Routes = [
                 component: RegisterComponent,
                 title: 'Sing Up',
             },
-            {
-                path: 'logout',
-                component: LogoutComponent,
-                title: 'Home Page',
-            },
+            // {
+            //     path: 'logout',
+            //     component: LogoutComponent,
+            //     title: 'Home Page',
+            // },
             {
                 path: 'profile',
                 component: ProfileComponent,
+                canActivate: [AuthActivate],
                 title: 'Profile Page',
             }
         ]

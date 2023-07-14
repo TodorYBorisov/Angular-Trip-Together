@@ -20,5 +20,5 @@ export class AuthActivate implements CanActivate {
 
     checkIfLogged(url: string): boolean {
         return false;
-    }
+    };
 }
