@@ -1,12 +1,14 @@
 import { Injectable } from "@angular/core";
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from "@angular/router";
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterModule, RouterStateSnapshot, UrlTree } from "@angular/router";
 import { Observable } from "rxjs";
+import { AuthService } from "src/app/auth/auth.service";
+
 
 @Injectable({ providedIn: 'root' })
 
 export class AuthActivate implements CanActivate {
 
-    constructor(private router: Router) { }
+    constructor(private authService: AuthService, private router: Router) { }
 
     canActivate(
         route: ActivatedRouteSnapshot,
@@ -15,10 +17,10 @@ export class AuthActivate implements CanActivate {
         | UrlTree
         | Observable<boolean | UrlTree>
         | Promise<boolean | UrlTree> {
-        return this.checkIfLogged(state.url) || this.router.createUrlTree(['/about']); //'/auth/login'
+        return this.authService.isLogged || this.router.createUrlTree(['/auth/register']);
     }
 
-    checkIfLogged(url: string): boolean {
-        return false;
-    };
+    // checkIfLogged(url: string): boolean {
+    //     return false;
+    // };
 }
