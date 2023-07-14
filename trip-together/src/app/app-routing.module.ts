@@ -11,7 +11,7 @@ import { AboutComponent } from './about/about.component'
 // import { CreateComponent } from './features/create/create.component';
 // import { EditComponent } from './features/edit/edit.component';
 // import { DetailsComponent } from './features/details/details.component';
-import { SearchComponent } from './features/search/search.component';
+// import { SearchComponent } from './features/search/search.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 
 const routes: Routes = [
@@ -28,7 +28,7 @@ const routes: Routes = [
   // { path: 'catalog/id', component: TripDetailsComponent, title: 'Trips Details' },
   // { path: 'edit/:id', component: EditComponent, title: 'Edit Page' },
   // { path: 'details/:id', component: DetailsComponent, title: 'Details Page' },
-  { path: 'search', component: SearchComponent, title: 'Search Page' },
+  // { path: 'search', component: SearchComponent, title: 'Search Page' },
   { path: '**', component: PageNotFoundComponent, title: '404 Page' },
   // { path: '**', redirectTo: 'not-found', title: '404 Page' },
 

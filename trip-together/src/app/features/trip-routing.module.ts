@@ -6,6 +6,7 @@ import { CreateComponent } from './create/create.component';
 import { DetailsComponent } from './details/details.component';
 import { EditComponent } from './edit/edit.component';
 import { AuthActivate } from '../shared/guards/authActivate';
+import { SearchComponent } from './search/search.component';
 
 
 const routes: Routes = [
@@ -31,7 +32,13 @@ const routes: Routes = [
             {
                 path: 'create',
                 component: CreateComponent,
-                title: 'Create trip',
+                title: 'Create Page',
+                canActivate: [AuthActivate]
+            },
+            {
+                path: 'search',
+                component: SearchComponent,
+                title: 'Search Page',
                 canActivate: [AuthActivate]
             }
         ],
