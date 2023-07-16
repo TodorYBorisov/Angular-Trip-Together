@@ -18,7 +18,7 @@ export class NavbarComponent {
   }
 
   get userName(): string {
-    return this.authService.user?.userName || '';
+    return this.authService.user?.username || '';
 
   }
 
