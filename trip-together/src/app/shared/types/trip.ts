@@ -1,3 +1,5 @@
+import { User } from "./user";
+
 export interface Trip {
     _id: string,
     startPoint: string,
@@ -9,7 +11,7 @@ export interface Trip {
     seats: number,
     price: number,
     description: string,
-    creator: string,
+    userId: User,
     buddies: string[],
     __v: number
 }
