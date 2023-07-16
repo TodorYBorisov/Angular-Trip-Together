@@ -30,7 +30,7 @@ export class AuthService {
   login(): void {
     this.user = {
       email: 'toshko@abv.bg',
-      userName: 'Toshko'
+      username: 'Toshko'
     };
 
     localStorage.setItem(this.USER_KEY, JSON.stringify(this.user))
