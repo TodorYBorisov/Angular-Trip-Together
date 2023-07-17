@@ -10,31 +10,32 @@ import { SearchComponent } from './search/search.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { tripRoutingModule } from './trip-routing.module';
+import { SharedModule } from "../shared/shared.module";
 
 
 
 @NgModule({
-  declarations: [
-    CatalogComponent,
-    CreateComponent,
-    EditComponent,
-    DetailsComponent,
-    SearchComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatCardModule,
-    MatGridListModule,
-    tripRoutingModule
-  ],
-  exports:[
-    CatalogComponent,
-    CreateComponent,
-    EditComponent,
-    DetailsComponent,
-    SearchComponent
-
-  ]
+    declarations: [
+        CatalogComponent,
+        CreateComponent,
+        EditComponent,
+        DetailsComponent,
+        SearchComponent
+    ],
+    exports: [
+        CatalogComponent,
+        CreateComponent,
+        EditComponent,
+        DetailsComponent,
+        SearchComponent
+    ],
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatCardModule,
+        MatGridListModule,
+        tripRoutingModule,
+        SharedModule
+    ]
 })
 export class FeaturesModule { }

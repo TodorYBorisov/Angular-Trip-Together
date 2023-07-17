@@ -1,24 +1,53 @@
-<p>create works!</p>
-
-
-<mat-card class="card-box">
-    <mat-card-header>
-        <mat-card-title> This trip is from ... to ...</mat-card-title>
-    </mat-card-header>
-
-    <img mat-card- mat-card-lg-image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFJwzrZQe64U9qy3r4kRK8b_uxy1ixCX1-SO76MVE3tE4I8l642lwCdoqbsRMb_Hmq1yg&usqp=CAU">
-
-    <mat-card-content>
-        <mat-card-subtitle>Desctription: </mat-card-subtitle>
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus obcaecati aperiam itaque doloribus, voluptas in velit reprehenderit rem porro blanditiis soluta aspernatur officia voluptatem assumenda eveniet. Totam illum commodi facilis.
-        </p>
-    </mat-card-content>
-
-    <mat-card-actions>
-        <button mat-button><i class="fa-solid fa-user-pen"></i>Edit</button>
-        <button mat-button><i class="fa-sharp fa-solid fa-trash"></i>Delete</button>
-    </mat-card-actions>
-
-
-</mat-card>
+<main>
+    <section class="py-5" id="offer-trip-page">
+        <div class="container offer-trip">
+            <h1>Create your destination trip</h1>
+            <div>
+                <form action="" method="">
+                    <div class="offer-label">
+                        <label for="startPoint"> <i class="fas fa-map-marker-alt"></i> Starting Point </label>
+                        <label for="endPoint"> <i class="fas fa-map-marker-alt"></i> End Point</label>
+                    </div>
+                    <div class="form-group offer-input">
+                        <input type="text" class="form-control-2" id="startPoint" placeholder="Sofia" name=""
+                            value="">
+                        <input type="text" class="form-control-2" id="endPoint" placeholder="Varna" name=""
+                            value="">
+                    </div>
+                    <div class="offer-label">
+                        <label for="date"> <i class="far fa-calendar-alt"></i> Date</label>
+                        <label for="time"> <i class="far fa-clock"></i> Time</label>
+                    </div>
+                    <div class="form-group offer-input">
+                        <input type="date" class="form-control-2" id="date" placeholder="18 May 2023" name="date"
+                            value="">
+                        <input type="time" class="form-control-2" id="time" placeholder="18:00 PM" name="time" value="">
+                    </div>
+                    <div class="offer-label">
+                        <label for="carImage">Car Image</label>
+                        <label for="carBrand">Car Brand</label>
+                    </div>
+                    <div class="form-group offer-input">
+                        <input type="text" class="form-control-2" id="carImage" placeholder="https://..." name=""
+                            value="">
+                        <input type="text" class="form-control-2" id="carBrand" placeholder="BMW" name="" value="">
+                    </div>
+                    <div class="offer-label">
+                        <label for="seats">Available Seats</label>
+                        <label for="price">Price</label>
+                    </div>
+                    <div class="form-group offer-input">
+                        <input type="text" class="form-control-2" id="seats" placeholder="4" name="" value="">
+                        <input type="text" class="form-control-2" id="price" placeholder="20" name="" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Short description</label>
+                        <textarea class="form-control" id="description" placeholder="Insert information about the trip here"
+                            name=""></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
