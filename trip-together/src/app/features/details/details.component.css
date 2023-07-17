@@ -21,10 +21,10 @@ main {
   position: relative;
 }
 
-.details {
+/* .details {
   color: black;
   border: 1px solid black;
-}
+} */
 
 .details .container {
   padding: 2%;
@@ -169,7 +169,7 @@ h5.mt-4 {
 }
 
 .line {
-  box-shadow: 2px 0px 4px 1px #f4c537, inset -14px -14px 30px -13px rgb(0 0 0 / 55%);
+  box-shadow: 2px 0px 4px 1px #33529b, inset -14px -14px 30px -13px rgb(0 0 0 / 55%);
   border: 0;
   margin-top: 15px;
   margin-bottom: 30px;
@@ -202,7 +202,7 @@ img.card-img-top {
 }
 
 input.form-control-2, textarea.form-control, input.form-control, textarea:disabled {
-  box-shadow: 0px -2px 20px -1px #f4c537, inset -14px -14px 30px -13px rgb(0 0 0 / 55%);
+  /* box-shadow: 0px -2px 20px -1px #f4c537, inset -14px -14px 30px -13px rgb(0 0 0 / 55%); */
   background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
@@ -283,9 +283,10 @@ input[type="date"]::-webkit-calendar-picker-indicator, input[type="time"]::-webk
 textarea, textarea.form-control, textarea:disabled {
   padding: 5px 10px;
   text-align: center;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  /* border-top-left-radius: 20px;
+  border-top-right-radius: 20px; */
   word-wrap: break-word;
+  border-radius: 0.25rem;
 }
 
 textarea, input {
@@ -467,12 +468,12 @@ section>div.container {
 .trip-info .img-fluid.rounded {
   max-width: 500px;
   transition: all .2s ease-in-out;
-  box-shadow: 0px -2px 20px -1px #f4c537, inset -14px -14px 30px -13px rgb(0 0 0 / 55%);
+  /* box-shadow: 0px -2px 20px -1px #f4c537, inset -14px -14px 30px -13px rgb(0 0 0 / 55%); */
 }
 .img-fluid.rounded:hover {
-  transform: scale(1.02);
+  /* transform: scale(1.02); */
   cursor: grab;
-  box-shadow: 0px -2px 20px -1px #64c3fff5, inset -14px -14px 30px -13px rgb(0 0 0 / 55%);
+  /* box-shadow: 0px -2px 20px -1px #64c3fff5, inset -14px -14px 30px -13px rgb(0 0 0 / 55%); */
 }
 
 .trip-info div:first-child {
