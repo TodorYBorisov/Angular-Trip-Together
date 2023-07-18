@@ -21,7 +21,8 @@
         <p class="price"><i class="fas fa-hand-holding-usd"></i> Price: <span>{{trip.price}}</span> BGN</p>
       </div>
       <div class="btn-group" *ngIf="isLogged">
-        <a routerLink="/trip/details/{{trip._id}}" id="details">Details</a>
+        <!-- <a routerLink="/trip/details/{{trip._id}}" id="details">Details</a> -->
+        <a [routerLink]="['/trip','details', trip._id]" id="details">Details</a>
       </div>
     </div>
   </div>
