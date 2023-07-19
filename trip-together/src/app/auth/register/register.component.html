@@ -3,18 +3,82 @@
 <div class="register-box">
     <h1>Register</h1>
     <h4>It's free and only take a minute</h4>
-    <form action="#" method="">
-        <label>Username</label>
-        <input type="text" name="" placeholder="Username..">
-        <label>Email</label>
-        <input type="text" name="" placeholder="Email..">
-        <label>Telephone</label>
-        <input type="text" name="tel" id="tel" placeholder="+359 88 888 888">
-        <label>Password</label>
-        <input type="password" name="" placeholder="Password..">
-        <label>Confirm Password</label>
-        <input type="password" name="" placeholder="Confirm Password..">
-        <input type="submit" value="Submit">
+    <form [formGroup]="form" (ngSubmit)="registerHandler()">
+        <!-- username -->
+        <label for="username"><span><i class="fa-solid fa-user"></i></span>Username</label>
+        <input type="text" name="username" placeholder="Username.." formControlName="username">
+
+        <ng-container *ngIf="form.get('username')?.touched">
+            <p class="error_color" *ngIf="form.get('username')?.errors?.['required']"> Username is required!</p>
+            <p class="error_color" *ngIf="form.get('username')?.errors?.['minlength']"> Username should be longer than 5
+                chars!</p>
+        </ng-container>
+
+        <!-- email -->
+        <label for="email"><span><i class="fa-solid fa-envelope"></i></span>Email</label>
+        <input type="email" name="email" placeholder="Email.." formControlName="email">
+
+        <ng-container *ngIf="form.get('email')?.touched">
+            <p class="error_color" *ngIf="form.get('email')?.errors?.['required']">Email is required!</p>
+            <p class="error_color" *ngIf="form.get('email')?.errors?.['email']">Email is not valid!</p>
+        </ng-container>
+
+
+        <!-- telephone -->
+        <label for="tel"><span><i class="fa-solid fa-phone-volume"></i></span>Telephone</label>
+        <input type="text" name="tel" id="tel" placeholder="+359 88 888 888" formControlName="tel">
+
+        <ng-container *ngIf="form.get('tel')?.touched">
+            <p class="error_color" *ngIf="form.get('tel')?.errors?.['required']">Telephone is required!</p>
+        </ng-container>
+
+        <ng-container formGroupName="passGroup">
+            <!-- password -->
+            <label for="password"><span><i class="fa-solid fa-lock"></i></span>Password</label>
+            <input type="password" name="password" placeholder="Password.." formControlName="password">
+
+            <ng-container *ngIf="form.get('passGroup')?.get('password')?.touched">
+                <p class="error_color" *ngIf="form.get('passGroup')?.get('password')?.errors?.['required']">Password is
+                    required!</p>
+                <p class="error_color" *ngIf="form.get('passGroup')?.get('password')?.errors?.['minlength']">Password
+                    must
+                    be at least 5 characters!</p>
+            </ng-container>
+
+            <!-- rePassword -->
+            <label for="rePassword"><span><i class="fa-solid fa-lock"></i></span>Confirm Password</label>
+            <input type="password" name="rePassword" placeholder="Confirm Password.." formControlName="rePassword">
+
+            <ng-container *ngIf="form.get('passGroup')?.get('rePassword')?.touched">
+                <p class="error_color" *ngIf="
+                 form.get('passGroup')?.errors?.['matchPasswordsValidator'] ||
+                 form.get('passGroup')?.get('rePassword')?.errors?.['required']">Repeat Password does not match
+                    password!</p>
+            </ng-container>
+        </ng-container>
+
+        <!-- gender -->
+        <label for="gender"><span><i class="fa-solid fa-venus-mars"></i></span>Gender</label>
+        <div class="gender">
+            <input type="radio" id="female" name="gender" value="female" formControlName="gender">
+            <label for="female">Female</label>
+            <input type="radio" id="male" name="gender" value="male" formControlName="gender" >
+            <label for="male">Male</label>
+        </div>
+
+        <ng-container *ngIf="form.get('gender')?.touched">
+            <p class="error_color" *ngIf="form.get('gender')?.errors?.['required']">Gender is required!</p>
+        </ng-container>
+
+        <input type="submit" value="Register" [disabled]="form.invalid">
     </form>
     <p>Already have an account? <a routerLink="/auth/login">Login here</a></p>
 </div>
+
+
+<!-- <div class="gender">
+    <input type="radio" id="female" name="gender" value="female" [checked]="!isMale" (change)="onGenderChange('female')" ngModel gender required #femaleInput="ngModel">
+    <label for="female">Female</label>
+    <input type="radio" id="male" name="gender" value="male" [checked]="isMale" (change)="onGenderChange('male')" ngModel gender required #maleInput="ngModel">
+    <label for="male">Male</label>
+  </div> -->

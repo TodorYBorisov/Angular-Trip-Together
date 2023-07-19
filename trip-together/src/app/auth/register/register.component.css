@@ -1,7 +1,7 @@
 .register-box {
     color: white;
-    width: 360px;
-    height: 600px;
+    width: 370px;
+    height: 680px;
     margin: auto;
     background-color: rgba(186, 163, 223, 0.300);
     border: 2px solid white;
@@ -63,6 +63,32 @@
     
 }
 
+/* ===================== */
+.register-box form .gender {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.register-box form .gender label {
+    display: inline-block;
+    margin: 0;
+}
+
+.register-box form .gender input[type="radio"] {
+    margin-right: 5px;
+}
+
+.register-box form .gender input[type="radio"] {
+    transform: scale(0.6); 
+    margin-right: 5px;
+}
+/* 1 */
+
+
+
+
 /* ========== */
 body {
     position: relative;
@@ -86,3 +112,12 @@ body {
     z-index: -1;
   
   }
+
+  .register-box .error_color {
+    color: red;
+}
+
+input.ng-valid {
+    border: 4px solid green !important;
+   
+}
