@@ -1,13 +1,29 @@
-<p>login works!</p>
-
 <div class="login-box">
     <h1>Login</h1>
-    <form action="#" method="">
-        <label>Email</label>
-        <input type="text" name="" placeholder="Email.." #inputEmail>
-        <label>Password</label>
-        <input type="password" name="" placeholder="Password.." #inputPassword>
-        <input type="submit" value="Submit" (click)="login(inputEmail.value,inputPassword.value)" >
+    <form #form="ngForm" (ngSubmit)="loginHandler(form)">
+        <label for="email"><span><i class="fa-solid fa-envelope"></i></span>Email</label>
+        <input type="text" name="email" id="email" placeholder="Email.." #inputEmail="ngModel" ngModel email required>
+
+        <!-- Errors for email -->
+        <ng-container *ngIf="inputEmail.touched">
+            <div class="error_color" *ngIf="inputEmail.errors?.['required']">Email is required!</div>
+            <div class="error_color" *ngIf="inputEmail.errors?.['email']"> Email is not valid!</div>
+        </ng-container>
+
+        <label for="password"><span><i class="fa-solid fa-lock"></i></span>Password</label>
+        <input type="password" name="password" placeholder="Password.." #inputPassword="ngModel" ngModel password
+            required [minlength]="5">
+
+        <!-- Errors for paswword -->
+        <ng-container *ngIf="inputPassword.touched">
+            <div class="error_color" *ngIf="inputPassword.errors?.['required']">Password is required!</div>
+            <div class="error_color" *ngIf="inputPassword.errors?.['minlength']"> Password must be at least 5 characters!</div>
+        </ng-container>
+
+
+        <!-- <button type="submit" [disabled]="form.invalid" >Login</button> -->
+        <input type="submit" value="Login" [disabled]="form.invalid" >
+
     </form>
     <p>Not have an account? <a routerLink="/auth/register">Register here</a></p>
 </div>
