@@ -1,0 +1,240 @@
+@import url('https://use.fontawesome.com/releases/v5.12.1/css/all.css');
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+
+/* b */
+
+.profile {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-container {
+
+    margin-top: 100px;
+    color: white;
+    width: 350px;
+    border: 2px solid white;
+    height: 380px;
+
+    /* background: rgba(0, 0, 0, 0.4); */
+    background-color: rgba(186, 163, 223, 0.300);
+    /* border-radius: 20px; */
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+
+}
+
+.profile-img {
+    padding: 20px;
+    border-radius: 50%;
+    height: 220px;
+}
+
+.profile-info {
+    display: block;
+    width: 30%;
+    margin-top: 100px;
+    color: white;
+    padding: 1em;
+    border: 2px solid white;
+
+    font-size: 20px;
+    /* background: rgba(0, 0, 0, 0.4); */
+    background-color: rgba(186, 163, 223, 0.300);
+    /* border-radius: 20px; */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+}
+.profile-info .count{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.profile p>span {
+    font-weight: bold;
+    font-size: 1rem;
+    
+    
+
+}
+
+/* h4.card-title {
+  font-size: 1.2rem;
+} */
+
+h5.mt-4 {
+    font-size: 1rem;
+    margin-top: 0 !important;
+}
+
+.card.h-100 {
+    transition: all .2s ease-in-out;
+    width: 250px;
+    border: none;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0px -2px 20px -1px #f4c537, inset -14px -14px 30px -13px rgb(0 0 0 / 55%);
+}
+
+.card.h-100:hover .card-body,
+.card.h-100:hover {
+    cursor: grab;
+    box-shadow: 0px -2px 20px -1px #64c3fff5, inset -14px -14px 30px -13px rgb(0 0 0 / 55%);
+}
+
+.card.h-100:hover {
+    transform: scale(1.05);
+}
+
+.card-body {
+    box-shadow: 0px 5px 9px -2px #f4c537, inset -14px -14px 30px -13px rgb(0 0 0 / 55%);
+    text-align: left;
+    padding: 10px 10px 10px 40px !important;
+}
+
+.card-body i {
+    padding-right: 5px;
+}
+
+.card-info {
+    display: inline-block;
+}
+
+.line {
+    box-shadow: 2px 0px 4px 1px #f4c537, inset -14px -14px 30px -13px rgb(0 0 0 / 55%);
+    border: 0;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+img.card-img-top {
+    height: 170px;
+}
+
+.row {
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.form-control-2 {
+    text-align: center;
+    display: block;
+    width: 45%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input.form-control-2,
+textarea.form-control,
+input.form-control,
+textarea:disabled {
+    box-shadow: 0px -2px 20px -1px #f4c537, inset -14px -14px 30px -13px rgb(0 0 0 / 55%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    outline: none;
+}
+
+textarea:disabled {
+    width: 100%;
+    resize: none;
+}
+
+.form-group p {
+    color: #f8f9fa;
+    text-shadow: 1px 1px #007bff;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.login,
+.register {
+    width: 40% !important;
+}
+
+.login input,
+.register input {
+    text-align: center;
+}
+
+.login-page>h1,
+.register-page>h1,
+.offer-trip>h1 {
+    margin: 2%;
+    text-align: center;
+}
+
+input.form-control-2::placeholder,
+textarea.form-control::placeholder {
+    color: rgb(167, 162, 162);
+}
+
+.gender {
+    box-shadow: 0px -2px 20px -1px #f4c537, inset -14px -14px 30px -13px rgb(0 0 0 / 55%);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: .25rem;
+    padding-top: 5px;
+    margin-bottom: 15px;
+}
+
+.no-trips {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.no-trips img {
+    box-shadow: 0px -2px 20px -1px #f4c537, inset -14px -14px 30px -13px rgb(0 0 0 / 55%);
+    opacity: 0.95;
+    margin-bottom: 10px;
+}
+
+.no-trips p.lead {
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+}
+
+/* ========== */
+body {
+    position: relative;
+
+}
+
+main {
+    position: relative;
+}
+
+#profile-page::before {
+    content: "";
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../assets/images/background2.jpg');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+
+}
+.profile-container button {
+    color: white;
+    border: none;
+    border-radius: 0.3em;
+    padding: 0.6em 1.2em;
+    outline: none;
+    background-color: rgb(112, 150, 230);
+}
