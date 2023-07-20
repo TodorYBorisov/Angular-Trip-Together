@@ -25,11 +25,11 @@
 
 
         <!-- telephone -->
-        <label for="tel"><span><i class="fa-solid fa-phone-volume"></i></span>Telephone</label>
+        <label for="tel"><span><i class="fa-solid fa-phone-volume"></i></span>Phone</label>
         <input type="text" name="tel" id="tel" placeholder="+359 88 888 888" formControlName="tel">
 
         <ng-container *ngIf="form.get('tel')?.touched">
-            <p class="error_color" *ngIf="form.get('tel')?.errors?.['required']">Telephone is required!</p>
+            <p class="error_color" *ngIf="form.get('tel')?.errors?.['required']">Phone is required!</p>
         </ng-container>
 
         <ng-container formGroupName="passGroup">
