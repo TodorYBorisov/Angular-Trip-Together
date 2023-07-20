@@ -33,13 +33,13 @@ const routes: Routes = [
                 path: 'create',
                 component: CreateComponent,
                 title: 'Create Page',
-                canActivate: [AuthActivate]
+                // canActivate: [AuthActivate]
             },
             {
                 path: 'search',
                 component: SearchComponent,
                 title: 'Search Page',
-                canActivate: [AuthActivate]
+                // canActivate: [AuthActivate]
             }
         ],
     },

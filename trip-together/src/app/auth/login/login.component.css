@@ -10,6 +10,8 @@ main {
     background-color: rgba(186, 163, 223, 0.300);
     border: 2px solid white;
     border-radius: 20px;
+    margin-top: 35px  
+    /* ако нещо не е ок махни горния марджим */
 }
 
 .login-box h1 {

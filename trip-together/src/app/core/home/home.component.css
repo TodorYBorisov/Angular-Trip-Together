@@ -31,6 +31,13 @@ h1 {
 
 .center-button {
   padding: 10px 20px;
+  color: white;
+    border: none;
+    border-radius: 0.3em;
+    padding: 0.6em 1.2em;
+    outline: none;
+    background-color: rgb(112, 150, 230);
+  
 }
 
 /* ================================== */

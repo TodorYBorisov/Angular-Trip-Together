@@ -11,6 +11,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { tripRoutingModule } from './trip-routing.module';
 import { SharedModule } from "../shared/shared.module";
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -35,7 +36,8 @@ import { SharedModule } from "../shared/shared.module";
         MatCardModule,
         MatGridListModule,
         tripRoutingModule,
-        SharedModule
+        SharedModule,
+        FormsModule
     ]
 })
 export class FeaturesModule { }
