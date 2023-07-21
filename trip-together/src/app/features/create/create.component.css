@@ -1,7 +1,7 @@
 @import url('https://use.fontawesome.com/releases/v5.12.1/css/all.css');
 @import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
 
-body {
+/* body {
   position: relative;
 }
 
@@ -15,7 +15,7 @@ body::before {
   right: 0px;
   bottom: 0px;
   left: 0px;
-}
+} */
 
 main {
   position: relative;
@@ -203,8 +203,8 @@ img.card-img-top {
 
 input.form-control-2, textarea.form-control, input.form-control, textarea:disabled {
   /* box-shadow: 0px -2px 20px -1px #0b1618, inset -14px -14px 30px -13px rgb(0 0 0 / 55%); */
-  background: rgb(129, 192, 222);
-  color: blackwhite;
+  /* background: rgb(129, 192, 222); */
+  /* color: blackwhite; */
   border: none;
   outline: none;
 }
@@ -290,7 +290,7 @@ textarea, textarea.form-control, textarea:disabled {
 }
 
 textarea, input {
-  background: rgba(0, 0, 0, 0.6);
+  /* background: rgba(0, 0, 0, 0.6); */
 }
 
 .details .icon {
@@ -313,8 +313,9 @@ div.container .register, div.container .login {
   margin-right: 60px;
 }
 
+/* Add my me */
 label, .container>h1 {
-  color: black;
+  color: white;
   font-size:medium;
 }
 .container>h1 {
@@ -476,3 +477,34 @@ section>div.container {
   padding-top: 40px;
 }
 
+/* ========== */
+body {
+  position: relative;
+
+}
+
+main {
+  position: relative;
+}
+
+#offer-trip-page::before {
+  content: "";
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../assets/images/background2.jpg');
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+
+}
+.profile-container button {
+  color: white;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.6em 1.2em;
+  outline: none;
+  background-color: rgb(112, 150, 230);
+}
