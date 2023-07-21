@@ -12,15 +12,15 @@ export class TripService {
 
   //така дърпаме всички trips от апи-то
   getAllTrips() {
-    const { appUrl } = environment;
-    return this.http.get<Trip[]>(`${appUrl}/trips`);
+    const { apiUrl } = environment;
+    return this.http.get<Trip[]>(`${apiUrl}/trips`);
   }
 
 
   //така дърпаме единична тема по нейното id 
   getTripbyId(id: string) {
-    const { appUrl } = environment;
-    return this.http.get<Trip>(`${appUrl}/trips/details/${id}`);
+    const { apiUrl } = environment;
+    return this.http.get<Trip>(`${apiUrl}/trips/details/${id}`);
   }
 
 }
