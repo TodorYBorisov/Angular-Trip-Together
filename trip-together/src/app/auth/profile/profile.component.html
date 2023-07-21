@@ -1,33 +1,81 @@
 <p>profile works!</p>
 
-
 <section class="profile col-md-6 text-center col-lg" id="profile-page">
+
     <div class="profile-container">
         <!-- Do not forget to change the path to the image -->
         <!-- Gender of the user determines which picture is displayed as their avatar -->
         <img class="profile-img" src="../../../assets/images/male.png" alt="user-picture">
-        <p>Username: <span>mihail</span></p>
-        <p><i class="fa-solid fa-envelope" style="margin: 3px;" ></i>Email: <span>mihail_valkov@mail.bg</span></p>
-        <p><i class="fa-solid fa-phone-volume" style="margin: 3px;"></i>Phone: <span>+359 885 888 888</span></p>
+        <ng-container *ngIf="!isEditMode">
+            <p>Username: <span>{{profileDetails.username}}</span></p>
+            <p><i class="fa-solid fa-envelope" style="margin: 3px;"></i>Email: <span>{{profileDetails.email}}</span>
+            </p>
+            <p><i class="fa-solid fa-phone-volume" style="margin: 3px;"></i>Phone: <span>{{profileDetails.tel}}</span></p>
+            <button class="edit-button" (click)="toggleEditMode()">Edit</button>
+        </ng-container>
 
-        <button class="edit-button">Edit</button>
+        <ng-container *ngIf="isEditMode">
+            <form [formGroup]="form" (ngSubmit)="saveProfileHandler()">
+                <div class="flex">
+                    <p>Username: </p>
+                    <input type="text" name="username" id="username" value="Johny" formControlName="username">
+                </div>
+                <!-- user validation -->
+                <ng-container *ngIf="form.get('username')?.touched">
+                    <p class="error" *ngIf="form.get('username')?.errors?.['required']"> Username is required!</p>
+                    <p class="error" *ngIf="form.get('username')?.errors?.['minlength']"> Username should be longer than
+                        5 chars!</p>
+                </ng-container>
 
+                <div class="flex">
+                    <p>Email: </p>
+                    <input type="email" name="email" id="email" value="john.doe@gmail.com" formControlName="email">
+                </div>
+                <!-- email validation -->
+                <ng-container *ngIf="form.get('email')?.touched">
+                    <p class="error" *ngIf="form.get('email')?.errors?.['required']">Email is required!</p>
+                    <p class="error" *ngIf="form.get('email')?.errors?.['emailValidator']">Email is not valid!</p>
+                </ng-container>
+
+
+                <div class="flex">
+                    <p>Phone: </p>
+                    <div>
+                        <!-- <select name="select-tel" id="select-tel" class="tel">
+                            <option value="00359">+359</option>
+                        </select> -->
+                        <input type="text" name="tel" id="tel" value="885 888 888" formControlName="tel">
+                    </div>
+                </div>
+
+                <ng-container *ngIf="form.get('tel')?.touched">
+                    <p class="error" *ngIf="form.get('tel')?.errors?.['required']">Telephone is required!</p>
+                </ng-container>
+                <button class="red-button">Cancel</button>
+                <button class="green-button">Save</button>
+            </form>
+        </ng-container>
     </div>
+
     <div class="profile-info">
         <p class="count">Trips History: <span>3</span> counts</p>
 
-        <div class="trips-info">
+        <div class="trips-info" *ngIf="!ifTrips">
             <!-- If there are trips created by the current logged in user display each of them -->
-            <p>from <span>Svilengrad</span> to <span>Sofia</span> on <span>2021-06-16</span> at
-                <span>20:40</span></p>
-            <p>from <span>Plovdiv</span> to <span>Burgas</span> on <span>2021-07-07</span> at <span>10:40</span>
-            </p>
-            <p>from <span>Sofia</span> to <span>Nesebur</span> on <span>2021-08-01</span> at <span>09:00</span>
-            </p>
-
-            <!-- If there are no trips created by the current logged in user display:-->
-            <p>there are no offer trips yet...</p>
+            <p>from <span>Svilengrad</span> to <span>Sofia</span> on <span>2021-06-16</span> at<span>20:40</span></p>
+            <p>from <span>Plovdiv</span> to <span>Burgas</span> on <span>2021-07-07</span> at <span>10:40</span></p>
+            <p>from <span>Sofia</span> to <span>Nesebur</span> on <span>2021-08-01</span> at <span>09:00</span></p>
+            <p>from <span>Sofia</span> to <span>Nesebur</span> on <span>2021-08-01</span> at <span>09:00</span></p>
+            <p>from <span>Sofia</span> to <span>Nesebur</span> on <span>2021-08-01</span> at <span>09:00</span></p>
+            <p>from <span>Sofia</span> to <span>Nesebur</span> on <span>2021-08-01</span> at <span>09:00</span></p>
+            <p>from <span>Sofia</span> to <span>Nesebur</span> on <span>2021-08-01</span> at <span>09:00</span></p>
+            <p>from <span>Sofia</span> to <span>Nesebur</span> on <span>2021-08-01</span> at <span>09:00</span></p>
+            <p>from <span>Sofia</span> to <span>Nesebur</span> on <span>2021-08-01</span> at <span>09:00</span></p>
         </div>
-
+        <!-- If there are no trips created by the current logged in user display:-->
+        <p>There are no offer trips yet.</p>
     </div>
 </section>
+
+
+<!-- ===================== -->
