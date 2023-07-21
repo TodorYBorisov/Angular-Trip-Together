@@ -10,11 +10,11 @@
 
 .profile-container {
 
-    margin-top: 100px;
+    margin-top: 50px;
     color: white;
     width: 350px;
     border: 2px solid white;
-    height: 380px;
+    /* height: 380px; */
 
     /* background: rgba(0, 0, 0, 0.4); */
     background-color: rgba(186, 163, 223, 0.300);
@@ -33,7 +33,7 @@
 .profile-info {
     display: block;
     width: 30%;
-    margin-top: 100px;
+    margin-top: 50px;
     color: white;
     padding: 1em;
     border: 2px solid white;
@@ -237,4 +237,6 @@ main {
     padding: 0.6em 1.2em;
     outline: none;
     background-color: rgb(112, 150, 230);
+    margin-left: 6px;
+    margin-top: 6px;
 }
