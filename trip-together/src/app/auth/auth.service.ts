@@ -1,44 +1,53 @@
-import { Injectable } from '@angular/core';
-import { User } from '../shared/types/user';
+import { Injectable, OnDestroy } from '@angular/core';
+import { User } from '../shared/interfaces/user';
+import { BehaviorSubject, Subscription, filter, tap } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class AuthService implements OnDestroy {
 
+  private user$$ = new BehaviorSubject<undefined | null | User>(undefined);
+  
+  user$ = this.user$$.asObservable().pipe(
+    filter((val): val is User | null => val !== undefined)
+  );
 
-  user: User | undefined;
-  USER_KEY = '[user]' // това е ключа с който записваме потребителя в LocalStoriga
+  // public user$ = this.user$$.asObservable();
 
-  //с това проверяваме дали има потребител в localStorige
+  user: User | null = null;
+
+  //проверяваме дали имаме логнат потребител
   get isLogged(): boolean {
-    return !!this.user //когато сложим два удиеителни поред променливата ако я има ще върне true, ако ли не , false
+    return this.user !== null //когато сложим два удиеителни поред променливата ако я има ще върне true, ако ли не , false
   }
 
-  constructor() {
-    try {
-      const localStorigeUser = localStorage.getItem(this.USER_KEY) || "";
+  subscription: Subscription;
 
-      this.user = JSON.parse(localStorigeUser);
+  constructor(private http: HttpClient) {
 
-
-    } catch (error) {
-      this.user = undefined;
-    }
+    this.subscription = this.user$.subscribe(user => {
+      this.user = user
+    })
   }
 
-  login(): void {
-    this.user = {
-      email: 'toshko@abv.bg',
-      username: 'Toshko'
-    };
-
-    localStorage.setItem(this.USER_KEY, JSON.stringify(this.user))
-
+  register(username: string, email: string, tel: string, gender: string, password: string, rePassword: string) {
+    return this.http.post<User>('/api/register', { username, email, tel, gender, password, rePassword })
+      .pipe(tap((user) => this.user$$.next(user)));
   }
 
-  logout(): void {
-    this.user = undefined
-    localStorage.removeItem(this.USER_KEY)
+  login(email: string, password: string) {
+    return this.http.post<User>('/api/login', { email, password })
+      .pipe(tap((user) => this.user$$.next(user)))
+  }
+
+  logout() {
+    return this.http.post<User>('/api/logout', {})
+      .pipe(tap(() => this.user$$.next(null)));
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 }
