@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -9,25 +9,28 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  constructor(private authService: AuthService, private router: Router) { }
+
+  constructor(private activatedRoute: ActivatedRoute, private authService: AuthService, private router: Router) { }
 
   loginHandler(form: NgForm): void {
     if (form.invalid) {
       return;
-    } 
+    }
 
-    const value: { email: string, password: string } = form.value;
+    const { email, password } = form.value;
 
-    console.log(value.email);
-    console.log(value.password);
+    console.log(email);
+    console.log(password);
 
-    //зачистване на полетата на формата
-    //form.setValue({ email: '', password: '' })
-    form.resetForm();
+    //form.resetForm();
 
-    //за сега не оперираме с данните за логването
-    this.authService.login();
-    this.router.navigate(['/'])
+    this.authService.login(email!, password!).subscribe((user) => {
+      this.router.navigate(['/'])
+    });
+
+    // const returnUrl = this.activatedRoute.snapshot.queryParams['returnUrl'] || '/';
+
+    // this.router.navigate([returnUrl])
   }
 
 }
