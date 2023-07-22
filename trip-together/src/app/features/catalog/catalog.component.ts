@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/auth/auth.service';
-import { Trip } from 'src/app/shared/types/trip';
+import { Trip } from 'src/app/shared/interfaces/trip';
 import { TripService } from '../trip.service';
 
 @Component({

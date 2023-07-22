@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Trip } from 'src/app/shared/types/trip';
+import { Trip } from 'src/app/shared/interfaces/trip';
 import { TripService } from '../trip.service';
 import { ActivatedRoute } from '@angular/router';
 import { AuthService } from 'src/app/auth/auth.service';
