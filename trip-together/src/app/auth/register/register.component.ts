@@ -25,13 +25,18 @@ export class RegisterComponent {
 
   })
 
-
   constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router) { }
 
   registerHandler(): void {
     if (this.form.invalid) { return; }
 
-    console.log(this.form.value);
+    //console.log(this.form.value);
     // this.form.reset();
+
+    const { username, email, tel, gender, passGroup: { password, rePassword } = {} } = this.form.value;
+    this.authService.register(username!, email!, tel!, gender!, password!, rePassword!).subscribe((user) => {
+      this.router.navigate(['/'])
+    });
+
   }
 }

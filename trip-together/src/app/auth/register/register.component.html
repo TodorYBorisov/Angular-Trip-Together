@@ -10,8 +10,7 @@
 
         <ng-container *ngIf="form.get('username')?.touched">
             <p class="error_color" *ngIf="form.get('username')?.errors?.['required']"> Username is required!</p>
-            <p class="error_color" *ngIf="form.get('username')?.errors?.['minlength']"> Username should be longer than 5
-                chars!</p>
+            <p class="error_color" *ngIf="form.get('username')?.errors?.['minlength']"> Username should be at least 5 characters!</p>
         </ng-container>
 
         <!-- email -->
@@ -40,9 +39,7 @@
             <ng-container *ngIf="form.get('passGroup')?.get('password')?.touched">
                 <p class="error_color" *ngIf="form.get('passGroup')?.get('password')?.errors?.['required']">Password is
                     required!</p>
-                <p class="error_color" *ngIf="form.get('passGroup')?.get('password')?.errors?.['minlength']">Password
-                    must
-                    be at least 5 characters!</p>
+                <p class="error_color" *ngIf="form.get('passGroup')?.get('password')?.errors?.['minlength']">Password should be at least 5 characters!</p>
             </ng-container>
 
             <!-- rePassword -->
