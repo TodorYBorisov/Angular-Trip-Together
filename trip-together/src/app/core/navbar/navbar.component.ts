@@ -22,9 +22,15 @@ export class NavbarComponent {
 
   }
 
-  logout(): void {
-    this.authService.logout();
+  // logout(): void {
+  //   this.authService.logout().subscribe({
+  //     next: () => {
+  //       this.router.navigate(['/'])
+  //     },
+  //     error: () => {
+  //       this.router.navigate(['/auth/login'])
+  //     }
+  //   });
 
-    this.router.navigate(['/'])
-  }
+  // }
 }
