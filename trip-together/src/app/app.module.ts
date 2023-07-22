@@ -9,6 +9,7 @@ import { FeaturesModule } from './features/features.module';
 import { HttpClientModule} from '@angular/common/http'
 import { AuthModule } from './auth/auth.module';
 import { SharedModule } from './shared/shared.module';
+import { appInterceptorProvider } from './app.interceptor';
 
 
 
@@ -28,7 +29,7 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     
   ],
-  providers: [],
+  providers: [appInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
