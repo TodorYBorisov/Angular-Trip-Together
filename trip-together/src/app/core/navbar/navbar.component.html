@@ -80,7 +80,7 @@
         <li *ngIf="isLoggedIn"><a mat-stroked-button class="button-spacing"><mat-icon>wb_sunny</mat-icon>Weather</a></li>
         <li *ngIf="isLoggedIn"><a mat-stroked-button routerLink="/trip/create" class="button-spacing"><mat-icon>add</mat-icon>Create</a></li>
         <li *ngIf="isLoggedIn"><a mat-stroked-button routerLink="/trip/search" class="button-spacing"><mat-icon>search</mat-icon>Search</a></li>
-        <li *ngIf="isLoggedIn"><a mat-stroked-button routerLink="/auth/profile" class="button-spacing"><mat-icon>account_circle</mat-icon>{{userName}}'s Profile</a></li>
+        <li *ngIf="isLoggedIn"><a mat-stroked-button routerLink="/auth/profile" class="button-spacing"><mat-icon>account_circle</mat-icon>{{username}}'s Profile</a></li>
         <li *ngIf="isLoggedIn"><a mat-stroked-button routerLink="/auth/logout" class="button-spacing"><mat-icon>logout</mat-icon>Logout</a></li>
         <li *ngIf="!isLoggedIn"><a mat-stroked-button routerLink="/auth/login" class="button-spacing"><mat-icon>login</mat-icon>Login</a></li>
         <li *ngIf="!isLoggedIn"><a mat-stroked-button routerLink="/auth/register" class="button-spacing" id="button"><mat-icon>person_add</mat-icon>Sign Up</a></li>
