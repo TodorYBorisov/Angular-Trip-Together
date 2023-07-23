@@ -27,7 +27,7 @@ export class AuthService implements OnDestroy {
 
   constructor(private http: HttpClient) {
 
-    this.subscription = this.user$.subscribe(user => {
+    this.subscription = this.user$.subscribe((user) => {
       this.user = user
     })
   }
@@ -46,6 +46,9 @@ export class AuthService implements OnDestroy {
     return this.http.post<User>('/api/logout', {})
       .pipe(tap(() => this.user$$.next(null)));
   }
+
+
+  
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
