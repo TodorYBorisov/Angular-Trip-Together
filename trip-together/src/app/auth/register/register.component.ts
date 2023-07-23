@@ -27,7 +27,7 @@ export class RegisterComponent {
 
   constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router) { }
 
-  registerHandler(): void {
+  registerHandler() {
     if (this.form.invalid) { return; }
 
     //console.log(this.form.value);
