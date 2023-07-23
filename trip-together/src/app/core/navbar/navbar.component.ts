@@ -17,7 +17,7 @@ export class NavbarComponent {
     return this.authService.isLogged
   }
 
-  get userName(): string {
+  get username(): string {
     return this.authService.user?.username || '';
 
   }
