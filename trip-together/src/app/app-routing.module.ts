@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component'
 // import { DetailsComponent } from './features/details/details.component';
 // import { SearchComponent } from './features/search/search.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
+import { ErrorComponent } from './core/error/error.component';
 
 const routes: Routes = [
   // { path: '', pathMatch: 'full', component: HomeComponent, title: 'TripTogether' },
@@ -29,6 +30,7 @@ const routes: Routes = [
   // { path: 'edit/:id', component: EditComponent, title: 'Edit Page' },
   // { path: 'details/:id', component: DetailsComponent, title: 'Details Page' },
   // { path: 'search', component: SearchComponent, title: 'Search Page' },
+  { path: 'error', component: ErrorComponent },
   { path: 'not-found', component: PageNotFoundComponent, title: '404 Page' },
   { path: '**', redirectTo: 'not-found', title: '404 Page' },
 
