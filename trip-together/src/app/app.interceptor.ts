@@ -1,4 +1,4 @@
-import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HTTP_INTERCEPTORS } from "@angular/common/http";
+import { HTTP_INTERCEPTORS, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from "@angular/common/http";
 import { Injectable, Provider } from "@angular/core";
 import { Router } from "@angular/router";
 import { Observable, catchError } from "rxjs";
@@ -6,7 +6,7 @@ import { environment } from "src/environments/environment";
 import { ErrorService } from "./core/error/error.service";
 
 
-const apiUrl = environment.apiUrl;
+const { apiUrl } = environment;
 
 @Injectable()
 export class AppInterceptor implements HttpInterceptor {
@@ -36,5 +36,5 @@ export class AppInterceptor implements HttpInterceptor {
 export const appInterceptorProvider: Provider = {
     multi: true,
     useClass: AppInterceptor,
-    provide: HTTP_INTERCEPTORS
-}
+    provide: HTTP_INTERCEPTORS,
+};
