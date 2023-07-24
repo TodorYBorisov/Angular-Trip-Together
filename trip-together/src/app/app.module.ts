@@ -10,12 +10,14 @@ import { HttpClientModule} from '@angular/common/http'
 import { AuthModule } from './auth/auth.module';
 import { SharedModule } from './shared/shared.module';
 import { appInterceptorProvider } from './app.interceptor';
+import { AuthenticateComponent } from './authenticate/authenticate.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    AuthenticateComponent
 
   ],
   imports: [
