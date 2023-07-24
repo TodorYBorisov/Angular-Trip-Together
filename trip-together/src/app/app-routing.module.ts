@@ -29,8 +29,8 @@ const routes: Routes = [
   // { path: 'edit/:id', component: EditComponent, title: 'Edit Page' },
   // { path: 'details/:id', component: DetailsComponent, title: 'Details Page' },
   // { path: 'search', component: SearchComponent, title: 'Search Page' },
-  { path: '**', component: PageNotFoundComponent, title: '404 Page' },
-  // { path: '**', redirectTo: 'not-found', title: '404 Page' },
+  { path: 'not-found', component: PageNotFoundComponent, title: '404 Page' },
+  { path: '**', redirectTo: 'not-found', title: '404 Page' },
 
 ];
 
