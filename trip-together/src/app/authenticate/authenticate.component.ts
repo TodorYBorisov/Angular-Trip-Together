@@ -7,12 +7,22 @@ import { AuthService } from '../auth/auth.service';
   styleUrls: ['./authenticate.component.css']
 })
 export class AuthenticateComponent implements OnInit {
-  isAuthenticated = true;
+
+  isAuthenticating = true;
 
   constructor(private authService: AuthService) { }
-  ngOnInit(): void {
-    
-  }
-  
 
+  ngOnInit(): void {
+    this.authService.getProfile().subscribe({
+      next: () => {
+        this.isAuthenticating = false;
+      },
+      error: () => {
+        this.isAuthenticating = false;
+      },
+      complete: () => {
+        this.isAuthenticating = false;
+      }
+    });
+  }
 }
