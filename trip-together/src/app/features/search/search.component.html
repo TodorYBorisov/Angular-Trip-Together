@@ -1,5 +1,5 @@
 <section id="searchPage">
-  <h1>Search city by Start and End point</h1>
+  <h1>Search trip by Start and End point</h1>
   <div class="error" *ngIf="errorMsgFromServer">{{errorMsgFromServer}}</div>
   <div class="search">
     <input id="search-input" type="text" ngModel #inputQuery="ngModel" name="search" placeholder="Enter city name"
@@ -40,6 +40,6 @@
 
   </ng-container>
   <ng-template #loading>
-    <app-loader></app-loader>
+    <app-loader class="loading"></app-loader>
   </ng-template>
 </section>

@@ -806,3 +806,40 @@ main {
   outline: none;
   background-color: rgb(112, 150, 230);
 }
+
+.loader-container {
+  /* Set the container to take the full height and width of the viewport */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Center the loader horizontally and vertically using Flexbox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lds-dual-ring {
+  /* Add styles for the loader */
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  border: 6px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 6px solid #3498db;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
