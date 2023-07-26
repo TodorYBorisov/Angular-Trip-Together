@@ -1,6 +1,6 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { User } from '../shared/interfaces/user';
-import { BehaviorSubject, Subscription, catchError, filter, tap, throwError } from 'rxjs';
+import { BehaviorSubject, Subscription, tap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -8,19 +8,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthService implements OnDestroy {
 
-  private user$$ = new BehaviorSubject<undefined | null | User>(undefined);
+  private user$$ = new BehaviorSubject<User| undefined>(undefined);
+  public user$ = this.user$$.asObservable();
   
-  user$ = this.user$$.asObservable().pipe(
-    filter((val): val is User | null => val !== undefined)
-  );
-
-  // public user$ = this.user$$.asObservable();
-
-  user: User | null = null;
+  user: User | undefined;
 
   //проверяваме дали имаме логнат потребител
   get isLogged(): boolean {
-    return this.user !== null //когато сложим два удиеителни поред променливата ако я има ще върне true, ако ли не , false
+    return !!this.user //когато сложим два удиеителни поред променливата ако я има ще върне true, ако ли не , false
   }
 
   subscription: Subscription;
@@ -28,8 +23,8 @@ export class AuthService implements OnDestroy {
   constructor(private http: HttpClient) {
 
     this.subscription = this.user$.subscribe((user) => {
-      this.user = user
-    })
+      this.user = user;
+    });
   }
 
   register(username: string, email: string, tel: string, gender: string, password: string, rePassword: string) {
@@ -44,20 +39,18 @@ export class AuthService implements OnDestroy {
 
   logout() {
     return this.http.post<User>('/api/logout', {})
-      .pipe(tap(() => this.user$$.next(null)));
+      .pipe(tap(() => this.user$$.next(undefined)));
   }
 
   getProfile() {
     return this.http.get<User>('/api/users/profile')
-    .pipe(
-      tap(user => this.user$$.next(user)),
-      catchError((err) => {
-        this.user$$.next(null);
-        return throwError(() => err);
-      })
-    )
+    .pipe(tap(user => this.user$$.next(user)));
   }
 
+  updateProfile(username: string, email: string, tel: string) {
+    return this.http.put<User>('/api/users/profile', {username, email, tel})
+    .pipe(tap(user => this.user$$.next(user)));
+  }
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
