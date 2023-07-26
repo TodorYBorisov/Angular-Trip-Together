@@ -17,10 +17,10 @@ export class AuthActivate implements CanActivate {
         | UrlTree
         | Observable<boolean | UrlTree>
         | Promise<boolean | UrlTree> {
-        return this.authService.isLogged || this.router.createUrlTree(['/auth/register']);
+        return this.authService.isLogged; //|| this.router.createUrlTree(['/auth/register']);
     }
 
-    checkIfLogged(url: string): boolean {
-        return false;
-    };
+    // checkIfLogged(url: string): boolean {
+    //     return false;
+    // };
 }
