@@ -5,12 +5,13 @@
     <div class="profile-container">
         <!-- Do not forget to change the path to the image -->
         <!-- Gender of the user determines which picture is displayed as their avatar -->
-        <img class="profile-img" src="../../../assets/images/male.png" alt="user-picture">
+        <img class="profile-img" src="../../../assets/images/{{gender}}.png" alt="user-picture">
         <ng-container *ngIf="!isEditMode">
             <p>Username: <span>{{profileDetails.username}}</span></p>
             <p><i class="fa-solid fa-envelope" style="margin: 3px;"></i>Email: <span>{{profileDetails.email}}</span>
             </p>
-            <p><i class="fa-solid fa-phone-volume" style="margin: 3px;"></i>Phone: <span>{{profileDetails.tel}}</span></p>
+            <p><i class="fa-solid fa-phone-volume" style="margin: 3px;"></i>Phone: <span>{{profileDetails.tel}}</span>
+            </p>
             <button class="edit-button" (click)="toggleEditMode()">Edit</button>
         </ng-container>
 
@@ -58,22 +59,21 @@
     </div>
 
     <div class="profile-info">
-        <p class="count">Trips History: <span>3</span> counts</p>
+        <p class="count">Trips History: <span>{{tripsFound.length}}</span> created trips</p>
 
-        <div class="trips-info" *ngIf="!ifTrips">
+        <ng-container *ngIf="tripsFound.length>0; else noTrips">
+        <div class="trips-info">
             <!-- If there are trips created by the current logged in user display each of them -->
-            <p>from <span>Svilengrad</span> to <span>Sofia</span> on <span>2021-06-16</span> at<span>20:40</span></p>
-            <p>from <span>Plovdiv</span> to <span>Burgas</span> on <span>2021-07-07</span> at <span>10:40</span></p>
-            <p>from <span>Sofia</span> to <span>Nesebur</span> on <span>2021-08-01</span> at <span>09:00</span></p>
-            <p>from <span>Sofia</span> to <span>Nesebur</span> on <span>2021-08-01</span> at <span>09:00</span></p>
-            <p>from <span>Sofia</span> to <span>Nesebur</span> on <span>2021-08-01</span> at <span>09:00</span></p>
-            <p>from <span>Sofia</span> to <span>Nesebur</span> on <span>2021-08-01</span> at <span>09:00</span></p>
-            <p>from <span>Sofia</span> to <span>Nesebur</span> on <span>2021-08-01</span> at <span>09:00</span></p>
-            <p>from <span>Sofia</span> to <span>Nesebur</span> on <span>2021-08-01</span> at <span>09:00</span></p>
-            <p>from <span>Sofia</span> to <span>Nesebur</span> on <span>2021-08-01</span> at <span>09:00</span></p>
+            <div *ngFor="let trip of tripsFound" >
+                <p> from <span>{{trip.startPoint}}</span> to <span>{{trip.endPoint}}</span> on <span>{{trip.date}}</span> at <span>{{trip.time}}</span>.</p>
+            </div>
         </div>
+    </ng-container>
+
         <!-- If there are no trips created by the current logged in user display:-->
-        <p>There are no offer trips yet.</p>
+        <ng-template #noTrips>
+            <p>There are no offer trips yet.</p>
+        </ng-template>
     </div>
 </section>
 
