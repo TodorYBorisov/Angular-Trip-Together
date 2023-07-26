@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Trip } from 'src/app/shared/interfaces/trip';
 import { TripService } from '../trip.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
@@ -17,12 +17,18 @@ export class DetailsComponent implements OnInit {
   constructor(
     private tripService: TripService,
     private activatedRoute: ActivatedRoute,
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) { }
 
   get isLogged(): boolean {
     return this.authService.isLogged
   }
+
+  get user(){
+    return this.authService.user
+  }
+
 
   ngOnInit(): void {
 
@@ -34,7 +40,7 @@ export class DetailsComponent implements OnInit {
           this.trip = trip;
           this.isLoading = false;
 
-          console.log({trip}); //провери дали идва единичен трио само от базата
+          console.log({ trip }); //провери дали идва единичен трио само от базата
 
 
         },
@@ -45,6 +51,13 @@ export class DetailsComponent implements OnInit {
       }
     )
 
+  }
+
+  deleteTrip(): void {
+    if (confirm('Are you sure you want to delete this trip?')) {
+      this.tripService.deleteTripById(this.trip?._id as string)
+        .subscribe(() => this.router.navigate(['/trip/catalog']))
+    }
   }
 
 }
