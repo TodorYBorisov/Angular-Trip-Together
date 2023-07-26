@@ -6,12 +6,13 @@ const { tripController } = require('../controllers');
 // middleware that is specific to this router
 
 router.get('/', tripController.getAllTrips);
-router.post('/', auth(), tripController.createTrip);
+router.post('/', tripController.createTrip);
+router.get('/:userId', tripController.getUserTrips);
 
-router.get('/details/:tripId', auth(), tripController.getTrip);
+router.get('/details/:tripId', tripController.getTrip);
 router.put('/edit/:tripId', auth(), tripController.editTrip);
 router.delete('/delete/:tripId', auth(), tripController.deleteTrip);
-router.get('/search/:searchTerm', auth(), tripController.searchTrips);
+router.get('/search/:searchTerm', tripController.searchTrips);
 
 //router.get('/:tripId/join', auth(), tripController.joinToTrip);
 router.put('/:tripId', auth(), tripController.subscribeBuddie);

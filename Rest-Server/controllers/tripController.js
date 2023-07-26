@@ -23,6 +23,21 @@ function getAllTrips(req, res, next) {
         .catch(next);
 }
 
+function getUserTrips(req, res, next) {
+    const userId = req.params.userId;
+  
+    if (!userId) {
+        return res.status(400).json({ message: 'User ID is required.' });
+      }
+  
+      tripModel
+      .find({ userId: userId })
+      .lean() // Use .lean() to return plain JavaScript objects
+      .then(trips => res.status(200).json(trips))
+      .catch(next);
+  }
+  
+
 
 function createTrip(req, res, next) {
     const { startPoint, endPoint, date, time, imageUrl, brand, seats, price, description, _id: userId } = req.body;
@@ -195,5 +210,6 @@ module.exports = {
     searchTrips,
     joinToTrip,
     getAllCreatedTripsByUser,
-    subscribeBuddie
+    subscribeBuddie,
+    getUserTrips
 };
