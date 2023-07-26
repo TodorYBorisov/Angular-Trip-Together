@@ -5,7 +5,7 @@ body {
   position: relative;
 }
 
-body::before {
+/* body::before {
   content: "";
   background: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.5)), url('https://sc.6tupian.com/wp-content/uploads/2021/02/1613417565-f9f677ddb0fab5f.jpg');
   background-size: cover;
@@ -15,7 +15,7 @@ body::before {
   right: 0px;
   bottom: 0px;
   left: 0px;
-}
+} */
 
 main {
   position: relative;
@@ -26,9 +26,9 @@ main {
   border: 1px solid black;
 } */
 
-.details .container {
+/* .details .container {
   padding: 2%;
-}
+} */
 
 .details .destination {
   display: flex;
@@ -47,6 +47,7 @@ main {
 .details .buddies-info {
   text-align: center;
   width: 100%;
+  color: white;
 }
 
 .details .brand {
@@ -203,7 +204,7 @@ img.card-img-top {
 
 input.form-control-2, textarea.form-control, input.form-control, textarea:disabled {
   /* box-shadow: 0px -2px 20px -1px #f4c537, inset -14px -14px 30px -13px rgb(0 0 0 / 55%); */
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(73, 189, 206, 0.5);
   color: white;
   border: none;
   outline: none;
@@ -390,14 +391,18 @@ div.error p {
   margin-bottom: 10px;
   text-align: center;
   font-weight: normal;
+  font-size:x-large;
+  color: white;
 }
 
 .details h5 span {
   font-weight: bold;
+ 
 }
-
+/*  */
 i {
-  color: #0578B9;
+  color: rgb(112, 150, 230);
+ 
 }
 
 .btn {
@@ -423,10 +428,12 @@ button.btn {
 
 .actions {
   margin-top: 10px;
+  
 }
 
 .btn.btn-warning {
   color: #fff;
+  margin-left: 10px;
 }
 
 .btn.btn-primary {
@@ -454,9 +461,9 @@ li>a.nav-link:hover {
   margin-top: 0!important;
 }
 
-section>div.container {
+/* section>div.container {
   padding-top: 40px;
-}
+} */
 
 .trip-info {
   display: flex;
@@ -567,4 +574,36 @@ footer {
   .navbar-nav li {
     padding-left: 20px;
   }
+}
+
+/* ========== */
+body {
+  position: relative;
+
+}
+
+main {
+  position: relative;
+}
+
+#trip-details-page::before {
+  content: "";
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../assets/images/background2.jpg');
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+
+}
+.profile-container button {
+  color: white;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.6em 1.2em;
+  outline: none;
+  background-color: rgb(112, 150, 230);
 }
