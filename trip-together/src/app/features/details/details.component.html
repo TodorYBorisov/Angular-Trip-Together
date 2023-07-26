@@ -63,7 +63,7 @@
                 <!-- if there are no logged in user do not show div with class actions  -->
                 <div class="actions">
                     <!-- Only for logged user and creator to this trip -->
-                    <a href="" class="btn btn-danger">Delete this trip</a>
+                    <a (click)="deleteTrip()" class="btn btn-danger">Delete this trip</a>
                     <a href="" class="btn btn-warning">Edit this trip</a>
 
                     <!-- logged in user with available seats -->
