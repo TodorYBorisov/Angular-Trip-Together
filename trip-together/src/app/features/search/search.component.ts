@@ -36,8 +36,5 @@ export class SearchComponent {
       error: (error) => this.errorMsgFromServer = error.error.message,
       complete: () => this.subscription$.unsubscribe(),
     })
-
   }
-
-
 }
