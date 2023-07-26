@@ -289,9 +289,9 @@ textarea, textarea.form-control, textarea:disabled {
   border-radius: 0.25rem;
 }
 
-textarea, input {
-  /* background: rgba(0, 0, 0, 0.6); */
-}
+/* textarea, input {
+  background: rgba(0, 0, 0, 0.6);
+} */
 
 .details .icon {
   display: block;
@@ -452,6 +452,7 @@ button.btn {
   border: none;
   color: black;
 }
+
 
 /* .btn.btn-primary:hover {
   background-color: #099cf1;

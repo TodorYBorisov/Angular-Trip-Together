@@ -20,17 +20,14 @@
                         <div class="error_color" *ngIf="inputStartPoint.errors?.['required']">Starting point is
                             required!
                         </div>
-                        <div class="error_color" *ngIf="inputStartPoint.errors?.['minlength']">Starting point must be at
-                            least
-                            3 characters long!
+                        <div class="error_color" *ngIf="inputStartPoint.errors?.['minlength']">Starting point should be at least 3 characters long!
                         </div>
                     </ng-container>
 
                     <ng-container *ngIf="inputEndPoint.touched">
                         <div class="error_color" *ngIf="inputEndPoint.errors?.['required']">End point is required!
                         </div>
-                        <div class="error_color" *ngIf="inputEndPoint.errors?.['minlength']">End point must be at least
-                            3 characters long!
+                        <div class="error_color" *ngIf="inputEndPoint.errors?.['minlength']">The end point should be at least 3 characters long!
                         </div>
                     </ng-container>
 
@@ -67,19 +64,17 @@
                             name="imageUrl" value="" #inputImageUrl="ngModel" ngModel required
                             pattern="^https?:\/\/.+$">
                         <input type="text" class="form-control-2" id="brand" placeholder="BMW" name="brand" value=""
-                            #inputBrand="ngModel" ngModel required [minlength]="3">
+                            #inputBrand="ngModel" ngModel required [minlength]="2">
                     </div>
 
                     <ng-container *ngIf="inputImageUrl.invalid && inputImageUrl.touched">
-                        <div class="error_color" *ngIf="inputImageUrl.errors?.['required']">Image Url is required</div>
-                        <div class="error_color" *ngIf="inputImageUrl.errors?.['pattern']">Image Url msut start with
-                            http:// or https://</div>
+                        <div class="error_color" *ngIf="inputImageUrl.errors?.['required']">Image is required!</div>
+                        <div class="error_color" *ngIf="inputImageUrl.errors?.['pattern']">The Image should start with http:// or https://</div>
                     </ng-container>
 
                     <ng-container *ngIf="inputBrand.touched">
                         <div class="error_color" *ngIf="inputBrand.errors?.['required']">Brand is required!</div>
-                        <div class="error_color" *ngIf="inputBrand.errors?.['minlength']">Brand must be at least 3
-                            characters long!</div>
+                        <div class="error_color" *ngIf="inputBrand.errors?.['minlength']">The car brand should be minimum 2 characters long!</div>
                     </ng-container>
 
                     <!-- Seats and Price -->
@@ -96,14 +91,14 @@
                     </div>
 
                     <ng-container *ngIf="inputSeats.touched">
-                        <div class="error_color" *ngIf="inputSeats.errors?.['required']">Seats are required</div>
-                        <div class="error_color" *ngIf="inputSeats.errors?.['min']">Seats must be a positive number
+                        <div class="error_color" *ngIf="inputSeats.errors?.['required']">Seats number is required!</div>
+                        <div class="error_color" *ngIf="inputSeats.errors?.['min']">Seats must be a positive number!
                         </div>
                     </ng-container>
 
                     <ng-container *ngIf="inputPrice.touched">
-                        <div class="error_color" *ngIf="inputPrice.errors?.['required']">Price is required</div>
-                        <div class="error_color" *ngIf="inputPrice.errors?.['min']">Price must be a positive number
+                        <div class="error_color" *ngIf="inputPrice.errors?.['required']">Price is required!</div>
+                        <div class="error_color" *ngIf="inputPrice.errors?.['min']">Price must be a positive number!
                         </div>
                     </ng-container>
 
