@@ -7,15 +7,15 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AuthService implements OnDestroy {
-
-  private user$$ = new BehaviorSubject<User| undefined>(undefined);
+  private user$$ = new BehaviorSubject<User | undefined>(undefined);
   public user$ = this.user$$.asObservable();
-  
+
   user: User | undefined;
+  USER_KEY = '[user]';
 
   //проверяваме дали имаме логнат потребител
   get isLogged(): boolean {
-    return !!this.user //когато сложим два удиеителни поред променливата ако я има ще върне true, ако ли не , false
+    return !!this.user; //когато сложим два удиеителни поред променливата ако я има ще върне true, ако ли не , false
   }
 
   subscription: Subscription;
@@ -26,15 +26,15 @@ export class AuthService implements OnDestroy {
       this.user = user;
     });
   }
+  
+  login(email: string, password: string) {
+    return this.http.post<User>('/api/login', { email, password })
+      .pipe(tap((user) => this.user$$.next(user)));
+  }
 
   register(username: string, email: string, tel: string, gender: string, password: string, rePassword: string) {
     return this.http.post<User>('/api/register', { username, email, tel, gender, password, rePassword })
       .pipe(tap((user) => this.user$$.next(user)));
-  }
-
-  login(email: string, password: string) {
-    return this.http.post<User>('/api/login', { email, password })
-      .pipe(tap((user) => this.user$$.next(user)))
   }
 
   logout() {
@@ -44,12 +44,12 @@ export class AuthService implements OnDestroy {
 
   getProfile() {
     return this.http.get<User>('/api/users/profile')
-    .pipe(tap(user => this.user$$.next(user)));
+      .pipe(tap((user) => this.user$$.next(user)));
   }
 
   updateProfile(username: string, email: string, tel: string) {
-    return this.http.put<User>('/api/users/profile', {username, email, tel})
-    .pipe(tap(user => this.user$$.next(user)));
+    return this.http.put<User>('/api/users/profile', { username, email, tel })
+      .pipe(tap((user) => this.user$$.next(user)));
   }
 
   ngOnDestroy(): void {
