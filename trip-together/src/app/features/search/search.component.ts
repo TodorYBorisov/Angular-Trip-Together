@@ -20,20 +20,26 @@ export class SearchComponent {
   @ViewChild('inputQuery') inputQuery!: NgModel;
 
   constructor(private tripService: TripService, private authService: AuthService) { }
-
+  isLoading: boolean = true;
+ 
   get isLogged(): boolean {
     return this.authService.isLogged
   }
 
   onSearch(searchStr: string): void {
+    this.isLoading = true;
     this.query = searchStr;
     this.subscription$ = this.tripService.search(this.query).subscribe({
       next: (data) => {
         this.tripsFound = data;
         this.hasResult = this.tripsFound.length != 0;
         this.inputQuery.reset();
+        this.isLoading =false;
       },
-      error: (error) => this.errorMsgFromServer = error.error.message,
+      error: (error) => {
+        this.errorMsgFromServer = error.error.message;
+        this.isLoading =false;
+      },
       complete: () => this.subscription$.unsubscribe(),
     })
   }

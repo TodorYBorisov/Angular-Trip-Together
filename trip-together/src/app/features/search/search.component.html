@@ -12,9 +12,13 @@
     <button class="button-list" [disabled]="inputQuery.invalid" (click)="onSearch(inputQuery.value)">Search</button>
   </div>
 
-  <h2>Results:</h2>
-  <ng-container *ngIf="tripsFound; else loading">
+<ng-container *ngIf="tripsFound">  
+   
+    <div *ngIf="isLoading">
+      <app-loader class="loading"></app-loader>
+    </div>
 
+    <h2>Results:</h2>
     <div class="search-result">
       <ng-container *ngIf="hasResult; else noResult">
         <div *ngFor="let trip of tripsFound" class="card-box">
@@ -39,7 +43,7 @@
     </div>
 
   </ng-container>
-  <ng-template #loading>
+  <!-- <ng-template #loading>
     <app-loader class="loading"></app-loader>
-  </ng-template>
+  </ng-template> -->
 </section>
