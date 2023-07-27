@@ -1,26 +1,3 @@
-<!-- 
-<mat-card class="card-box">
-    <mat-card-header>
-        <mat-card-title> This trip is from ... to ...</mat-card-title>
-    </mat-card-header>
-
-    <img mat-card- mat-card-lg-image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFJwzrZQe64U9qy3r4kRK8b_uxy1ixCX1-SO76MVE3tE4I8l642lwCdoqbsRMb_Hmq1yg&usqp=CAU">
-
-    <mat-card-content>
-        <mat-card-subtitle>Desctription: </mat-card-subtitle>
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus obcaecati aperiam itaque doloribus, voluptas in velit reprehenderit rem porro blanditiis soluta aspernatur officia voluptatem assumenda eveniet. Totam illum commodi facilis.
-        </p>
-    </mat-card-content>
-
-    <mat-card-actions>
-        <button mat-button><i class="fa-solid fa-user-pen"></i>Edit</button>
-        <button mat-button><i class="fa-sharp fa-solid fa-trash"></i>Delete</button>
-    </mat-card-actions>
-
-
-</mat-card> -->
-
 <section class="py-5 details" id="trip-details-page" *ngIf="trip">
     <div class="container">
         <div class="destination">
@@ -63,26 +40,21 @@
                 <!-- if there are no logged in user do not show div with class actions  -->
                 <div class="actions">
                     <!-- Only for logged user and creator to this trip -->
-                    <a (click)="deleteTrip()" class="btn btn-danger">Delete this trip</a>
-                    <a href="" class="btn btn-warning">Edit this trip</a>
+                    <a *ngIf="isOwner" (click)="deleteTrip()" class="btn btn-danger">Delete this trip</a>
+                    <a *ngIf="isOwner" [routerLink]="['/trip','edit', trip._id]" class="btn btn-warning">Edit this trip</a>
 
                     <!-- logged in user with available seats -->
-                    <a href="" class="btn btn-join">Join now, [ 1 ] seats left!</a>
+                    <a *ngIf="!isOwner" class="btn btn-join">Join now, [ {{trip.seats}} ] seats left!</a>
 
                     <!-- logged in user and has already joined the trip  -->
-                    <span class="btn btn-info">Already joined. Don't be late!</span>
+                    <!-- <span *ngIf="isOwner" class="btn btn-info">Already joined. Don't be late!</span> -->
 
                     <!-- logged in user with no available seats -->
-                    <span class="btn btn-secondary">No seats available! [0]</span>
+                    <!-- <span *ngIf="isOwner" class="btn btn-secondary">No seats available! [0]</span> -->
+
                 </div>
 
             </div>
         </div>
     </div>
 </section>
-
-
-
-
-
-  
