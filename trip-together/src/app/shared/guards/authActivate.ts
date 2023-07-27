@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterModule, RouterStateSnapshot, UrlTree } from "@angular/router";
+import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from "@angular/router";
 import { Observable } from "rxjs";
 import { AuthService } from "src/app/auth/auth.service";
 
@@ -8,7 +8,7 @@ import { AuthService } from "src/app/auth/auth.service";
 
 export class AuthActivate implements CanActivate {
 
-    constructor(private authService: AuthService, private router: Router) { }
+    constructor(private authService: AuthService) { }
 
     canActivate(
         route: ActivatedRouteSnapshot,
@@ -17,10 +17,6 @@ export class AuthActivate implements CanActivate {
         | UrlTree
         | Observable<boolean | UrlTree>
         | Promise<boolean | UrlTree> {
-        return this.authService.isLogged; //|| this.router.createUrlTree(['/auth/register']);
+        return this.authService.isLogged;
     }
-
-    // checkIfLogged(url: string): boolean {
-    //     return false;
-    // };
 }
