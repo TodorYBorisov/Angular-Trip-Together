@@ -1,53 +1,135 @@
 <main>
     <section class="py-5" id="offer-trip-page">
-        <div class="container offer-trip">
-            <h1>Edit your trip</h1>
-            <div>
-                <form action="" method="">
-                    <div class="offer-label">
-                        <label for="startPoint"> <i class="fas fa-map-marker-alt"></i> Starting Point </label>
-                        <label for="endPoint"> <i class="fas fa-map-marker-alt"></i> End Point</label>
-                    </div>
-                    <div class="form-group offer-input">
-                        <input type="text" class="form-control-2" id="startPoint" placeholder="Sofia" name=""
-                            value="">
-                        <input type="text" class="form-control-2" id="endPoint" placeholder="Varna" name=""
-                            value="">
-                    </div>
-                    <div class="offer-label">
-                        <label for="date"> <i class="far fa-calendar-alt"></i> Date</label>
-                        <label for="time"> <i class="far fa-clock"></i> Time</label>
-                    </div>
-                    <div class="form-group offer-input">
-                        <input type="date" class="form-control-2" id="date" placeholder="18 May 2023" name="date"
-                            value="">
-                        <input type="time" class="form-control-2" id="time" placeholder="18:00 PM" name="time" value="">
-                    </div>
-                    <div class="offer-label">
-                        <label for="carImage">Car Image</label>
-                        <label for="carBrand">Car Brand</label>
-                    </div>
-                    <div class="form-group offer-input">
-                        <input type="text" class="form-control-2" id="carImage" placeholder="https://..." name=""
-                            value="">
-                        <input type="text" class="form-control-2" id="carBrand" placeholder="BMW" name="" value="">
-                    </div>
-                    <div class="offer-label">
-                        <label for="seats">Available Seats</label>
-                        <label for="price">Price</label>
-                    </div>
-                    <div class="form-group offer-input">
-                        <input type="text" class="form-control-2" id="seats" placeholder="4" name="" value="">
-                        <input type="text" class="form-control-2" id="price" placeholder="20" name="" value="">
-                    </div>
-                    <div class="form-group">
-                        <label for="description">Short description</label>
-                        <textarea class="form-control" id="description" placeholder="Insert information about the trip here"
-                            name=""></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+        <ng-container *ngIf="tripDetails">
+            <div class="container offer-trip">
+                <h1>Edit your trip</h1>
+                <div>
+                    <form #editForm="ngForm" (ngSubmit)="onSubmit(editForm)">
+                        <!-- Starting and end points -->
+                        <div class="offer-label">
+                            <label for="startPoint"> <i class="fas fa-map-marker-alt"></i> Starting Point </label>
+                            <label for="endPoint"> <i class="fas fa-map-marker-alt"></i> End Point</label>
+                        </div>
+                        <div class="form-group offer-input">
+                            <input type="text" class="form-control-2" id="startPoint" placeholder="Sofia"
+                                name="startPoint" [(ngModel)]="tripDetails.startPoint" #inputStartPoint="ngModel" ngModel required [minlength]="3">
+                            <input type="text" class="form-control-2" id="endPoint" placeholder="Varna" name="endPoint"
+                            [(ngModel)]="tripDetails.endPoint" #inputEndPoint="ngModel" ngModel required [minlength]="3">
+                        </div>
+
+                        <ng-container *ngIf="inputStartPoint.touched">
+                            <div class="error_color" *ngIf="inputStartPoint.errors?.['required']">Starting point is
+                                required!
+                            </div>
+                            <div class="error_color" *ngIf="inputStartPoint.errors?.['minlength']">Starting point should
+                                be at least 3 characters long!
+                            </div>
+                        </ng-container>
+
+                        <ng-container *ngIf="inputEndPoint.touched">
+                            <div class="error_color" *ngIf="inputEndPoint.errors?.['required']">End point is required!
+                            </div>
+                            <div class="error_color" *ngIf="inputEndPoint.errors?.['minlength']">The end point should be
+                                at least 3 characters long!
+                            </div>
+                        </ng-container>
+
+                        <!-- Dte and Time -->
+                        <div class="offer-label">
+                            <label for="date"> <i class="far fa-calendar-alt"></i> Date</label>
+                            <label for="time"> <i class="far fa-clock"></i> Time</label>
+                        </div>
+                        <div class="form-group offer-input">
+                            <input type="date" class="form-control-2" id="date" placeholder="18 May 2023" name="date"
+                            [(ngModel)]="tripDetails.date" #inputDate="ngModel" ngModel required>
+                            <input type="time" class="form-control-2" id="time" placeholder="18:00 PM" name="time"
+                            [(ngModel)]="tripDetails.time" #inputTime="ngModel" ngModel required>
+                        </div>
+
+                        <ng-container *ngIf="inputDate.touched">
+                            <div class="error_color" *ngIf="inputDate.errors?.['required']">Date is required!
+                            </div>
+                        </ng-container>
+
+                        <ng-container *ngIf="inputTime.touched">
+                            <div class="error_color" *ngIf="inputTime.errors?.['required']">Time is required!
+                            </div>
+                        </ng-container>
+
+                        <!-- imageUrl and Brand -->
+
+                        <div class="offer-label">
+                            <label for="carImage">Car Image</label>
+                            <label for="carBrand">Car Brand</label>
+                        </div>
+                        <div class="form-group offer-input">
+                            <input type="text" class="form-control-2" id="imageUrl" placeholder="http:// or https://"
+                                name="imageUrl" [(ngModel)]="tripDetails.imageUrl" #inputImageUrl="ngModel" ngModel required
+                                pattern="^https?:\/\/.+$">
+                            <input type="text" class="form-control-2" id="brand" placeholder="BMW" name="brand" [(ngModel)]="tripDetails.brand"
+                                #inputBrand="ngModel" ngModel required [minlength]="2">
+                        </div>
+
+                        <ng-container *ngIf="inputImageUrl.invalid && inputImageUrl.touched">
+                            <div class="error_color" *ngIf="inputImageUrl.errors?.['required']">Image is required!</div>
+                            <div class="error_color" *ngIf="inputImageUrl.errors?.['pattern']">The Image should start
+                                with http:// or https://</div>
+                        </ng-container>
+
+                        <ng-container *ngIf="inputBrand.touched">
+                            <div class="error_color" *ngIf="inputBrand.errors?.['required']">Brand is required!</div>
+                            <div class="error_color" *ngIf="inputBrand.errors?.['minlength']">The car brand should be
+                                minimum 2 characters long!</div>
+                        </ng-container>
+
+                        <!-- Seats and Price -->
+
+                        <div class="offer-label">
+                            <label for="seats">Available Seats</label>
+                            <label for="price">Price</label>
+                        </div>
+                        <div class="form-group offer-input">
+                            <input type="number" class="form-control-2" id="seats" placeholder="4" name="seats" [(ngModel)]="tripDetails.seats"
+                                #inputSeats="ngModel" ngModel required min="0" step="1">
+                            <input type="number" class="form-control-2" id="price" placeholder="20" name="price"
+                            [(ngModel)]="tripDetails.price" #inputPrice="ngModel" ngModel required min="0" step="0.01">
+                        </div>
+
+                        <ng-container *ngIf="inputSeats.touched">
+                            <div class="error_color" *ngIf="inputSeats.errors?.['required']">Seats number is required!
+                            </div>
+                            <div class="error_color" *ngIf="inputSeats.errors?.['min']">Seats must be a positive number!
+                            </div>
+                        </ng-container>
+
+                        <ng-container *ngIf="inputPrice.touched">
+                            <div class="error_color" *ngIf="inputPrice.errors?.['required']">Price is required!</div>
+                            <div class="error_color" *ngIf="inputPrice.errors?.['min']">Price must be a positive number!
+                            </div>
+                        </ng-container>
+
+                        <!-- Description -->
+
+                        <div class="form-group">
+                            <label for="description">Short description</label>
+                            <textarea class="form-control" id="description"
+                                placeholder="Insert information about the trip here" name="description" [(ngModel)]="tripDetails.description"
+                                #inputDescription="ngModel" ngModel required [minlength]="15"></textarea>
+                        </div>
+
+                        <ng-container *ngIf="inputDescription.touched">
+                            <div class="error_color" *ngIf="inputDescription.errors?.['required']">Description is
+                                required!
+                            </div>
+                            <div class="error_color" *ngIf="inputDescription.errors?.['minlength']">Description must be
+                                at
+                                least 15 haracters long!</div>
+                        </ng-container>
+
+                        <button type="submit" class="btn btn-primary" [disabled]="editForm.invalid">Submit</button>
+                    </form>
+                </div>
             </div>
-        </div>
+        </ng-container>
     </section>
 </main>

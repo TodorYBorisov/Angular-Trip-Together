@@ -1,7 +1,7 @@
 @import url('https://use.fontawesome.com/releases/v5.12.1/css/all.css');
 @import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
 
-body {
+/* body {
   position: relative;
 }
 
@@ -15,7 +15,7 @@ body::before {
   right: 0px;
   bottom: 0px;
   left: 0px;
-}
+} */
 
 main {
   position: relative;
@@ -203,8 +203,8 @@ img.card-img-top {
 
 input.form-control-2, textarea.form-control, input.form-control, textarea:disabled {
   /* box-shadow: 0px -2px 20px -1px #0b1618, inset -14px -14px 30px -13px rgb(0 0 0 / 55%); */
-  background: rgb(129, 192, 222);
-  color: blackwhite;
+  /* background: rgb(129, 192, 222); */
+  /* color: blackwhite; */
   border: none;
   outline: none;
 }
@@ -289,9 +289,9 @@ textarea, textarea.form-control, textarea:disabled {
   border-radius: 0.25rem;
 }
 
-textarea, input {
+/* textarea, input {
   background: rgba(0, 0, 0, 0.6);
-}
+} */
 
 .details .icon {
   display: block;
@@ -313,8 +313,9 @@ div.container .register, div.container .login {
   margin-right: 60px;
 }
 
+/* Add my me */
 label, .container>h1 {
-  color: black;
+  color: white;
   font-size:medium;
 }
 .container>h1 {
@@ -329,14 +330,26 @@ label, .container>h1 {
 div.error {
   animation: fadeOut 1s forwards;
   animation-delay: 3s;
-  position: fixed;
+  /* position: fixed; */
   right: 0;
   min-width: 350px;
-  margin-top: 55px;
-  margin-right: 20px;
+  /* margin-top: 55px;
+  margin-right: 20px; */
   display: block;
   z-index: 11111;
 }
+/* Added by me */
+.container.offer-trip .error_color {
+  color: red;
+}
+input.ng-valid {
+  border: 4px solid green !important;
+}
+
+textarea.ng-valid {
+  border: 4px solid green !important;
+}
+/* Added by me */
 
 div.error p {
   background: rgba(204, 55, 55, 0.726);
@@ -440,6 +453,7 @@ button.btn {
   color: black;
 }
 
+
 /* .btn.btn-primary:hover {
   background-color: #099cf1;
 } */
@@ -464,113 +478,34 @@ section>div.container {
   padding-top: 40px;
 }
 
-/* .trip-info {
-  display: flex;
-  border-radius: 5px;
-  align-items: center;
-  margin-top: 30px;
+/* ========== */
+body {
+  position: relative;
+
 }
 
-.trip-info .img-fluid.rounded {
-  max-width: 500px;
-  transition: all .2s ease-in-out;
-  box-shadow: 0px -2px 20px -1px #f4c537, inset -14px -14px 30px -13px rgb(0 0 0 / 55%);
-}
-.img-fluid.rounded:hover {
-  transform: scale(1.02);
-  cursor: grab;
-  box-shadow: 0px -2px 20px -1px #64c3fff5, inset -14px -14px 30px -13px rgb(0 0 0 / 55%);
+main {
+  position: relative;
 }
 
-.trip-info div:first-child {
-  width: 80%;
-  display: flex;
-  justify-content: space-between
-}
+#offer-trip-page::before {
+  content: "";
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../assets/images/background2.jpg');
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
 
-.trip-desc {
-  width: 55%!important;
-  text-align: center;
-  word-wrap: break-word;
-  padding: 1%;
 }
-
-.trip-desc textarea {
-  height: 170px;
+.profile-container button {
+  color: white;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.6em 1.2em;
+  outline: none;
+  background-color: rgb(112, 150, 230);
 }
-.trip-desc > h5 {
-  font-size: 22px;
-}
-
-footer {
-  padding: 20px;
-  position: absolute;
-  width: 100%;
-}
-
-@keyframes showNav {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-} */
-
-/* @media only screen and (max-width: 1000px) {
-  .trip-info {
-    display: flex;
-    border-radius: 5px;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-  }
-  .trip-info>div img {
-    width: 90%;
-  }
-  .trip-info>div {
-    justify-content: space-around!important;
-  }
-  .trip-desc {
-    width: 63%!important;
-    text-align: center;
-  }
-  .brand {
-    text-align: center;
-  }
-  .brand>span.lead, .trip-desc span.lead {
-    width: 100%;
-    word-wrap: break-word;
-  }
-  .collapse.navbar-collapse {
-    display: inline-block;
-  }
-  .navbar>.container {
-    flex-wrap: nowrap!important;
-  }
-  ul.navbar-nav {
-    margin: auto;
-    flex-direction: row;
-  }
-  .navbar-nav li {
-    padding-left: 20px;
-  }
-} */
