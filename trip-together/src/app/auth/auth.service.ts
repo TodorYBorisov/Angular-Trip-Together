@@ -3,6 +3,7 @@ import { User } from '../shared/interfaces/user';
 import { BehaviorSubject, Subscription, tap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -56,3 +57,19 @@ export class AuthService implements OnDestroy {
     this.subscription.unsubscribe();
   }
 }
+
+
+// setUserToken(data: User) {
+//   localStorage.setItem(CONSTANTS.userTokenName, JSON.stringify(data));
+// }
+// clearUserToken() {
+//   localStorage.removeItem(CONSTANTS.userTokenName);
+// }
+// getUserToken(): User | null {
+//   const token = localStorage.getItem(CONSTANTS.userTokenName);
+//   if (token) {
+//     return JSON.parse(token);
+//   }
+
+//   return null;
+// }
