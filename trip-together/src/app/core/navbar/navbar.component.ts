@@ -21,16 +21,8 @@ export class NavbarComponent {
     return this.authService.user?.username || '';
 
   }
+  get user(){
+    return this.authService.user
+  }
 
-  // logout(): void {
-  //   this.authService.logout().subscribe({
-  //     next: () => {
-  //       this.router.navigate(['/'])
-  //     },
-  //     error: () => {
-  //       this.router.navigate(['/auth/login'])
-  //     }
-  //   });
-
-  // }
 }
