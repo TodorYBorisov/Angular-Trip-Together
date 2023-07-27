@@ -25,30 +25,30 @@ function getAllTrips(req, res, next) {
 
 function getUserTrips(req, res, next) {
     const userId = req.params.userId;
-  
+
     if (!userId) {
         return res.status(400).json({ message: 'User ID is required.' });
-      }
-  
-      tripModel
-      .find({ userId: userId })
-      .lean() // Use .lean() to return plain JavaScript objects
-      .then(trips => res.status(200).json(trips))
-      .catch(next);
-  }
-  
+    }
+
+    tripModel
+        .find({ userId: userId })
+        .lean() // Use .lean() to return plain JavaScript objects
+        .then(trips => res.status(200).json(trips))
+        .catch(next);
+}
+
 
 
 function createTrip(req, res, next) {
     const { startPoint, endPoint, date, time, imageUrl, brand, seats, price, description, _id: userId } = req.body;
-   
+
     tripModel.create({ startPoint, endPoint, date, time, imageUrl, brand, seats, price, description, userId })
         .then((createdTrip) => {
-            return userModel.updateOne({ _id: userId }, { $push: { trips: createdTrip._id }})
-           .then(createdTrip => res.status(200).json(createdTrip))
-           .catch(next);
-    });
-   
+            return userModel.updateOne({ _id: userId }, { $push: { trips: createdTrip._id } })
+                .then(createdTrip => res.status(200).json(createdTrip))
+                .catch(next);
+        });
+
 }
 
 
@@ -77,7 +77,7 @@ function getTrip(req, res, next) {
 }
 
 function editTrip(req, res, next) {
-    const { _id: tripId } = req.body;
+    //const { _id: tripId } = req.params;
     const { startPoint } = req.body;
     const { endPoint } = req.body;
     const { date } = req.body;
@@ -87,24 +87,31 @@ function editTrip(req, res, next) {
     const { seats } = req.body;
     const { price } = req.body;
     const { description } = req.body;
-    const { _id: userId } = req.user;
-    const { buddies } = req.body;
+    //const { _id: userId } = req.user;
+    // const { userId } = req.params;
+    const userId = req.body._id;
+    const tripId = req.params.tripId;
 
-    tripModel.findOneAndUpdate({ _id: tripId, userId }, { startPoint, endPoint, date, time, imageUrl, brand, seats, price, description, buddies }, { new: true })
-        .then(updatedTrip => {
-            if (updatedTrip) {
-                res.status(200).json(updatedTrip);
-            }
-            else {
-                res.status(401).json({ message: 'You are not allowed to edit this trip!' });
-            }
-        })
-        .catch(next);
+        //console.log(userId);
+        //console.log(tripId);
+
+        tripModel.findOneAndUpdate({ _id: tripId, userId }, { startPoint, endPoint, date, time, imageUrl, brand, seats, price, description }, { new: true })
+            .then(updatedTrip => {
+                if (updatedTrip) {
+                    res.status(200).json(updatedTrip);
+                }
+                else {
+                    res.status(401).json({ message: 'You are not allowed to edit this trip!' });
+                }
+            })
+            .catch(next);
 }
+
+
 
 function deleteTrip(req, res, next) {
     const { tripId } = req.params;
-    const { _id: userId } = req.user;
+    const { userId } = req.params;
 
     Promise.all([
         tripModel.findOneAndDelete({ _id: tripId, userId }),
@@ -119,7 +126,6 @@ function deleteTrip(req, res, next) {
             }
         })
         .catch(next);
-
 
 }
 

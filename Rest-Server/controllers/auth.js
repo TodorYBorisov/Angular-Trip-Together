@@ -1,6 +1,7 @@
 const {
     userModel,
-    tokenBlacklistModel
+    tokenBlacklistModel,
+    tripModel
 } = require('../models');
 
 const utils = require('../utils');
