@@ -107,8 +107,6 @@ function editTrip(req, res, next) {
             .catch(next);
 }
 
-
-
 function deleteTrip(req, res, next) {
     const { tripId } = req.params;
     const { userId } = req.params;
