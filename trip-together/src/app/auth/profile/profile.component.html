@@ -1,5 +1,3 @@
-<p>profile works!</p>
-
 <section class="profile col-md-6 text-center col-lg" id="profile-page">
 
     <div class="profile-container">
@@ -12,7 +10,7 @@
             </p>
             <p><i class="fa-solid fa-phone-volume" style="margin: 3px;"></i>Phone: <span>{{profileDetails.tel}}</span>
             </p>
-            <button class="edit-button" (click)="toggleEditMode()">Edit</button>
+            <button class="edit-button" (click)="toggleEditMode()">Edit Profile</button>
         </ng-container>
 
         <ng-container *ngIf="isEditMode">
@@ -52,24 +50,24 @@
                 <ng-container *ngIf="form.get('tel')?.touched">
                     <p class="error" *ngIf="form.get('tel')?.errors?.['required']">Telephone is required!</p>
                 </ng-container>
-                <button class="red-button">Cancel</button>
-                <button class="green-button">Save</button>
+                <!-- <button class="red-button" formControlName="cancel">Cancel</button> -->
+                <button class="green-button">Save Profile</button>
             </form>
         </ng-container>
     </div>
 
     <div class="profile-info">
-        <p class="count">Trips History: <span>{{tripsFound.length}}</span> created trips</p>
+        <p class="count">My Trips History: <span>{{tripsFound.length}}</span> created trips</p>
 
         <ng-container *ngIf="tripsFound.length>0; else noTrips">
         <div class="trips-info">
             <!-- If there are trips created by the current logged in user display each of them -->
             <div *ngFor="let trip of tripsFound" >
-                <p> from <span>{{trip.startPoint}}</span> to <span>{{trip.endPoint}}</span> on <span>{{trip.date}}</span> at <span>{{trip.time}}</span>.</p>
+                <!-- <p>From <span>{{trip.startPoint}}</span> to <span>{{trip.endPoint}}</span> on <span>{{trip.date}}</span> at <span>{{trip.time}}</span>.</p> -->
+                <a class="my-trip" [routerLink]="['/trip','details', trip._id]">From <span>{{trip.startPoint}}</span> to <span>{{trip.endPoint}}</span> on <span>{{trip.date}}</span> at <span>{{trip.time}}</span>.</a>
             </div>
         </div>
     </ng-container>
-
         <!-- If there are no trips created by the current logged in user display:-->
         <ng-template #noTrips>
             <p>There are no offer trips yet.</p>

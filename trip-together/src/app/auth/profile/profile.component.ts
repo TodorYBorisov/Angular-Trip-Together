@@ -85,6 +85,7 @@ get userId():any{
     //задаваме си променлива да е равна на данните ор формата и те да са от типа на профила
     this.profileDetails = { ...this.form.value } as Profile;
 
+   
     const { username, email, tel } = this.profileDetails;
     this.authService.updateProfile(username, email, tel).subscribe(() => {
 

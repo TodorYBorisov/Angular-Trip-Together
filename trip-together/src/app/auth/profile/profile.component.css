@@ -55,6 +55,7 @@
 .profile p>span {
     font-weight: bold;
     font-size: 1rem;
+   
     
     
 
@@ -240,4 +241,11 @@ main {
     background-color: rgb(112, 150, 230);
     margin-left: 6px;
     margin-top: 6px;
+}
+a.my-trip{
+    display: block;
+    /* text-decoration: none; */
+    color: white;
+    margin-bottom: 20px;
+    
 }
