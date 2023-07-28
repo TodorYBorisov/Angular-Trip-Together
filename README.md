@@ -1,7 +1,12 @@
 # Angular-Trip-Together
-Trip Together represents the culmination of my Angular course at Software University. It is an integrated project that incorporates a custom RESTful server using Node.js, Express.js,MongoDB with Mongoose, Bcrypt, and JsonWebtoken to handle server-side functionalities and backend operations. The frontend is powered by Angular.
+Trip Together represents the culmination of my Angular course at Software University. It is an integrated project that incorporates a custom RESTful server using Node.js, Express.js, MongoDB with Mongoose, Bcrypt and JsonWebtoken to handle server-side functionalities and backend operations. The frontend is powered by Angular.
 
 ## Description
+- Trip Together is a web application that allows users to experience shared trips with other users.
+- The main objective of the app is to enable users to share a common vehicle to reach their final destination.
+- Using a trip together app can reduce your carbon footprint. Car share users typically drive less, which makes them more environmentally friendly.
+- Users have the opportunity to create passive income by making use of their cars.
+
 
 ## Features
 
