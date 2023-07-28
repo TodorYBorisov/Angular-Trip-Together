@@ -25,9 +25,9 @@ The project incorporates several security enhancements:
 
 ## Installation
 To run Trip Together locally, follow these steps:
-1. Clone the repository to your local machine:
-    - https://github.com/TodorYBorisov/Angular-Trip-Together.git
-2. Navigate to the project's root directory in your terminal.
-3. Install the dependencies of both trip together app and rest server side, using the package manager of your choice
-4. Open your browser and go to `http://localhost:4200/` to access the application.
+1. Clone the repository to your local machine
+2. Navigate to the project's root directory in your terminal
+3. Install the dependencies of both trip together app and rest server, using the package manager of your choice
+4. Start the REST with "npm start" command and the application with "ng serve" command
+5. Open your browser and go to `http://localhost:4200/` to access the application.
 
