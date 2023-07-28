@@ -5,8 +5,8 @@ It is an integrated project that incorporates a custom RESTful server using Node
 The frontend is powered by Angular.
 
 ## Description
-- Trip Together is a web application that allows users to experience shared trips with other users.
 - The main objective of the app is to enable users to share a common vehicle to reach their final destination.
+- Trip Together is a web application that allows users to experience shared trips with other users.
 - Users have the opportunity to create passive income by making use of their cars.
 - Using a Trip Together app can reduce carbon footprint, potentially save you money.
 - Lastly, research shows that when users share common transportation, they tend to drive less, making them more environmentally friendly.
