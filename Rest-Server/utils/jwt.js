@@ -15,7 +15,7 @@ function verifyToken(token) {
             resolve(data);
         });
     });
-}
+} 
 
 module.exports = {
     createToken,
