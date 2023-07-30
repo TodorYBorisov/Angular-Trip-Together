@@ -52,15 +52,17 @@ function createTrip(req, res, next) {
 }
 
 
-function subscribeBuddie(req, res, next) {
-    const tripId = req.params.tripId;
-    const { _id: userId } = req.user;
-    tripModel.findByIdAndUpdate({ _id: tripId }, { $addToSet: { buddies: userId } }, { new: true })
-        .then(updatedTrip => {
-            res.status(200).json(updatedTrip);
-        })
-        .catch(next);
-}
+// function subscribeBuddie(req, res, next) {
+
+//     //console.log(req.user);
+//     const tripId = req.params.tripId;
+//     const userId = req.user.id;
+//     tripModel.findByIdAndUpdate({ _id: tripId }, { $addToSet: { buddies: userId } }, { new: true })
+//         .then(updatedTrip => {
+//             res.status(200).json(updatedTrip);
+//         })
+//         .catch(next);
+// }
 
 
 function getTrip(req, res, next) {
@@ -92,19 +94,19 @@ function editTrip(req, res, next) {
     const userId = req.body._id;
     const tripId = req.params.tripId;
 
-        //console.log(userId);
-        //console.log(tripId);
+    //console.log(userId);
+    //console.log(tripId);
 
-        tripModel.findOneAndUpdate({ _id: tripId, userId }, { startPoint, endPoint, date, time, imageUrl, brand, seats, price, description }, { new: true })
-            .then(updatedTrip => {
-                if (updatedTrip) {
-                    res.status(200).json(updatedTrip);
-                }
-                else {
-                    res.status(401).json({ message: 'You are not allowed to edit this trip!' });
-                }
-            })
-            .catch(next);
+    tripModel.findOneAndUpdate({ _id: tripId, userId }, { startPoint, endPoint, date, time, imageUrl, brand, seats, price, description }, { new: true })
+        .then(updatedTrip => {
+            if (updatedTrip) {
+                res.status(200).json(updatedTrip);
+            }
+            else {
+                res.status(401).json({ message: 'You are not allowed to edit this trip!' });
+            }
+        })
+        .catch(next);
 }
 
 function deleteTrip(req, res, next) {
@@ -160,7 +162,10 @@ function searchTrips(req, res, next) {
 
 function joinToTrip(req, res, next) {
     const tripId = req.params.tripId;
-    const { _id: userId } = req.user;
+    // { _id: userId } = req.user;
+    const userId = req.user.id;
+
+    //console.log(userId);
 
     tripModel
         .findById(tripId)
@@ -170,6 +175,7 @@ function joinToTrip(req, res, next) {
             }
 
             if (!trip.buddies.includes(userId)) {
+                trip.seats -= 1;
                 trip.buddies.push(userId);
             }
 
@@ -205,6 +211,11 @@ function getAllCreatedTripsByUser(req, res, next) {
         .catch(next);
 }
 
+// function seatsDecrement(req, res, next) {
+
+
+// }
+
 module.exports = {
     getAllTrips,
     createTrip,
@@ -214,6 +225,7 @@ module.exports = {
     searchTrips,
     joinToTrip,
     getAllCreatedTripsByUser,
-    subscribeBuddie,
-    getUserTrips
+    // subscribeBuddie,
+    getUserTrips,
+    // seatsDecrement
 };
