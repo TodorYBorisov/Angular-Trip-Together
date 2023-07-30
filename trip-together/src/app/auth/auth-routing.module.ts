@@ -3,13 +3,12 @@ import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { LogoutComponent } from "./logout/logout.component";
-// import { AuthActivate } from "../shared/guards/authActivate";
+import { AuthActivate } from "../shared/guards/authActivate";
 
 
 const routes: Routes = [
     {
         path: 'auth',
-        // canActivate: [AuthActivate],
         children: [
             {
                 path: 'login',
@@ -29,7 +28,7 @@ const routes: Routes = [
             {
                 path: 'profile',
                 component: ProfileComponent,
-                // canActivate: [AuthActivate],
+                canActivate: [AuthActivate],
                 title: 'Profile Page',
             }
         ]
