@@ -59,7 +59,6 @@ function login(req, res, next) {
             }
             user = bsonToJson(user);
             user = removePassword(user);
-
             const token = utils.jwt.createToken({ id: user._id });
 
             if (process.env.NODE_ENV === 'production') {
