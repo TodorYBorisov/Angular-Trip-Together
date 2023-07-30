@@ -13,14 +13,13 @@ export class AppInterceptor implements HttpInterceptor {
     constructor(private router: Router, private errorServie: ErrorService) { }
 
     intercept(
-        req: HttpRequest<any>,
+        req: HttpRequest<unknown>,
         next: HttpHandler
-    ): Observable<HttpEvent<any>> {
+    ): Observable<HttpEvent<unknown>> {
         if (req.url.startsWith('/api')) {
             req = req.clone({
                 url: req.url.replace('/api', apiUrl),
                 withCredentials: true, // Cookie -> JWT
-               
             });
         }
 
