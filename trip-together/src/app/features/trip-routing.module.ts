@@ -22,24 +22,26 @@ const routes: Routes = [
             {
                 path: 'details/:id',
                 component: DetailsComponent,
-                title: 'Details Page'
+                title: 'Details Page',
+               canActivate: [AuthActivate]
             },
             {
                 path: 'edit/:id',
                 component: EditComponent,
-                title: 'Edit Page'
+                title: 'Edit Page',
+                canActivate: [AuthActivate]
             },
             {
                 path: 'create',
                 component: CreateComponent,
                 title: 'Create Page',
-                //canActivate: [AuthActivate]
+                canActivate: [AuthActivate]
             },
             {
                 path: 'search',
                 component: SearchComponent,
                 title: 'Search Page',
-                // canActivate: [AuthActivate]
+                canActivate: [AuthActivate]
             }
         ],
     },
