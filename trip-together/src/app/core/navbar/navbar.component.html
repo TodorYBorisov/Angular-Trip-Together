@@ -77,7 +77,7 @@
         <li><a mat-stroked-button routerLink="/home" class="button-spacing"><mat-icon>home</mat-icon>Home</a></li>
         <li><a mat-stroked-button routerLink="/about" class="button-spacing">About</a></li>
         <li><a mat-stroked-button routerLink="/trip/catalog" class="button-spacing"><mat-icon>dashboard</mat-icon>Trips</a></li>
-        <li *ngIf="isLoggedIn"><a mat-stroked-button class="button-spacing"><mat-icon>wb_sunny</mat-icon>Weather</a></li>
+        <li *ngIf="isLoggedIn"><a mat-stroked-button routerLink="/trip/weather" class="button-spacing"><mat-icon>wb_sunny</mat-icon>Weather</a></li>
         <li *ngIf="isLoggedIn"><a mat-stroked-button routerLink="/trip/create" class="button-spacing"><mat-icon>add</mat-icon>Create</a></li>
         <li *ngIf="isLoggedIn"><a mat-stroked-button routerLink="/trip/search" class="button-spacing"><mat-icon>search</mat-icon>Search</a></li>
         <li *ngIf="isLoggedIn"><a mat-stroked-button routerLink="/auth/profile" class="button-spacing"><mat-icon>account_circle</mat-icon>{{username}}'s Profile</a></li>
