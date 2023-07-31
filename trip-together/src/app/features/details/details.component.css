@@ -50,6 +50,11 @@ main {
   color: white;
 }
 
+.details .buddies-info p {
+  font-size:large;
+  text-decoration: underline;
+}
+
 .details .brand {
   text-align: left;
 }
