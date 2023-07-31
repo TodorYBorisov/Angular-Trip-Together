@@ -15,6 +15,10 @@ export class DetailsComponent implements OnInit {
   trip: Trip | undefined;
   isLoading: boolean = true;
   isOwner: boolean = false;
+  seatsLeft: number = 0;
+  isSubcribe: boolean = false;
+  hasJoined: boolean = false
+
 
   constructor(
     private tripService: TripService,
@@ -61,5 +65,51 @@ export class DetailsComponent implements OnInit {
         .subscribe(() => this.router.navigate(['/trip/catalog']))
     }
   }
- 
+
+  // joinToTrip(): void {
+  //   this.tripService.joinToTrip(this.trip?._id as string, this.trip?.userId._id as string)
+  //     .subscribe({
+  //       next: () => {
+  //         this.isSubcribe = true
+  //         this.seatsLeft = Number(this.trip?.seats!) - 1;
+  //         this.router.navigate([`/trip/details/${this.trip?._id}`])
+  //       },
+  //       error: (error) => {
+  //         this.isSubcribe = false
+  //         console.log(`Error: ${error}`);
+  //       }
+  //     })
+
+  // }
+  hasAvailableSeats(): boolean {
+    this.seatsLeft = this.trip?.seats || 0
+    return this.seatsLeft > 0
+  }
+
+
+  addBuddy(): void {
+    const userId = this.trip?.userId?._id as string;
+    
+    if (this.trip?.buddies.includes(userId)) {
+      this.hasJoined = true;
+      console.log('Buddies:', this.trip?.buddies);
+      return;
+    }
+    
+    this.tripService.addBuddieToTrip(this.trip?._id as string, { userId })
+    .subscribe({
+      next: () => {
+        
+        this.isSubcribe = true
+        this.router.navigate([`/trip/details/${this.trip?._id}`])
+        },
+        error: (error) => {
+          this.isSubcribe = false
+          console.log(`Error: ${error}`);
+        }
+
+      });
+
+  }
+
 }
