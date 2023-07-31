@@ -32,7 +32,7 @@ export class CatalogComponent implements OnInit {
           if (this.tripList.length === 0) { //правим проверка за броя на темите
             this.thereAreNoTtrips = true;
           }
-          console.log(this.tripList);
+          //console.log(this.tripList);
           
         },
         error: (error) => {
