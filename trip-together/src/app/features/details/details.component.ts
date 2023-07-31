@@ -86,7 +86,6 @@ export class DetailsComponent implements OnInit {
     return this.seatsLeft > 0
   }
 
-
   addBuddy(): void {
     const userId = this.trip?.userId?._id as string;
     

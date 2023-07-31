@@ -16,9 +16,9 @@
             <h5>Trip Together Buddies</h5>
             <ng-container *ngIf="trip.buddies.length>0; else noBuddies">
                 <!-- if there are joined buddies for the current trip separate them with comma and space", " -->
-                <div *ngFor="let buddy of trip.buddies">
-                    <p>{{buddy}} </p>
-                </div> 
+                <!-- <div *ngFor="let buddy of trip.buddies"> -->
+                    <p>The number of participants in the trip is {{trip.buddies.length}}.</p>
+                <!-- </div>  -->
             </ng-container>
             <!-- If not display: -->
             <ng-template #noBuddies>
@@ -48,7 +48,7 @@
                     <!-- logged in user with available seats -->
                     <!-- <a *ngIf="!isOwner && !isSubcribe " (click)="joinToTrip()" class="btn btn-join">Join now, [ {{trip.seats}} ] seats left!</a> -->
                     <a *ngIf="!isOwner && !isSubcribe && hasAvailableSeats()" (click)="addBuddy()"
-                        class="btn btn-join">Join now, [ {{trip.seats}} ] seats left!</a>
+                        class="btn btn-join">Join to TripTogether, i have {{trip.seats}} seats left!</a>
 
                     <!-- logged in user and has already joined the trip  -->
                     <span *ngIf="isSubcribe && !hasJoined" class="btn btn-info">Already joined. Don't be late!</span>

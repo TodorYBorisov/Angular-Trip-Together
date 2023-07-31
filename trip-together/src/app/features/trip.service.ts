@@ -63,8 +63,12 @@ export class TripService {
   //   return this.http.put<Trip>(`/api/trips/details/${tripId}`, userId);
   // } 
 
-  
+  //това работи
   addBuddieToTrip(tripId: string, data: { userId: string }): Observable<Trip>{
     return this.http.put<Trip>(`/api/trips/details/${tripId}`, data);
   }
+
+  // addBuddieToTrip(tripId: string, data: { userId: string }): Observable<Trip>{
+  //   return this.http.put<Trip>(`/api/trips/details/${tripId}`, {buddies:[{userId: data.userId}]});
+  // }
 }
