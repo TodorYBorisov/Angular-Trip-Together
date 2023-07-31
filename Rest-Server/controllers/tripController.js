@@ -171,7 +171,8 @@ function joinToTrip(req, res, next) {
         .findById(tripId)
         .then(trip => {
             if (trip.buddies.includes(userId)) {
-                throw new Error('User is already a buddy');
+                res.status(200).json({alreadyJoined: true});
+                return;
             }
 
             if (!trip.buddies.includes(userId)) {
