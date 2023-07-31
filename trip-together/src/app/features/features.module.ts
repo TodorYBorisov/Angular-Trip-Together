@@ -12,6 +12,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { tripRoutingModule } from './trip-routing.module';
 import { SharedModule } from "../shared/shared.module";
 import { FormsModule } from '@angular/forms';
+import { WeatherComponent } from './weather/weather.component';
 
 
 
@@ -21,14 +22,16 @@ import { FormsModule } from '@angular/forms';
         CreateComponent,
         EditComponent,
         DetailsComponent,
-        SearchComponent
+        SearchComponent,
+        WeatherComponent
     ],
     exports: [
         CatalogComponent,
         CreateComponent,
         EditComponent,
         DetailsComponent,
-        SearchComponent
+        SearchComponent,
+        WeatherComponent
     ],
     imports: [
         CommonModule,
