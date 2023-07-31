@@ -58,5 +58,13 @@ export class TripService {
     const { apiUrl } = environment;
     return this.http.put<Trip>(`${apiUrl}/trips/edit/${tripId}`, data)
   }
+
+  // joinToTrip(tripId: string, userId: string): Observable<Trip> {
+  //   return this.http.put<Trip>(`/api/trips/details/${tripId}`, userId);
+  // } 
+
   
+  addBuddieToTrip(tripId: string, data: { userId: string }): Observable<Trip>{
+    return this.http.put<Trip>(`/api/trips/details/${tripId}`, data);
+  }
 }
