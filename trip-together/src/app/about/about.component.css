@@ -119,4 +119,17 @@
   }
 
 
- 
+/* .carousel__face:first-child {
+  color: white;
+} */
+
+.carousel__face {
+  color: white;
+}
+
+.carousel__face span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+}
