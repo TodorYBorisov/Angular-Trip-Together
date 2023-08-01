@@ -1,72 +1,3 @@
-<!-- <nav id="nav">
-  <mat-toolbar color="is-dark">
-    <mat-toolbar-row id="background-col">
-      <span><a class="logo" routerLink='/'><mat-icon>directions_car</mat-icon></a>TripTogether</span>
-
-      <div class="example-spacer"></div>
-      <a mat-stroked-button routerLink="/home" class="button-spacing"><mat-icon>home</mat-icon>Home</a>
-      <a mat-stroked-button routerLink="/about" class="button-spacing">About</a>
-      <a mat-stroked-button routerLink="/catalog" class="button-spacing"><mat-icon>dashboard</mat-icon>Trips</a>
-      <a mat-stroked-button class="button-spacing"><mat-icon>wb_sunny</mat-icon>Weather</a>
-      <a mat-stroked-button routerLink="/create" class="button-spacing"><mat-icon>add</mat-icon>Create</a>
-      <a mat-stroked-button routerLink="/search" class="button-spacing"><mat-icon>search</mat-icon>Search</a>
-      <a mat-stroked-button routerLink="/auth/profile"
-        class="button-spacing"><mat-icon>account_circle</mat-icon>Profile</a>
-      <a mat-stroked-button routerLink="/auth/logout" class="button-spacing"><mat-icon>logout</mat-icon>Logout</a>
-      <a mat-stroked-button routerLink="/auth/login" class="button-spacing"><mat-icon>login</mat-icon>Login</a>
-      <a mat-stroked-button routerLink="/auth/register" class="button-spacing"
-        id="button"><mat-icon>person_add</mat-icon>Sing Up</a>
-    </mat-toolbar-row>
-  </mat-toolbar>
-</nav> -->
-<!-- ================================================================================== -->
-<!-- <mat-icon>delete</mat-icon>
-<mat-icon>edit</mat-icon> -->
-
-<!-- <header>
-  <section class="navigation">
-    <p>TripTogether...<span></span><span><i class="fa-sharp fa-solid fa-car-side fa-lg"
-          style="color: #000000;"></i></span></p>
-    <nav>
-      <ul>
-        <li><a routerLink="/home"></a>Home</li>
-        <li><a routerLink="/about"></a>Trips</li>
-        <li><a routerLink="/about"></a>Create</li>
-        <li><a routerLink="/about"></a>Weather</li>
-        <li><a routerLink="/about"></a>Profile</li>
-        <li><a routerLink="/about"></a>Logout</li>
-        <li><a routerLink="/login"></a>Login</li>
-        <li><a routerLink="/register" id="button"></a>Sing Up</li>
-      </ul>
-    </nav>
-  </section>
-  <section class="site-header">
-    <h1>The true essence of a road trip lies not in reaching your destination, but in something else.</h1>
-    <p>Encouraging sustainable transportation alternatives</p>
-    <button>Check your next journey!</button>
-  </section>
-</header> -->
-
-<!-- <i class="fa-sharp fa-solid fa-car-side fa-lg" style="color: #000000;"></i> -->
-
-<!-- <div>
-  <ul>
-    <li>
-      <p>Welcome, {{username/email}}</p>
-    </li>
-    <li>
-      <a mat-stroked-button routerLink="/auth/logout" class="button-spacing"><mat-icon>logout</mat-icon>Logout</a>
-    </li>
-    <li>
-      <a mat-stroked-button routerLink="/auth/login" class="button-spacing"><mat-icon>login</mat-icon>Login</a>
-    </li>
-    <li>
-      <a mat-stroked-button routerLink="/auth/register" class="button-spacing"
-        id="button"><mat-icon>person_add</mat-icon>Sing Up</a>
-    </li>
-  </ul>
-</div> -->
-<!-- ======================================================================================================================= -->
 <nav id="nav">
   <mat-toolbar color="is-dark">
     <mat-toolbar-row id="background-col">
@@ -75,7 +6,7 @@
       <div class="example-spacer"></div>
       <ul class="nav-list">
         <li><a mat-stroked-button routerLink="/home" class="button-spacing"><mat-icon>home</mat-icon>Home</a></li>
-        <li><a mat-stroked-button routerLink="/about" class="button-spacing">About</a></li>
+        <li><a mat-stroked-button routerLink="/learn-more" class="button-spacing"><mat-icon>info</mat-icon>Learn More</a></li>
         <li><a mat-stroked-button routerLink="/trip/catalog" class="button-spacing"><mat-icon>dashboard</mat-icon>Trips</a></li>
         <li *ngIf="isLoggedIn"><a mat-stroked-button routerLink="/trip/weather" class="button-spacing"><mat-icon>wb_sunny</mat-icon>Weather</a></li>
         <li *ngIf="isLoggedIn"><a mat-stroked-button routerLink="/trip/create" class="button-spacing"><mat-icon>add</mat-icon>Create</a></li>

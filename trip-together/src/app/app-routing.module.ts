@@ -20,7 +20,7 @@ const routes: Routes = [
   // { path: '', pathMatch: 'full', component: HomeComponent, title: 'TripTogether' },
   { path: '', pathMatch: 'full', redirectTo: '/home' },
   { path: 'home', component: HomeComponent, title: 'Home Page' },
-  { path: 'about', component: AboutComponent, title: 'About Page' },
+  { path: 'learn-more', component: AboutComponent, title: 'Learn More Page' },
   // { path: 'auth/login', component: LoginComponent, title: 'Login Page' },
   // { path: 'auth/register', component: RegisterComponent, title: 'Sing Up' },
   // { path: 'auth/logout', redirectTo: 'home', title: 'Home Page' },
