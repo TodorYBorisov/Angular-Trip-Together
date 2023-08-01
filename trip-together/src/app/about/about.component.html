@@ -2,19 +2,28 @@
 
     <div class="text">
         <h3>
-            How Trip Together works, just follow these three simple steps below:
+            To learn how Trip Together works, just click on the button below.
         </h3>
-        <ol>
-            <li>
-                Register in the app, it takes less than a minute
-            </li>
-            <li>
-                Check your next journey, if you can't find it , create your own
-            </li>
-            <li>
-                If you find it join the trip and meet your trip companions
-            </li>
-        </ol>
+        <button class="learn" (click)="fadeInOut()">More Info</button>
+        <div @fadeInOut *ngIf="isShown">
+            <ol>
+                <li>
+                    Register in the app, it takes less than a minute.
+                </li>
+                <li>
+                    Check your next journey, if you can't find it, create your own.
+                </li>
+                <li>
+                    If you find it join the trip and meet your trip companions.
+                </li>
+                <li>
+                    You can see all your created trips on your profile page as well.
+                </li>
+                <li>
+                    You can search for a trip based on the city name.
+                </li>
+            </ol>
+        </div>
     </div>
 </div>
 <h3 class="center">These are just some of our happy Trip Together users</h3>
@@ -32,4 +41,3 @@
         <div class="carousel__face"><span></span>Trip from Pernik to Sofia</div>
     </div>
 </div>
-

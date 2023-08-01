@@ -10,6 +10,7 @@ import {MatCardModule} from '@angular/material/card';
 import { RouterModule } from '@angular/router';
 import { AuthModule } from '../auth/auth.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AboutComponent } from '../about/about.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ErrorComponent,
     NavbarComponent,
     PageNotFoundComponent,
+    AboutComponent
   
   ],
   imports: [
@@ -36,6 +38,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     FooterComponent,
     ErrorComponent,
     PageNotFoundComponent,
+    AboutComponent
   
   ]
 })
