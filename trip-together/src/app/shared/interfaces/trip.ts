@@ -12,6 +12,6 @@ export interface Trip {
     price: number,
     description: string,
     userId: User,
-    buddies: string[],
+    buddies: User[],
     __v: number
 }
