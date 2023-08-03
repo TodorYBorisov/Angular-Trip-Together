@@ -53,6 +53,7 @@ main {
 .details .buddies-info p {
   font-size:large;
   text-decoration: underline;
+  margin-bottom: 5px;
 }
 
 .details .brand {
