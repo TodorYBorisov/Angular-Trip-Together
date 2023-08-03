@@ -168,7 +168,7 @@ function joinToTrip(req, res, next) {
     //console.log(userId);
 
     tripModel
-        .findById(tripId)
+        .findById(tripId).populate('buddies')
         .then(trip => {
             if (trip.buddies.includes(userId)) {
                 res.status(200).json({alreadyJoined: true});
