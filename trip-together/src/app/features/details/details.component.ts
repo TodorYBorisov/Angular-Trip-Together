@@ -88,19 +88,19 @@ export class DetailsComponent implements OnInit {
 
   addBuddy(): void {
     const userId = this.trip?.userId?._id as string;
-    
-    if (this.trip?.buddies.includes(userId)) {
+
+    if (this.trip?.buddies.some(user => user._id == userId)) {
       this.hasJoined = true;
       console.log('Buddies:', this.trip?.buddies);
       return;
     }
-    
+
     this.tripService.addBuddieToTrip(this.trip?._id as string, { userId })
-    .subscribe({
-      next: () => {
-        
-        this.isSubcribe = true
-        this.router.navigate([`/trip/details/${this.trip?._id}`])
+      .subscribe({
+        next: () => {
+
+          this.isSubcribe = true
+          this.router.navigate([`/trip/details/${this.trip?._id}`])
         },
         error: (error) => {
           this.isSubcribe = false
