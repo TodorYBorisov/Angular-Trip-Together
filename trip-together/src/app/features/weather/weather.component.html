@@ -1,1 +1,132 @@
-<p>weather works!</p>
+<div class="container" *ngIf="weatherData">
+    <div class="upper-data">
+        <img src="../../../assets/weather/weather-images.jpg" *ngIf="(weatherData.main.temp | tempConvertor) > 15">
+        <img src="../../../assets/weather/coldNight.JPG" *ngIf="(weatherData.main.temp | tempConvertor) <= 15">
+
+        <div class="weather-data">
+            <div class="location">{{weatherData.name}}</div>
+            <div class="temperature">{{(weatherData.main.temp | tempConvertor) | number: '1.0-0'}}°C</div> 
+
+        </div>
+    </div>
+
+    <div class="lower-data">
+        <div class="more-info-lable">
+            More information
+        </div>
+
+        <div class="more-info-container">
+            <div class="info-block">
+                <div class="info-block-lable">
+                    <img src="../../../assets/weather/low-temperature-128.png">
+                    <span>Min</span>
+                </div>
+                <div class="info-block-value">
+                    {{(weatherData.main.temp_min | tempConvertor)}}°C
+                </div>
+            </div>
+            <div class="info-block">
+                <div class="info-block-lable">
+                    <img src="../../../assets/weather/high-temperature-128.png">
+                    <span>Max</span>
+                </div>
+                <div class="info-block-value">
+                    {{(weatherData.main.temp_max | tempConvertor)}}°C
+                </div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-block-lable">
+                    <img src="../../../assets/weather/humidity-17-128.png">
+                    <span>Humidity</span>
+                </div>
+                <div class="info-block-value">
+                    {{weatherData.main.humidity}}%
+                </div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-block-lable">
+                    <img src="../../../assets/weather/windSpead.png">
+                    <span>Wind</span>
+                </div>
+                <div class="info-block-value">
+                    {{weatherData.wind.speed}} km/h
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- alt +° 0176 за градуси -->
+
+
+<!-- 
+<div class="search">
+    <form #form="ngForm" (submit)="onSubmit()">
+        <input type="text" placeholder="Search City" name="city" [(ngModel)]="cityName">
+    </form>
+</div> -->
+
+
+
+<!-- <div class="container">
+    <div class="upper-data">
+        <img src="../../../assets/weather/hotWeather.JPG" *ngIf="14 > 15">
+        <img src="../../../assets/weather/coldNight.JPG" *ngIf="14 <= 15">
+
+        <div class="weather-data">
+            <div class="location">Sofia</div>
+            <div class="temperature">{{14.40 | number: '1.0-0' }}°C</div> 
+
+        </div>
+    </div>
+    <div class="lower-data">
+        <div class="more-info-lable">
+            More information
+        </div>
+
+        <div class="more-info-container">
+            <div class="info-block">
+                <div class="info-block-lable">
+                    <img src="../../../assets/weather/low-temperature-128.png">
+                    <span>Min</span>
+                </div>
+                <div class="info-block-value">
+                    10°C
+                </div>
+            </div>
+            <div class="info-block">
+                <div class="info-block-lable">
+                    <img src="../../../assets/weather/high-temperature-128.png">
+                    <span>Max</span>
+                </div>
+                <div class="info-block-value">
+                    22°C
+                </div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-block-lable">
+                    <img src="../../../assets/weather/humidity-17-128.png">
+                    <span>Humidity</span>
+                </div>
+                <div class="info-block-value">
+                    77%
+                </div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-block-lable">
+                    <img src="../../../assets/weather/windSpead.png">
+                    <span>Wind</span>
+                </div>
+                <div class="info-block-value">
+                    11 km/h
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div> -->

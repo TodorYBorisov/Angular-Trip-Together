@@ -1,9 +1,12 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Trip } from '../shared/interfaces/trip';
 import { Observable, catchError, throwError } from 'rxjs';
 import { AuthService } from '../auth/auth.service';
+import { WeatherData } from '../shared/interfaces/weather';
+import { WEATHER_API } from '../shared/constants';
+import { User } from '../shared/interfaces/user';
 
 @Injectable({
   providedIn: 'root'
@@ -50,9 +53,9 @@ export class TripService {
   }
 
   deleteTripById(tripId: string, userId: string): Observable<Trip> {
-  const { apiUrl } = environment;
-  return this.http.delete<Trip>(`${apiUrl}/trips/delete/${tripId}/${userId}`)
-}
+    const { apiUrl } = environment;
+    return this.http.delete<Trip>(`${apiUrl}/trips/delete/${tripId}/${userId}`)
+  }
 
   editTrip(tripId: string, data: Trip): Observable<Trip> {
     const { apiUrl } = environment;
@@ -71,4 +74,31 @@ export class TripService {
   // addBuddieToTrip(tripId: string, data: { userId: string }): Observable<Trip>{
   //   return this.http.put<Trip>(`/api/trips/details/${tripId}`, {buddies:[{userId: data.userId}]});
   // }
+
+
+  // getWeatherData(cityName:string){
+  //   return this.http.get(environment.weatherApiBaseUrl, {
+  //     headers: new HttpHeaders()
+  //     .set(environment.XRapidAPIHostHeaderName,environment.XRapidAPIHostHeaderValue)
+  //     .set(environment.XRapidAPIKeyHeaderName,environment.XRapidAPIKeyHeaderValue),
+  //     params: new HttpParams()
+  //     .set('q', cityName)
+  //     .set('units', 'metric')
+  //     .set('mode', 'json')
+  //   })
+  // }
+
+  getWeatherData(cityName: string): Observable<WeatherData> {
+    return this.http.get<WeatherData>(WEATHER_API.weatherApiBaseUrl + '/city/' + cityName, {
+      headers: new HttpHeaders()
+        .set(WEATHER_API.XRapidAPIHostHeaderName, WEATHER_API.XRapidAPIHostHeaderValue)
+        .set(WEATHER_API.XRapidAPIKeyHeaderName, WEATHER_API.XRapidAPIKeyHeaderValue),
+      params: new HttpParams()
+        .set('q', cityName)
+        .set('units', 'metric')
+        .set('mode', 'json')
+    });
+  }
+
+
 }
