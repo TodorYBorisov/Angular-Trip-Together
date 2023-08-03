@@ -89,16 +89,16 @@ export class DetailsComponent implements OnInit {
   addBuddy(): void {
     const userId = this.trip?.userId?._id as string;
 
-    if (this.trip?.buddies.some(user => user._id == userId)) {
+    if (this.trip?.buddies.some(user => user._id == this.user?._id)) {
       this.hasJoined = true;
-      console.log('Buddies:', this.trip?.buddies);
+      this.isSubcribe = true
       return;
     }
 
     this.tripService.addBuddieToTrip(this.trip?._id as string, { userId })
       .subscribe({
         next: () => {
-
+          this.hasJoined = true;
           this.isSubcribe = true
           this.router.navigate([`/trip/details/${this.trip?._id}`])
         },
@@ -112,3 +112,60 @@ export class DetailsComponent implements OnInit {
   }
 
 }
+
+
+
+
+// {
+//   "buddies": [
+//     {
+//       "trips": [],
+//       "_id": "64c2deec6b037b2df8c86f8d"
+//     }
+//   ],
+//   "_id": "64c7cf12b197ec3ef8749ea0",
+//   "startPoint": "Sofia",
+//   "endPoint": "Varna",
+//   "date": "2023-08-01",
+//   "time": "15:00",
+//   "imageUrl": "https://media.ed.edmunds-media.com/hyundai/kona/2022/oem/2022_hyundai_kona_4dr-suv_limited_fq_oem_1_600.jpg",
+//   "brand": "Hyundai Kona",
+//   "seats": 2,
+//   "price": 35,
+//   "description": "This is trip from sofia to varna",
+//   "userId": "64bfaa91c2cdeb30e8e2a6a5",
+//   "created_at": "2023-07-31T15:11:14.919Z",
+//   "updatedAt": "2023-08-03T17:22:01.368Z",
+//   "__v": 3
+// }
+
+// {
+//   "buddies": [],
+//   "_id": "64c7cf12b197ec3ef8749ea0",
+//   "startPoint": "Sofia",
+//   "endPoint": "Varna",
+//   "date": "2023-08-01",
+//   "time": "15:00",
+//   "imageUrl": "https://media.ed.edmunds-media.com/hyundai/kona/2022/oem/2022_hyundai_kona_4dr-suv_limited_fq_oem_1_600.jpg",
+//   "brand": "Hyundai Kona",
+//   "seats": 2,
+//   "price": 35,
+//   "description": "This is trip from sofia to varna",
+//   "userId": {
+//     "trips": [
+//       "64c7cf12b197ec3ef8749ea0"
+//     ],
+//     "_id": "64bfaa91c2cdeb30e8e2a6a5",
+//     "username": "Toshko",
+//     "email": "toshko@abv.bg",
+//     "tel": "+359884400839",
+//     "gender": "male",
+//     "password": "$2b$05$z1lUSgJE1wYDh3FRyk3gJuraUrtOjJ3023UOg/bsscI2lUpITbNWe",
+//     "created_at": "2023-07-25T10:57:21.640Z",
+//     "updatedAt": "2023-08-01T09:12:33.985Z",
+//     "__v": 0
+//   },
+//   "created_at": "2023-07-31T15:11:14.919Z",
+//   "updatedAt": "2023-08-03T17:22:01.368Z",
+//   "__v": 3
+// }
