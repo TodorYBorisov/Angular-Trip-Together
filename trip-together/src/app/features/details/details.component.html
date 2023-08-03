@@ -45,24 +45,17 @@
                     <a *ngIf="isOwner" [routerLink]="['/trip','edit', trip._id]" class="btn btn-warning"><i class="fa-solid fa-user-pen" style="color: #000000;"></i>Edit trip</a>
 
                     <!-- logged in user with available seats -->
-                    <!-- <a *ngIf="!isOwner && !isSubcribe " (click)="joinToTrip()" class="btn btn-join">Join now, [ {{trip.seats}} ] seats left!</a> -->
                     <a *ngIf="!isOwner && !isSubcribe && hasAvailableSeats()" (click)="addBuddy()"
                         class="btn btn-join">Join to TripTogether, i have {{trip.seats}} seats left!</a>
 
                     <!-- logged in user and has already joined the trip  -->
-                    <span *ngIf="isSubcribe && !hasJoined" class="btn btn-info">Already joined. Don't be late!</span>
+                    <span *ngIf="isSubcribe && hasJoined" class="btn btn-info">Already joined. Don't be late!</span>
 
                     <!-- logged in user with no available seats -->
-                    <!-- <span *ngIf="!isOwner && !isSubcribe && trip.seats === 0" class="btn btn-secondary">No seats available!</span> -->
-
                     <ng-container *ngIf="!isOwner && !isSubcribe && !hasAvailableSeats()">
                         <span class="btn btn-secondary">No seats available!</span>
                     </ng-container>
-                    <!-- <ng-container *ngIf="trip.seats>0" >
-                        <span *ngIf="!isOwner && !isSubcribe" class="btn btn-secondary">No seats available!</span>
-                    </ng-container> -->
                 </div>
-
             </div>
         </div>
     </div>
