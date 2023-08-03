@@ -162,10 +162,7 @@ function searchTrips(req, res, next) {
 
 function joinToTrip(req, res, next) {
     const tripId = req.params.tripId;
-    // { _id: userId } = req.user;
     const userId = req.user.id;
-
-    //console.log(userId);
 
     tripModel
         .findById(tripId).populate('buddies')
