@@ -202,4 +202,9 @@ main {
     align-self: center;
 }
 
+.error {
+    color: red;
+    text-align: center;
+    font-size: 14px;
+  }
 /* ако ми трябва бутона трябва да размаркирам горните */

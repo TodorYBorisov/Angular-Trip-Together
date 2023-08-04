@@ -5,7 +5,7 @@
     <input id="search-input" type="text" ngModel #inputQuery="ngModel" name="search" placeholder="Enter city name"
       required [minlength]="3">
     <ng-container *ngIf="inputQuery.invalid && inputQuery.touched">
-      <div class="error" *ngIf="inputQuery.errors?.['required']">Search is required</div>
+      <div class="error" *ngIf="inputQuery.errors?.['required']">Search is required!</div>
       <div class="error" *ngIf="inputQuery.errors?.['minlength']">Search must be at least 3 characters long!
       </div>
     </ng-container>
