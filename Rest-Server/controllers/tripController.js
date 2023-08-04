@@ -160,15 +160,42 @@ function searchTrips(req, res, next) {
         .catch(next);
 }
 
+// function joinToTrip(req, res, next) {
+//     const tripId = req.params.tripId;
+//     const userId = req.user.id;
+
+//     tripModel
+//         .findById(tripId).populate('buddies')
+//         .then(trip => {
+//             if (trip.buddies.includes(userId)) {
+//                 res.status(200).json({alreadyJoined: true});
+//                 return;
+//             }
+
+//             if (!trip.buddies.includes(userId)) {
+//                 trip.seats -= 1;
+//                 trip.buddies.push(userId);
+//             }
+//             console.log(trip);
+//             return trip.save();
+//         })
+//         .then(updatedTrip => {
+//             res.status(200).json(updatedTrip);
+//         })
+//         .catch(error => {
+//             next(error);
+//         });
+// }
+// ==================
 function joinToTrip(req, res, next) {
     const tripId = req.params.tripId;
     const userId = req.user.id;
 
     tripModel
-        .findById(tripId).populate('buddies')
+        .findById(tripId)
         .then(trip => {
             if (trip.buddies.includes(userId)) {
-                res.status(200).json({alreadyJoined: true});
+                res.status(200).json({ alreadyJoined: true });
                 return;
             }
 
@@ -176,17 +203,23 @@ function joinToTrip(req, res, next) {
                 trip.seats -= 1;
                 trip.buddies.push(userId);
             }
-
+            
+            // Save the modified trip first
             return trip.save();
         })
-        .then(updatedTrip => {
-            res.status(200).json(updatedTrip);
+        .then(savedTrip => {
+            // Now populate the buddies field in the saved trip
+            return savedTrip.populate('buddies').execPopulate();
+        })
+        .then(updatedTripWithBuddies => {
+            res.status(200).json(updatedTripWithBuddies);
         })
         .catch(error => {
             next(error);
         });
 }
 
+// =================
 //   function like(req, res, next) {
 //     const { tripId } = req.params;
 //     const { _id: userId } = req.user;
