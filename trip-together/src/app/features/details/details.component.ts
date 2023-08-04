@@ -19,7 +19,6 @@ export class DetailsComponent implements OnInit {
   isSubcribe: boolean = false;
   hasJoined: boolean = false
 
-
   constructor(
     private tripService: TripService,
     private activatedRoute: ActivatedRoute,
@@ -113,31 +112,6 @@ export class DetailsComponent implements OnInit {
 
 }
 
-
-
-
-// {
-//   "buddies": [
-//     {
-//       "trips": [],
-//       "_id": "64c2deec6b037b2df8c86f8d"
-//     }
-//   ],
-//   "_id": "64c7cf12b197ec3ef8749ea0",
-//   "startPoint": "Sofia",
-//   "endPoint": "Varna",
-//   "date": "2023-08-01",
-//   "time": "15:00",
-//   "imageUrl": "https://media.ed.edmunds-media.com/hyundai/kona/2022/oem/2022_hyundai_kona_4dr-suv_limited_fq_oem_1_600.jpg",
-//   "brand": "Hyundai Kona",
-//   "seats": 2,
-//   "price": 35,
-//   "description": "This is trip from sofia to varna",
-//   "userId": "64bfaa91c2cdeb30e8e2a6a5",
-//   "created_at": "2023-07-31T15:11:14.919Z",
-//   "updatedAt": "2023-08-03T17:22:01.368Z",
-//   "__v": 3
-// }
 
 // {
 //   "buddies": [],
