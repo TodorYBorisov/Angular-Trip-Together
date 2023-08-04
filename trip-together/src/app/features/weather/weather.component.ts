@@ -49,11 +49,22 @@ export class WeatherComponent implements OnInit {
 
   constructor(private tripService: TripService) { }
 
+  cityName: string = 'Sofia'
   weatherData?: WeatherData
 
   ngOnInit(): void {
+    this.getWeatherData(this.cityName);
+    this.cityName = '';
+    
+  }
 
-    this.tripService.getWeatherData('Plovdiv')
+  onSubmit(){
+    this.getWeatherData(this.cityName);
+    this.cityName = '';
+  }
+
+  private getWeatherData(cityName: string){
+    this.tripService.getWeatherData(cityName)
       .subscribe({
         next: (responce) => {
           //console.log(responce);
@@ -63,8 +74,7 @@ export class WeatherComponent implements OnInit {
         error: (error) => {
           console.log(`Error: ${error}`);
         }
-
-      })
+      });
   }
 
 }
