@@ -1,7 +1,13 @@
 
 <div class="search">
     <form #form="ngForm" (submit)="onSubmit()">
-        <input type="text" placeholder="Search City" name="city" [(ngModel)]="cityName">
+        <input type="text" placeholder="Search by City" name="city" [(ngModel)]="cityName" ngModel #inputQuery="ngModel" required [minlength]="3">
+        <ng-container *ngIf="inputQuery.invalid && inputQuery.touched">
+            <div class="error" *ngIf="inputQuery.errors?.['required']">City is required</div>
+            <div class="error" *ngIf="inputQuery.errors?.['minlength']">City must be at least 3 characters long!
+            </div>
+          </ng-container>
+          <button type="submit" [disabled]="form.invalid"></button>
     </form>
 </div>
 
