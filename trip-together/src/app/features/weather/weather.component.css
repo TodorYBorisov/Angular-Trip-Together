@@ -9,7 +9,6 @@ body {
     font-size: 16px;
     width: 100%;
     height: 100vh;
-    background-color:blue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,13 +69,13 @@ body {
 }
 
 .location {
-    color: white;
+    color: black;
     text-align: center;
-    font-size: x-large;
+    font-size: xx-large;
 }
 
 .temperature {
-    color: white;
+    color: black;
     font-size: xxx-large;
     text-align: center;
     font-weight: 900;
@@ -157,11 +156,11 @@ background-image: linear-gradient(315deg, #45a29e 0%, #0d324d 74%);
 
 } */
 
-/* main {
+main {
     position: relative;
-} */
+}
 
-/* .container::before {
+.container::before {
     content: "";
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../assets/images/background2.jpg');
     background-size: cover;
@@ -173,5 +172,5 @@ background-image: linear-gradient(315deg, #45a29e 0%, #0d324d 74%);
     left: 0px;
     z-index: -1;
 
-} */
+}
 
