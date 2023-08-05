@@ -61,6 +61,10 @@ The project incorporates several security enhancements:
 - **Custom 404 Page**: An exclusive 404 page is implemented to handle undefined routes gracefully
 - **JWT Blacklist**: To enhance security, a blacklist system stores every used JSON Web Token (JWT) after a user logs out
 
+## Additional libraries used:
+- Angular Material https://material.angular.io/
+- Font Awesome https://fontawesome.com/
+
 ## Installation
 To run Trip Together locally, follow these steps:
 1. Clone the repository to your local machine
