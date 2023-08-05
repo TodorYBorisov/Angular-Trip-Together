@@ -57,9 +57,9 @@ The frontend is powered by Angular.
 ## Security
 The project incorporates several security enhancements:
 
-- Guards: Various features have guards in place to control access based on user authentication status
-- Custom 404 Page: An exclusive 404 page is implemented to handle undefined routes gracefully
-- JWT Blacklist: To enhance security, a blacklist system stores every used JSON Web Token (JWT) after a user logs out
+- **Guards** Various features have guards in place to control access based on user authentication status
+- **Custom 404 Page** An exclusive 404 page is implemented to handle undefined routes gracefully
+- **JWT Blacklist** To enhance security, a blacklist system stores every used JSON Web Token (JWT) after a user logs out
 
 ## Installation
 To run Trip Together locally, follow these steps:
@@ -70,4 +70,4 @@ To run Trip Together locally, follow these steps:
 5. Open your browser and go to `http://localhost:4200/` to access the application
 
 ## Deployment
-TODO
+TODO!!
