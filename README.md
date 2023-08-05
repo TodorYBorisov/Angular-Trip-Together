@@ -21,19 +21,19 @@ The frontend is powered by Angular.
 ## Features
 <ins>Public part visible without authentication:</ins>
 - **Home page** is accessible by all users, includes a button which leads to all available trips if there some
-- **Learn more page** includes button with angular animation explaining in simple steps how to use the application and carousel
-- **Trips page** includes basic details about the particular trip
-- **Sign Up page** expect as input username, email, phone number, gender, password and repeat password, all fields are required
+- **Learn more** page includes button with angular animation explaining in simple steps how to use the application and carousel
+- **Trips** page includes basic details about the particular trip
+- **Sign Up** page expect as input username, email, phone number, gender, password and repeat password, all fields are required
     - Username should be at least 5 characters long
     - Password should be at least 5 characters long
     - The password and the repeated password should match
-- **Login page** expect as input valid email and password
+- **Login** page expect as input valid email and password
 
-Private part visible after successful authentication:
-- **Trips page** give access to all trip details information
-    - if the user is not the creator of the trip, there is an option to **join the particular trip** if there are seats available
+<ins>Private part visible after successful authentication:</ins>
+- **Trips** page give access to all trip details information
+    - if the user is not the creator of the trip, there is an option to <ins>join the particular trip</ins> if there are seats available
         - his username and email is dynamically visualized in the trip list of the details page 
-        - each user can join a particular trip only once
+        - each user can <ins>join a particular trip only once</ins>
     - if the user is the creator of the trip:
         - **Edit button** is displayed and the trip can be edited
         - **Delete button** is displayed and the trip can be deleted
