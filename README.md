@@ -11,7 +11,15 @@ The frontend is powered by Angular.
 - Using a Trip Together app can reduce carbon footprint, potentially save you money.
 - Lastly, research shows that when users share common transportation, they tend to drive less, making them more environmentally friendly.
 
+## Users
+- email: toshko@abv.bg;
+- password:12345;
 
+- email: lili@abv.bg;
+- password:12345;
+
+- email: mitko@abv.bg;
+- password:12345;
 
 ## Features
 TODO!
@@ -31,3 +39,5 @@ To run Trip Together locally, follow these steps:
 4. Start the REST with "npm start" command and the application with "ng serve" command
 5. Open your browser and go to `http://localhost:4200/` to access the application
 
+## Deployment
+TODO
