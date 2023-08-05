@@ -19,7 +19,18 @@ The frontend is powered by Angular.
 -Email: mitko@abv.bg; Password: 12345;
 
 ## Features
-TODO!
+Public part visible without authentication:
+- Home page is accessible by all users, includes a button which leads to all available trips if there some
+- Learn more page includes button with angular animation explaining in simple steps how to use the application
+- Trips page includes basic details about the particular trip
+- Sign Up page expect as input username, email, phone number, gender, password and repeat password, all fields are required
+    - Username should be at least 5 characters long
+    - Password should be at least 5 characters long
+    - The password and the repeated password should match
+- Login page expect as input valid email and password
+
+
+
 
 ## Security
 The project incorporates several security enhancements:
