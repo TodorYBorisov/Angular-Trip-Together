@@ -25,7 +25,6 @@ const tripSchema = new mongoose.Schema({
 	imageUrl: {
 		type: String,
 		required: [true, 'Image is required!'],
-		// match: [pattern, 'The Image should start with http:// or https://'],
 	},
 	brand: {
 		type: String,
@@ -36,13 +35,12 @@ const tripSchema = new mongoose.Schema({
 		type: Number,
 		required: [true, 'Seats number is required!'],
 		min: [0, 'Seats must be a positive number!'],
-		// max: [4, 'The Seats should be positive number (from 0 to 4 inclusive).'],
 	},
 	price: {
 		type: Number,
 		required: [true, 'Price is required!'],
 		min: [0, 'Price must be a positive number!'],
-		// max: [50, 'The Price should be a positive number.'],
+
 	},
 	description: {
 		type: String,
@@ -55,7 +53,6 @@ const tripSchema = new mongoose.Schema({
     },
     buddies: [{
         type: ObjectId,
-        //type: [mongoose.Types.ObjectId],
         ref: 'User'
     }],
     

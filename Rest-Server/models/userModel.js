@@ -47,7 +47,6 @@ const userSchema = new mongoose.Schema({
 	},
     trips: [{
         type: ObjectId,
-        // type: [mongoose.Types.ObjectId],
         ref: 'Trip'
     }],
 }, { timestamps: { createdAt: 'created_at' } });

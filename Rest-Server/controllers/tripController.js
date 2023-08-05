@@ -1,21 +1,5 @@
 const { tripModel, userModel } = require('../models');
 
-// function newTrip(startPoint, endPoint, date, time, imageUrl, brand, seats, price, description, buddies, userId) {
-//     return tripModel.create({ startPoint, endPoint, date, time, imageUrl, brand, seats, price, description, buddies, userId })
-//         .then(trip => userModel.updateOne({ _id: userId }, { $push: { trips: trip._id }, $addToSet: { buddies: userId } }));
-// }
-
-// function getAllTrips(req, res, next) {
-//     const { _id: userId } = req.user;
-
-//     tripModel.find({ userId })
-//         .sort({ created_at: -1 })
-//         .then(trips => {
-//             res.status(200).json(trips);
-//         })
-//         .catch(next);
-// }
-
 function getAllTrips(req, res, next) {
     tripModel.find()
         // .populate('userId')
@@ -51,27 +35,10 @@ function createTrip(req, res, next) {
 
 }
 
-
-// function subscribeBuddie(req, res, next) {
-
-//     //console.log(req.user);
-//     const tripId = req.params.tripId;
-//     const userId = req.user.id;
-//     tripModel.findByIdAndUpdate({ _id: tripId }, { $addToSet: { buddies: userId } }, { new: true })
-//         .then(updatedTrip => {
-//             res.status(200).json(updatedTrip);
-//         })
-//         .catch(next);
-// }
-
-
 function getTrip(req, res, next) {
     const { tripId } = req.params;
 
     tripModel.findById(tripId)
-        // .populate({
-        //     path: 'userId'
-        // })
         .populate('userId')
         .populate('buddies')
         .then(trip => res.json(trip))
@@ -79,7 +46,6 @@ function getTrip(req, res, next) {
 }
 
 function editTrip(req, res, next) {
-    //const { _id: tripId } = req.params;
     const { startPoint } = req.body;
     const { endPoint } = req.body;
     const { date } = req.body;
@@ -89,13 +55,8 @@ function editTrip(req, res, next) {
     const { seats } = req.body;
     const { price } = req.body;
     const { description } = req.body;
-    //const { _id: userId } = req.user;
-    // const { userId } = req.params;
     const userId = req.body._id;
     const tripId = req.params.tripId;
-
-    //console.log(userId);
-    //console.log(tripId);
 
     tripModel.findOneAndUpdate({ _id: tripId, userId }, { startPoint, endPoint, date, time, imageUrl, brand, seats, price, description }, { new: true })
         .then(updatedTrip => {
@@ -129,18 +90,6 @@ function deleteTrip(req, res, next) {
 
 }
 
-// function searchTrips(req, res, next){
-//     const { _id: userId } = req.user;
-//     const { searchTerm } = req.params;
-
-//     const searchResult = new RegExp(searchTerm, 'i');
-
-//     tripModel.find({userId}).or([{'startPoint': {$regex: searchResult}}, {'endPoint': {$regex: searchResult}}, {'date': {$regex: searchResult}}]).lean()
-//     .then(trips => {
-//         res.status(200).json(trips);
-//     })
-//     .catch(next);
-// }
 function searchTrips(req, res, next) {
     const { searchTerm } = req.params;
 
@@ -160,33 +109,6 @@ function searchTrips(req, res, next) {
         .catch(next);
 }
 
-// function joinToTrip(req, res, next) {
-//     const tripId = req.params.tripId;
-//     const userId = req.user.id;
-
-//     tripModel
-//         .findById(tripId).populate('buddies')
-//         .then(trip => {
-//             if (trip.buddies.includes(userId)) {
-//                 res.status(200).json({alreadyJoined: true});
-//                 return;
-//             }
-
-//             if (!trip.buddies.includes(userId)) {
-//                 trip.seats -= 1;
-//                 trip.buddies.push(userId);
-//             }
-//             console.log(trip);
-//             return trip.save();
-//         })
-//         .then(updatedTrip => {
-//             res.status(200).json(updatedTrip);
-//         })
-//         .catch(error => {
-//             next(error);
-//         });
-// }
-// ==================
 function joinToTrip(req, res, next) {
     const tripId = req.params.tripId;
     const userId = req.user.id;
@@ -219,18 +141,6 @@ function joinToTrip(req, res, next) {
         });
 }
 
-// =================
-//   function like(req, res, next) {
-//     const { tripId } = req.params;
-//     const { _id: userId } = req.user;
-
-//     console.log('like');
-
-//     tripModel.updateOne({ _id: tripId }, { $addToSet: { likes: userId } }, { new: true })
-//         .then(() => res.status(200).json({ message: 'Liked successful!' }))
-//         .catch(next);
-// }
-
 function getAllCreatedTripsByUser(req, res, next) {
     const { _id: userId } = req.user;
     const establish = true;
@@ -242,11 +152,6 @@ function getAllCreatedTripsByUser(req, res, next) {
         .catch(next);
 }
 
-// function seatsDecrement(req, res, next) {
-
-
-// }
-
 module.exports = {
     getAllTrips,
     createTrip,
@@ -256,7 +161,5 @@ module.exports = {
     searchTrips,
     joinToTrip,
     getAllCreatedTripsByUser,
-    // subscribeBuddie,
     getUserTrips,
-    // seatsDecrement
 };
