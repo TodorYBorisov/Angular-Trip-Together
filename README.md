@@ -20,36 +20,36 @@ The frontend is powered by Angular.
 
 ## Features
 Public part visible without authentication:
-- Home page is accessible by all users, includes a button which leads to all available trips if there some
-- Learn more page includes button with angular animation explaining in simple steps how to use the application and carousel
-- Trips page includes basic details about the particular trip
-- Sign Up page expect as input username, email, phone number, gender, password and repeat password, all fields are required
+- **Home page** is accessible by all users, includes a button which leads to all available trips if there some
+- **Learn more page** includes button with angular animation explaining in simple steps how to use the application and carousel
+- **Trips page** includes basic details about the particular trip
+- **Sign Up page** expect as input username, email, phone number, gender, password and repeat password, all fields are required
     - Username should be at least 5 characters long
     - Password should be at least 5 characters long
     - The password and the repeated password should match
-- Login page expect as input valid email and password
+- **Login page** expect as input valid email and password
 
 Private part visible after successful authentication:
-- Trips page give access to all trip details information
-    - if the user is not the creator of the trip, there is an option to join the particular trip if there are seats available
-        - his username and email is visualized in the trip list of the details page 
+- **Trips page** give access to all trip details information
+    - if the user is not the creator of the trip, there is an option to **join the particular trip** if there are seats available
+        - his username and email is dynamically visualized in the trip list of the details page 
         - each user can join a particular trip only once
     - if the user is the creator of the trip:
-        - Edit button is displayed and the trip can be edited
-        - Delete button is displayed and the trip can be deleted
+        - **Edit button** is displayed and the trip can be edited
+        - **Delete button** is displayed and the trip can be deleted
 
--  Weather page, gives logged in users access to search for an actual weather by city name, for example based on their final travel destination
+-  **Weather page** gives logged in users access to search for an actual weather by city name, for example based on their final travel destination
 
-- Create page, each user can create their own trips:
+- **Create page**, each user can create their own trips:
     - all fields in the form are required with different validations, if the form does not meet all the validations, the submit button is disabled
 
-- Search page, users can search for particular trip based on their starting or end point. If there is a match from the search, all results are rendered, users also access details as well
+- **Search page**, users can search for particular trip based on their starting or end point. If there is a match from the search, all results are rendered, users also access details as well
 
-- Profile page:
+- **Profile page**:
     - this page contains personal information about the user's account
-    - user has the option to edit his personal information through the edit profile button
-    - avatar picture is dynamic based on the gender of the logged in user
-    - a list of all trips created with a link to details for each particular trip
+    - user has the option to **edit** his personal information through the **edit profile button**
+    - **avatar picture** is dynamic based on the gender of the logged in user
+    - a **dynamic list** of all trips created by the user with a **link** to details for each specific trip
 
 
 
