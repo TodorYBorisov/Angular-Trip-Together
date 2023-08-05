@@ -12,14 +12,11 @@ The frontend is powered by Angular.
 - Lastly, research shows that when users share common transportation, they tend to drive less, making them more environmentally friendly.
 
 ## Users
-- email: toshko@abv.bg;
-- password:12345;
+-Email: toshko@abv.bg; -Password:12345;
 
-- email: lili@abv.bg;
-- password:12345;
+-Email: lili@abv.bg; -Password:12345;
 
-- email: mitko@abv.bg;
-- password:12345;
+-Email: mitko@abv.bg; -Password:12345;
 
 ## Features
 TODO!
