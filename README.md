@@ -35,9 +35,9 @@ Private part visible after successful authentication:
     - if the user is not the creator of the trip, there is an option to join the particular trip if there are seats available
         - his username and email is visualized in the trip list of the details page 
         - each user can join a particular trip only once
-    - if the user is the creator:
-        - he can edit his trip details
-        - he can delete his trip at all
+    - if the user is the creator of the trip:
+        - edit button is displayed and the trip can be edited
+        - delete button is displayed and the trip can be deleted
 
 -  Weather page, gives logged in users access to search for an actual weather by city name, for example based on their final travel destination
 
