@@ -52,7 +52,7 @@ The frontend is powered by Angular.
     - **avatar picture** is dynamic based on the gender of the logged in user
     - a **dynamic list** of all trips created by the user with a **link** to details for each specific trip
 
-
+- Implemented **error handling** and **data validation** for all forms to prevent crashes caused by entering invalid data
 
 ## Security
 The project incorporates several security enhancements:
