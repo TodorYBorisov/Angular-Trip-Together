@@ -19,7 +19,7 @@ The frontend is powered by Angular.
 -Email: mitko@abv.bg; Password: 12345;
 
 ## Features
-Public part visible without authentication:
+<ins>Public part visible without authentication:</ins>
 - **Home page** is accessible by all users, includes a button which leads to all available trips if there some
 - **Learn more page** includes button with angular animation explaining in simple steps how to use the application and carousel
 - **Trips page** includes basic details about the particular trip
