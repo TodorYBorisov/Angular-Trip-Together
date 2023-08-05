@@ -35,15 +35,21 @@ Private part visible after successful authentication:
         - his username and email is visualized in the trip list of the details page 
         - each user can join a particular trip only once
     - if the user is the creator of the trip:
-        - edit button is displayed and the trip can be edited
-        - delete button is displayed and the trip can be deleted
+        - Edit button is displayed and the trip can be edited
+        - Delete button is displayed and the trip can be deleted
 
 -  Weather page, gives logged in users access to search for an actual weather by city name, for example based on their final travel destination
 
 - Create page, each user can create their own trips:
     - all fields in the form are required with different validations, if the form does not meet all the validations, the submit button is disabled
 
+- Search page, users can search for particular trip based on their starting or end point. If there is a match from the search, all results are rendered, users also access details as well
 
+- Profile page:
+    - this page contains personal information about the user's account
+    - user has the option to edit his personal information through the edit profile button
+    - avatar picture is dynamic based on the gender of the logged in user
+    - a list of all trips created with a link to details for each particular trip
 
 
 
