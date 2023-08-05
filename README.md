@@ -30,7 +30,6 @@ Public part visible without authentication:
 - Login page expect as input valid email and password
 
 Private part visible after successful authentication:
-
 - Trips page give access to all trip details information
     - if the user is not the creator of the trip, there is an option to join the particular trip if there are seats available
         - his username and email is visualized in the trip list of the details page 
@@ -41,7 +40,8 @@ Private part visible after successful authentication:
 
 -  Weather page, gives logged in users access to search for an actual weather by city name, for example based on their final travel destination
 
-- Create page, each user can create their own trip
+- Create page, each user can create their own trips:
+    - all fields in the form are required with different validations, if the form does not meet all the validations, the submit button is disabled
 
 
 
