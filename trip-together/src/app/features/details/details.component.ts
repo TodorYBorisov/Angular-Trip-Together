@@ -3,7 +3,6 @@ import { Trip } from 'src/app/shared/interfaces/trip';
 import { TripService } from '../trip.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/auth/auth.service';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-details',
@@ -45,8 +44,6 @@ export class DetailsComponent implements OnInit {
         next: (trip) => {
           this.trip = trip;
           this.isLoading = false;
-
-          //console.log({ trip }); //провери дали идва единичен трио само от базата
         },
         error: (error) => {
           this.isLoading = false;
@@ -65,21 +62,6 @@ export class DetailsComponent implements OnInit {
     }
   }
 
-  // joinToTrip(): void {
-  //   this.tripService.joinToTrip(this.trip?._id as string, this.trip?.userId._id as string)
-  //     .subscribe({
-  //       next: () => {
-  //         this.isSubcribe = true
-  //         this.seatsLeft = Number(this.trip?.seats!) - 1;
-  //         this.router.navigate([`/trip/details/${this.trip?._id}`])
-  //       },
-  //       error: (error) => {
-  //         this.isSubcribe = false
-  //         console.log(`Error: ${error}`);
-  //       }
-  //     })
-
-  // }
   hasAvailableSeats(): boolean {
     this.seatsLeft = this.trip?.seats || 0
     return this.seatsLeft > 0
