@@ -47,10 +47,10 @@ Email: mitko@abv.bg; Password: 12345;
 - **Search page**, users can search among all created trips for a particular trip, based on their starting or end point. If there is a match from the search, all results are rendered, users also access details as well
 
 - **Profile page**:
-    - this page contains personal information about the user's account
+    - contains a section with personal information about the user's account
     - user has the option to **edit** his personal information through the **edit profile button**
     - **avatar picture** is dynamic based on the gender of the logged in user
-    - a **dynamic list** of all trips created by the user with a **link** to details for each specific trip
+    - contains a **dynamic list** of all trips created by the user with a **link** to details for each specific trip
 
 - Implemented **error handling** and **data validation** for all forms to prevent crashes caused by entering invalid data
 
