@@ -11,13 +11,6 @@ The frontend is powered by Angular.
 - Using a Trip Together app can reduce carbon footprint, potentially save you money
 - Lastly, research shows that when users share common transportation, they tend to drive less, making them more environmentally friendly
 
-## Users
-Email: toshko@abv.bg; Password: 12345;
-
-Email: lili@abv.bg; Password: 12345;
-
-Email: mitko@abv.bg; Password: 12345;
-
 ## Features
 <ins>Public part visible without authentication:</ins>
 - **Home page** is accessible by all users, includes a button which leads to all available trips if there some
