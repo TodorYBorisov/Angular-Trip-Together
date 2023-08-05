@@ -22,15 +22,15 @@ The frontend is powered by Angular.
 <ins>Public part visible without authentication:</ins>
 - **Home page** is accessible by all users, includes a button which leads to all available trips if there some
 - **Learn more** page includes button with angular animation explaining in simple steps how to use the application and carousel
-- **Trips** page includes basic details about the particular trip
-- **Sign Up** page expect as input username, email, phone number, gender, password and repeat password, all fields are required
+- **Trips page** includes basic details about the particular trip
+- **Sign Up page** expect as input username, email, phone number, gender, password and repeat password, all fields are required
     - Username should be at least 5 characters long
     - Password should be at least 5 characters long
     - The password and the repeated password should match
-- **Login** page expect as input valid email and password
+- **Login page** expect as input valid email and password
 
 <ins>Private part visible after successful authentication:</ins>
-- **Trips** page give access to all trip details information
+- **Trips page** give access to all trip details information
     - if the user is not the creator of the trip, there is an option to <ins>join the particular trip</ins> if there are seats available
         - his username and email is dynamically visualized in the trip list of the details page 
         - each user can <ins>join a particular trip only once</ins>
