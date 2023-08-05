@@ -66,10 +66,6 @@ export class ProfileComponent implements OnInit {
 
   }
 
-  // get trips(): any {
-  //   return this.authService.user?.trips.length
-  // }
-
 get userId():any{
   return this.authService.user?._id
 }
