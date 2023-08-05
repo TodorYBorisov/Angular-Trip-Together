@@ -23,7 +23,7 @@ The frontend is powered by Angular.
 - **Home page** is accessible by all users, includes a button which leads to all available trips if there some
 - **Learn more** page includes button with angular animation explaining in simple steps how to use the application and carousel
 - **Trips page** includes basic details about the particular trip
-- **Sign Up page**(register) expect as input username, email, phone number, gender, password and repeat password, <ins>all fields are required to create a new user</ins>
+- **Sign Up** page (register) expect as input username, email, phone number, gender, password and repeat password, <ins>all fields are required to create a new user</ins>
     - Username should be at least 5 characters long
     - Password should be at least 5 characters long
     - The password and the repeated password should match
