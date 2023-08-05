@@ -20,12 +20,8 @@
             <div class="error_color" *ngIf="inputPassword.errors?.['minlength']"> Password must be at least 5 characters!</div>
         </ng-container>
 
-
-        <!-- <button type="submit" [disabled]="form.invalid" >Login</button> -->
         <input type="submit" value="Login" [disabled]="form.invalid" >
 
     </form>
     <p>Not have an account? <a routerLink="/auth/register">Register here</a></p>
 </div>
-
-<!-- routerLink="/home" -->
