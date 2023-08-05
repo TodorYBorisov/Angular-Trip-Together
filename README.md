@@ -5,11 +5,11 @@ It is an integrated project that incorporates a custom RESTful server using Node
 The frontend is powered by Angular.
 
 ## Description
-- Trip Together is a web application that allows users to experience shared trips with other users.
-- The main objective of the app is to enable users to share a common vehicle to reach their final destination.
-- Users have the opportunity to create passive income by making use of their cars.
-- Using a Trip Together app can reduce carbon footprint, potentially save you money.
-- Lastly, research shows that when users share common transportation, they tend to drive less, making them more environmentally friendly.
+- Trip Together is a web application that allows users to experience shared trips with other users
+- The main objective of the app is to enable users to share a common vehicle to reach their final destination
+- Users have the opportunity to create passive income by making use of their cars
+- Using a Trip Together app can reduce carbon footprint, potentially save you money
+- Lastly, research shows that when users share common transportation, they tend to drive less, making them more environmentally friendly
 
 ## Users
 -Email: toshko@abv.bg; Password: 12345;
@@ -21,13 +21,28 @@ The frontend is powered by Angular.
 ## Features
 Public part visible without authentication:
 - Home page is accessible by all users, includes a button which leads to all available trips if there some
-- Learn more page includes button with angular animation explaining in simple steps how to use the application & carousel
+- Learn more page includes button with angular animation explaining in simple steps how to use the application and carousel
 - Trips page includes basic details about the particular trip
 - Sign Up page expect as input username, email, phone number, gender, password and repeat password, all fields are required
     - Username should be at least 5 characters long
     - Password should be at least 5 characters long
     - The password and the repeated password should match
 - Login page expect as input valid email and password
+
+Private part visible after successful authentication:
+
+- Trips page give access to all trip details information
+    - if the user is not the creator of the trip, there is an option to join the particular trip if there are seats available
+        - his username and email is visualized in the trip list of the details page 
+        - each user can join a particular trip only once
+    - if the user is the creator:
+        - he can edit his trip details
+        - he can delete his trip at all
+
+-  Weather page, gives logged in users access to search for an actual weather by city name, for example based on their final travel destination
+
+- Create page, each user can create their own trip
+
 
 
 
