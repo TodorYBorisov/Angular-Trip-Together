@@ -31,7 +31,7 @@ The frontend is powered by Angular.
         - **Edit button** is displayed and the trip can be edited
         - **Delete button** is displayed and the trip can be deleted
 
--  **Weather page** gives logged in users access to search for an actual weather by city name, for example based on their final travel destination
+-  **Weather page** gives logged in users access to search for weather conditions by city name, for example based on their final travel destination
     - Weather API https://open-weather13.p.rapidapi.com
 
 - **Create page**, each user can create their own trips:
