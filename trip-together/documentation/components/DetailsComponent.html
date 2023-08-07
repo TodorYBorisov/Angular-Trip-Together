@@ -1,0 +1,1621 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>trip-together documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">trip-together documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  DetailsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/features/details/details.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-details</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./details.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./details.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#hasJoined" >hasJoined</a>
+                            </li>
+                            <li>
+                                <a href="#isLoading" >isLoading</a>
+                            </li>
+                            <li>
+                                <a href="#isOwner" >isOwner</a>
+                            </li>
+                            <li>
+                                <a href="#isSubcribe" >isSubcribe</a>
+                            </li>
+                            <li>
+                                <a href="#seatsLeft" >seatsLeft</a>
+                            </li>
+                            <li>
+                                <a href="#trip" >trip</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addBuddy" >addBuddy</a>
+                            </li>
+                            <li>
+                                <a href="#deleteTrip" >deleteTrip</a>
+                            </li>
+                            <li>
+                                <a href="#hasAvailableSeats" >hasAvailableSeats</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#isLogged" >isLogged</a>
+                                </li>
+                                <li>
+                                    <a href="#user" >user</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(tripService: <a href="../injectables/TripService.html" target="_self">TripService</a>, activatedRoute: ActivatedRoute, authService: <a href="../injectables/AuthService.html" target="_self">AuthService</a>, router: Router)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/features/details/details.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>tripService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TripService.html" target="_self" >TripService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>activatedRoute</td>
+                                                  
+                                                        <td>
+                                                                    <code>ActivatedRoute</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code>Router</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addBuddy"></a>
+                    <span class="name">
+                        <span ><b>addBuddy</b></span>
+                        <a href="#addBuddy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addBuddy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">src/app/features/details/details.component.ts:70</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteTrip"></a>
+                    <span class="name">
+                        <span ><b>deleteTrip</b></span>
+                        <a href="#deleteTrip"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteTrip()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/features/details/details.component.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hasAvailableSeats"></a>
+                    <span class="name">
+                        <span ><b>hasAvailableSeats</b></span>
+                        <a href="#hasAvailableSeats"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>hasAvailableSeats()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="65"
+                            class="link-to-prism">src/app/features/details/details.component.ts:65</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">src/app/features/details/details.component.ts:38</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hasJoined"></a>
+                    <span class="name">
+                        <span ><b>hasJoined</b></span>
+                        <a href="#hasJoined"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/features/details/details.component.ts:19</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isLoading"></a>
+                    <span class="name">
+                        <span ><b>isLoading</b></span>
+                        <a href="#isLoading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/features/details/details.component.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isOwner"></a>
+                    <span class="name">
+                        <span ><b>isOwner</b></span>
+                        <a href="#isOwner"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/features/details/details.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isSubcribe"></a>
+                    <span class="name">
+                        <span ><b>isSubcribe</b></span>
+                        <a href="#isSubcribe"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/features/details/details.component.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="seatsLeft"></a>
+                    <span class="name">
+                        <span ><b>seatsLeft</b></span>
+                        <a href="#seatsLeft"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/features/details/details.component.ts:17</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="trip"></a>
+                    <span class="name">
+                        <span ><b>trip</b></span>
+                        <a href="#trip"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Trip.html" target="_self" >Trip | undefined</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/features/details/details.component.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-accessors">
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isLogged"></a>
+                        <span class="name"><b>isLogged</b><a href="#isLogged"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>isLogged()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/features/details/details.component.ts:29</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="user"></a>
+                        <span class="name"><b>user</b><a href="#user"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>user()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/features/details/details.component.ts:33</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnDestroy, OnInit } from &#x27;@angular/core&#x27;;
+import { Trip } from &#x27;src/app/shared/interfaces/trip&#x27;;
+import { TripService } from &#x27;../trip.service&#x27;;
+import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
+import { AuthService } from &#x27;src/app/auth/auth.service&#x27;;
+
+@Component({
+  selector: &#x27;app-details&#x27;,
+  templateUrl: &#x27;./details.component.html&#x27;,
+  styleUrls: [&#x27;./details.component.css&#x27;]
+})
+export class DetailsComponent implements OnInit {
+
+  trip: Trip | undefined;
+  isLoading: boolean &#x3D; true;
+  isOwner: boolean &#x3D; false;
+  seatsLeft: number &#x3D; 0;
+  isSubcribe: boolean &#x3D; false;
+  hasJoined: boolean &#x3D; false
+
+  constructor(
+    private tripService: TripService,
+    private activatedRoute: ActivatedRoute,
+    private authService: AuthService,
+    private router: Router
+  ) { }
+
+
+  get isLogged(): boolean {
+    return this.authService.isLogged
+  }
+
+  get user() {
+    return this.authService.user
+  }
+
+
+  ngOnInit(): void {
+
+    const id &#x3D; this.activatedRoute.snapshot.params[&#x27;id&#x27;];
+
+    this.tripService.getTripbyId(id).subscribe(
+      {
+        next: (trip) &#x3D;&gt; {
+          this.trip &#x3D; trip;
+          this.isLoading &#x3D; false;
+        },
+        error: (error) &#x3D;&gt; {
+          this.isLoading &#x3D; false;
+          console.log(&#x60;Error: ${error}&#x60;);
+        },
+        complete: () &#x3D;&gt; {
+          this.isOwner &#x3D; this.authService.user?._id &#x3D;&#x3D;&#x3D; this.trip?.userId._id
+        }
+      });
+  }
+
+  deleteTrip(): void {
+    if (confirm(&#x27;Are you sure you want to delete this trip?&#x27;)) {
+      this.tripService.deleteTripById(this.trip?._id as string, this.trip?.userId._id as string)
+        .subscribe(() &#x3D;&gt; this.router.navigate([&#x27;/trip/catalog&#x27;]))
+    }
+  }
+
+  hasAvailableSeats(): boolean {
+    this.seatsLeft &#x3D; this.trip?.seats || 0
+    return this.seatsLeft &gt; 0
+  }
+
+  addBuddy(): void {
+    const userId &#x3D; this.trip?.userId?._id as string;
+
+    if (this.trip?.buddies.some(user &#x3D;&gt; user._id &#x3D;&#x3D; this.user?._id)) {
+      this.hasJoined &#x3D; true;
+      this.isSubcribe &#x3D; true
+      return;
+    }
+
+    this.tripService.addBuddieToTrip(this.trip?._id as string, { userId })
+      .subscribe({
+        next: (data) &#x3D;&gt; {
+          this.hasJoined &#x3D; true;
+          this.isSubcribe &#x3D; true
+          this.trip!.buddies &#x3D;data.buddies
+          //this.router.navigate([&#x60;/trip/details/${this.trip?._id}&#x60;])
+        },
+        error: (error) &#x3D;&gt; {
+          this.isSubcribe &#x3D; false
+          console.log(&#x60;Error: ${error}&#x60;);
+        }
+
+      });
+
+  }
+
+}
+
+
+// {
+//   &quot;buddies&quot;: [],
+//   &quot;_id&quot;: &quot;64c7cf12b197ec3ef8749ea0&quot;,
+//   &quot;startPoint&quot;: &quot;Sofia&quot;,
+//   &quot;endPoint&quot;: &quot;Varna&quot;,
+//   &quot;date&quot;: &quot;2023-08-01&quot;,
+//   &quot;time&quot;: &quot;15:00&quot;,
+//   &quot;imageUrl&quot;: &quot;https://media.ed.edmunds-media.com/hyundai/kona/2022/oem/2022_hyundai_kona_4dr-suv_limited_fq_oem_1_600.jpg&quot;,
+//   &quot;brand&quot;: &quot;Hyundai Kona&quot;,
+//   &quot;seats&quot;: 2,
+//   &quot;price&quot;: 35,
+//   &quot;description&quot;: &quot;This is trip from sofia to varna&quot;,
+//   &quot;userId&quot;: {
+//     &quot;trips&quot;: [
+//       &quot;64c7cf12b197ec3ef8749ea0&quot;
+//     ],
+//     &quot;_id&quot;: &quot;64bfaa91c2cdeb30e8e2a6a5&quot;,
+//     &quot;username&quot;: &quot;Toshko&quot;,
+//     &quot;email&quot;: &quot;toshko@abv.bg&quot;,
+//     &quot;tel&quot;: &quot;+359884400839&quot;,
+//     &quot;gender&quot;: &quot;male&quot;,
+//     &quot;password&quot;: &quot;$2b$05$z1lUSgJE1wYDh3FRyk3gJuraUrtOjJ3023UOg/bsscI2lUpITbNWe&quot;,
+//     &quot;created_at&quot;: &quot;2023-07-25T10:57:21.640Z&quot;,
+//     &quot;updatedAt&quot;: &quot;2023-08-01T09:12:33.985Z&quot;,
+//     &quot;__v&quot;: 0
+//   },
+//   &quot;created_at&quot;: &quot;2023-07-31T15:11:14.919Z&quot;,
+//   &quot;updatedAt&quot;: &quot;2023-08-03T17:22:01.368Z&quot;,
+//   &quot;__v&quot;: 3
+// }</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;section class&#x3D;&quot;py-5 details&quot; id&#x3D;&quot;trip-details-page&quot; *ngIf&#x3D;&quot;trip&quot;&gt;
+    &lt;div class&#x3D;&quot;container&quot;&gt;
+        &lt;div class&#x3D;&quot;destination&quot;&gt;
+            &lt;div&gt;
+                &lt;span class&#x3D;&quot;icon&quot;&gt;&lt;i class&#x3D;&quot;fas fa-map-marked-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                &lt;h5&gt; from &lt;span&gt;{{trip.startPoint}}&lt;/span&gt; to &lt;span&gt;{{trip.endPoint}}&lt;/span&gt; &lt;/h5&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;span class&#x3D;&quot;icon&quot;&gt;&lt;i class&#x3D;&quot;fas fa-calendar-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                &lt;h5&gt; &lt;span&gt;{{trip.date}}&lt;/span&gt; at &lt;span&gt;{{trip.time}}&lt;/span&gt; &lt;/h5&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p class&#x3D;&quot;line&quot;&gt;&lt;/p&gt;
+        &lt;div class&#x3D;&quot;buddies-info&quot;&gt;
+            &lt;i class&#x3D;&quot;fas fa-users buddies&quot;&gt;&lt;/i&gt;
+            &lt;h5&gt;Trip Together Buddies&lt;/h5&gt;
+            &lt;ng-container *ngIf&#x3D;&quot;trip.buddies.length&gt;0; else noBuddies&quot;&gt;
+                &lt;!-- if there are joined buddies for the current trip separate them with comma and space&quot;, &quot; --&gt;
+                &lt;div *ngFor&#x3D;&quot;let buddy of trip.buddies&quot;&gt;
+                    &lt;p&gt;{{buddy.username}} joined your trip, with email: {{buddy.email}}.&lt;/p&gt;
+                &lt;/div&gt; 
+            &lt;/ng-container&gt;
+            &lt;!-- If not display: --&gt;
+            &lt;ng-template #noBuddies&gt;
+                &lt;p &gt;there are no buddies yet...&lt;/p&gt;
+            &lt;/ng-template&gt;
+            
+            &lt;h5&gt;Driver: &lt;span&gt;{{trip.userId.username}}&lt;/span&gt; &lt;/h5&gt;
+        &lt;/div&gt;
+        &lt;p class&#x3D;&quot;line&quot;&gt;&lt;/p&gt;
+        &lt;h5 class&#x3D;&quot;brand&quot;&gt;Car Brand: &lt;span class&#x3D;&quot;lead&quot;&gt;{{trip.brand}}&lt;/span&gt;&lt;/h5&gt;
+        &lt;div class&#x3D;&quot;trip-info&quot;&gt;
+            &lt;div&gt;
+                &lt;img class&#x3D;&quot;img-fluid rounded&quot; src&#x3D;&quot;{{trip.imageUrl}}&quot; alt&#x3D;&quot;car-image&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;trip-desc&quot;&gt;
+                &lt;h5&gt;Information about the trip&lt;/h5&gt;
+                &lt;textarea class&#x3D;&quot;lead&quot; disabled&gt;{{trip.description}}&lt;/textarea&gt;
+                &lt;h5&gt;Price: &lt;span class&#x3D;&quot;lead&quot;&gt;{{trip.price}}&lt;/span&gt; BGN&lt;/h5&gt;
+
+                &lt;!-- if there are no logged in user do not show div with class actions  --&gt;
+                &lt;div class&#x3D;&quot;actions&quot;&gt;
+                    &lt;!-- Only for logged user and creator to this trip --&gt;
+                    &lt;a *ngIf&#x3D;&quot;isOwner&quot; (click)&#x3D;&quot;deleteTrip()&quot; class&#x3D;&quot;btn btn-danger&quot;&gt;&lt;i class&#x3D;&quot;fa-solid fa-trash&quot; style&#x3D;&quot;color: #000000;&quot;&gt;&lt;/i&gt;Delete trip&lt;/a&gt;
+                    &lt;a *ngIf&#x3D;&quot;isOwner&quot; [routerLink]&#x3D;&quot;[&#x27;/trip&#x27;,&#x27;edit&#x27;, trip._id]&quot; class&#x3D;&quot;btn btn-warning&quot;&gt;&lt;i class&#x3D;&quot;fa-solid fa-user-pen&quot; style&#x3D;&quot;color: #000000;&quot;&gt;&lt;/i&gt;Edit trip&lt;/a&gt;
+
+                    &lt;!-- logged in user with available seats --&gt;
+                    &lt;a *ngIf&#x3D;&quot;!isOwner &amp;&amp; !isSubcribe &amp;&amp; hasAvailableSeats()&quot; (click)&#x3D;&quot;addBuddy()&quot;
+                        class&#x3D;&quot;btn btn-join&quot;&gt;Join to TripTogether, i have {{trip.seats}} seats left!&lt;/a&gt;
+
+                    &lt;!-- logged in user and has already joined the trip  --&gt;
+                    &lt;span *ngIf&#x3D;&quot;isSubcribe &amp;&amp; hasJoined&quot; class&#x3D;&quot;btn btn-info&quot;&gt;Already joined. Don&#x27;t be late!&lt;/span&gt;
+
+                    &lt;!-- logged in user with no available seats --&gt;
+                    &lt;ng-container *ngIf&#x3D;&quot;!isOwner &amp;&amp; !isSubcribe &amp;&amp; !hasAvailableSeats()&quot;&gt;
+                        &lt;span class&#x3D;&quot;btn btn-secondary&quot;&gt;No seats available!&lt;/span&gt;
+                    &lt;/ng-container&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./details.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import url(&#x27;https://use.fontawesome.com/releases/v5.12.1/css/all.css&#x27;);
+@import url(&#x27;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css&#x27;);
+
+body {
+  position: relative;
+}
+
+/* body::before {
+  content: &quot;&quot;;
+  background: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.5)), url(&#x27;https://sc.6tupian.com/wp-content/uploads/2021/02/1613417565-f9f677ddb0fab5f.jpg&#x27;);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: -25px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+} */
+
+main {
+  position: relative;
+}
+
+/* .details {
+  color: black;
+  border: 1px solid black;
+} */
+
+/* .details .container {
+  padding: 2%;
+} */
+
+.details .destination {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.destination&gt;div {
+  width: 33%;
+}
+
+.destination&gt;div:nth-child(2) {
+  text-align: center;
+}
+
+.details .buddies-info {
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
+.details .buddies-info p {
+  font-size:large;
+  text-decoration: underline;
+  margin-bottom: 5px;
+}
+
+.details .brand {
+  text-align: left;
+}
+
+main {
+  min-height: 91vh;
+}
+
+section div.container.home {
+  padding-top: 0;
+}
+
+.home h1, .home p {
+  text-align: center;
+  color: white;
+}
+
+.home p.lead {
+  font-size: 24px;
+  font-style: italic;
+}
+
+.edit-label, .offer-label {
+  display: flex;
+  justify-content: space-around;
+}
+
+.edit-input, .offer-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit&gt;h1 {
+  margin: 2%;
+  text-align: center;
+}
+
+.edit textarea.form-control, .offer-trip textarea.form-control {
+  width: 100%;
+  height: 90px;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-container {
+  box-shadow: 0px -2px 20px -1px #f4c537, inset -14px -14px 30px -13px rgb(0 0 0 / 55%);
+  margin-top: 100px;
+  color: white;
+  width: 350px;
+  border-top-left-radius: 20px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.profile-img {
+  padding: 20px;
+  border-radius: 50%;
+  height: 250px;
+}
+
+.profile-info {
+  display: block;
+  width: 50%;
+  margin-top: 100px;
+  color: white;
+  padding: 1em;
+  box-shadow: 0px -2px 20px -1px #f4c537, inset -14px -14px 30px -13px rgb(0 0 0 / 55%);
+  border-top-right-radius: 20px;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.profile p&gt;span {
+  font-weight: bold;
+}
+
+h4.card-title {
+  font-size: 1.2rem;
+}
+
+h5.mt-4 {
+  font-size: 1rem;
+  margin-top: 0!important;
+}
+
+.card.h-100 {
+  transition: all .2s ease-in-out;
+  width: 250px;
+  border: none;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0px -2px 20px -1px #f4c537, inset -14px -14px 30px -13px rgb(0 0 0 / 55%);
+}
+
+.card.h-100:hover .card-body, .card.h-100:hover {
+  cursor: grab;
+  box-shadow: 0px -2px 20px -1px #64c3fff5, inset -14px -14px 30px -13px rgb(0 0 0 / 55%);
+}
+
+.card.h-100:hover {
+  transform: scale(1.05);
+}
+
+.card-body {
+  box-shadow: 0px 5px 9px -2px #f4c537, inset -14px -14px 30px -13px rgb(0 0 0 / 55%);
+  text-align: left;
+  padding: 10px 10px 10px 40px!important;
+}
+
+.card-body i {
+  padding-right: 5px;
+}
+
+.card-info {
+  display: inline-block;
+}
+
+.line {
+  box-shadow: 2px 0px 4px 1px #33529b, inset -14px -14px 30px -13px rgb(0 0 0 / 55%);
+  border: 0;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+img.card-img-top {
+  height: 170px;
+}
+
+.row {
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.form-control-2 {
+  text-align: center;
+  display: block;
+  width: 45%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input.form-control-2, textarea.form-control, input.form-control, textarea:disabled {
+  /* box-shadow: 0px -2px 20px -1px #f4c537, inset -14px -14px 30px -13px rgb(0 0 0 / 55%); */
+  background: rgba(73, 189, 206, 0.5);
+  color: white;
+  border: none;
+  outline: none;
+}
+
+textarea:disabled {
+  width: 100%;
+  resize: none;
+}
+
+.form-group p {
+  color: #f8f9fa;
+  text-shadow: 1px 1px #007bff;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.login, .register {
+  width: 40%!important;
+}
+
+.login input, .register input {
+  text-align: center;
+}
+
+.login-page&gt;h1, .register-page&gt;h1, .offer-trip&gt;h1 {
+  margin: 2%;
+  text-align: center;
+}
+
+input.form-control-2::placeholder, textarea.form-control::placeholder {
+  color: rgb(167, 162, 162);
+}
+
+.gender {
+  box-shadow: 0px -2px 20px -1px #f4c537, inset -14px -14px 30px -13px rgb(0 0 0 / 55%);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: .25rem;
+  padding-top: 5px;
+  margin-bottom: 15px;
+}
+
+.no-trips {
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.no-trips img {
+  box-shadow: 0px -2px 20px -1px #f4c537, inset -14px -14px 30px -13px rgb(0 0 0 / 55%);
+  opacity: 0.95;
+  margin-bottom: 10px;
+}
+
+.no-trips p.lead {
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-style: italic;
+}
+
+textarea.form-control:focus, input.form-control:focus, input.form-control-2:focus {
+  border: 1px solid #80bdff;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  box-shadow: none;
+}
+
+input[type&#x3D;&quot;date&quot;]::-webkit-calendar-picker-indicator, input[type&#x3D;&quot;time&quot;]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 2px;
+  filter: invert(1);
+}
+
+textarea, textarea.form-control, textarea:disabled {
+  padding: 5px 10px;
+  text-align: center;
+  /* border-top-left-radius: 20px;
+  border-top-right-radius: 20px; */
+  word-wrap: break-word;
+  border-radius: 0.25rem;
+}
+
+textarea, input {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.details .icon {
+  display: block;
+  margin: 25px auto;
+  max-width: 100px;
+}
+
+.icon i, i.buddies {
+  font-size: 4em;
+}
+
+div.container .register, div.container .login {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+
+.gender label:first-of-type {
+  margin-right: 60px;
+}
+
+label, .container&gt;h1 {
+  color: white;
+}
+
+.gender label:hover, .gender input:hover {
+  cursor: pointer;
+}
+
+div.error {
+  animation: fadeOut 1s forwards;
+  animation-delay: 3s;
+  position: fixed;
+  right: 0;
+  min-width: 350px;
+  margin-top: 55px;
+  margin-right: 20px;
+  display: block;
+  z-index: 11111;
+}
+
+div.error p {
+  background: rgba(204, 55, 55, 0.726);
+  color: white;
+  padding: 5px 25px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+  position: relative;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+.error-page {
+  display: block;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.car.logo {
+  transform: rotate(-8deg);
+}
+
+.logo {
+  width: 55px;
+  height: 55px;
+}
+
+.trip {
+  text-align: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-top: 75px;
+  color: white;
+}
+
+.trip p.lead {
+  margin-bottom: 0;
+}
+
+.driver {
+  font-weight: bold;
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+.container form {
+  text-align: center;
+}
+
+.details h5 {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: normal;
+  font-size:x-large;
+  color: white;
+}
+
+.details h5 span {
+  font-weight: bold;
+ 
+}
+/*  */
+i {
+  color: rgb(112, 150, 230);
+ 
+}
+
+.btn {
+  margin-bottom: 10px;
+}
+
+button.btn {
+  padding: 5px 20px;
+}
+
+.btn.btn-info {
+  margin: 10px auto;
+  display: block;
+  width: 240px;
+  margin-top: 0;
+}
+
+.btn.btn-join {
+  background-color: #118b50;
+  border-color: #118b50;
+  color: white;
+}
+
+.actions {
+  margin-top: 10px;
+  
+}
+
+.btn.btn-warning {
+  color:black;
+  margin-left: 10px;
+}
+
+.btn.btn-primary {
+  background-color: #0578B9;
+  border: none;
+}
+
+.btn.btn-primary:hover {
+  background-color: #099cf1;
+}
+
+li&gt;a.nav-link {
+  color: rgba(255, 255, 255, 0.8)!important;
+}
+
+li&gt;a.nav-link:hover {
+  color: #099cf1!important;
+}
+
+.card-img-top {
+  height: 200px;
+}
+
+.jumbotron.my-4 {
+  margin-top: 0!important;
+}
+
+/* section&gt;div.container {
+  padding-top: 40px;
+} */
+
+.trip-info {
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.trip-info .img-fluid.rounded {
+  max-width: 500px;
+  transition: all .2s ease-in-out;
+  /* box-shadow: 0px -2px 20px -1px #f4c537, inset -14px -14px 30px -13px rgb(0 0 0 / 55%); */
+}
+.img-fluid.rounded:hover {
+  /* transform: scale(1.02); */
+  cursor: grab;
+  /* box-shadow: 0px -2px 20px -1px #64c3fff5, inset -14px -14px 30px -13px rgb(0 0 0 / 55%); */
+}
+
+.trip-info div:first-child {
+  width: 80%;
+  display: flex;
+  justify-content: space-between
+}
+
+.trip-desc {
+  width: 55%!important;
+  text-align: center;
+  word-wrap: break-word;
+  padding: 1%;
+}
+
+.trip-desc textarea {
+  height: 170px;
+}
+.trip-desc &gt; h5 {
+  font-size: 22px;
+}
+
+footer {
+  padding: 20px;
+  position: absolute;
+  width: 100%;
+}
+
+@keyframes showNav {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .trip-info {
+    display: flex;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+  }
+  .trip-info&gt;div img {
+    width: 90%;
+  }
+  .trip-info&gt;div {
+    justify-content: space-around!important;
+  }
+  .trip-desc {
+    width: 63%!important;
+    text-align: center;
+  }
+  .brand {
+    text-align: center;
+  }
+  .brand&gt;span.lead, .trip-desc span.lead {
+    width: 100%;
+    word-wrap: break-word;
+  }
+  .collapse.navbar-collapse {
+    display: inline-block;
+  }
+  .navbar&gt;.container {
+    flex-wrap: nowrap!important;
+  }
+  ul.navbar-nav {
+    margin: auto;
+    flex-direction: row;
+  }
+  .navbar-nav li {
+    padding-left: 20px;
+  }
+}
+
+/* &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; */
+body {
+  position: relative;
+
+}
+
+main {
+  position: relative;
+}
+
+#trip-details-page::before {
+  content: &quot;&quot;;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(&#x27;../../../assets/images/background2.jpg&#x27;);
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+
+}
+.profile-container button {
+  color: white;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.6em 1.2em;
+  outline: none;
+  background-color: rgb(112, 150, 230);
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><section class="py-5 details" id="trip-details-page" *ngIf="trip">    <div class="container">        <div class="destination">            <div>                <span class="icon"><i class="fas fa-map-marked-alt"></i></span>                <h5> from <span>{{trip.startPoint}}</span> to <span>{{trip.endPoint}}</span> </h5>            </div>            <div>                <span class="icon"><i class="fas fa-calendar-alt"></i></span>                <h5> <span>{{trip.date}}</span> at <span>{{trip.time}}</span> </h5>            </div>        </div>        <p class="line"></p>        <div class="buddies-info">            <i class="fas fa-users buddies"></i>            <h5>Trip Together Buddies</h5>            <ng-container *ngIf="trip.buddies.length>0; else noBuddies">                <!-- if there are joined buddies for the current trip separate them with comma and space", " -->                <div *ngFor="let buddy of trip.buddies">                    <p>{{buddy.username}} joined your trip, with email: {{buddy.email}}.</p>                </div>             </ng-container>            <!-- If not display: -->            <ng-template #noBuddies>                <p >there are no buddies yet...</p>            </ng-template>                        <h5>Driver: <span>{{trip.userId.username}}</span> </h5>        </div>        <p class="line"></p>        <h5 class="brand">Car Brand: <span class="lead">{{trip.brand}}</span></h5>        <div class="trip-info">            <div>                <img class="img-fluid rounded" src="{{trip.imageUrl}}" alt="car-image">            </div>            <div class="trip-desc">                <h5>Information about the trip</h5>                <textarea class="lead" disabled>{{trip.description}}</textarea>                <h5>Price: <span class="lead">{{trip.price}}</span> BGN</h5>                <!-- if there are no logged in user do not show div with class actions  -->                <div class="actions">                    <!-- Only for logged user and creator to this trip -->                    <a *ngIf="isOwner" (click)="deleteTrip()" class="btn btn-danger"><i class="fa-solid fa-trash" style="color: #000000;"></i>Delete trip</a>                    <a *ngIf="isOwner" [routerLink]="[\'/trip\',\'edit\', trip._id]" class="btn btn-warning"><i class="fa-solid fa-user-pen" style="color: #000000;"></i>Edit trip</a>                    <!-- logged in user with available seats -->                    <a *ngIf="!isOwner && !isSubcribe && hasAvailableSeats()" (click)="addBuddy()"                        class="btn btn-join">Join to TripTogether, i have {{trip.seats}} seats left!</a>                    <!-- logged in user and has already joined the trip  -->                    <span *ngIf="isSubcribe && hasJoined" class="btn btn-info">Already joined. Don\'t be late!</span>                    <!-- logged in user with no available seats -->                    <ng-container *ngIf="!isOwner && !isSubcribe && !hasAvailableSeats()">                        <span class="btn btn-secondary">No seats available!</span>                    </ng-container>                </div>            </div>        </div>    </div></section></div>'
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthenticateComponent', 'selector': 'app-authenticate'},{'name': 'CatalogComponent', 'selector': 'app-catalog'},{'name': 'CreateComponent', 'selector': 'app-create'},{'name': 'DetailsComponent', 'selector': 'app-details'},{'name': 'EditComponent', 'selector': 'app-edit'},{'name': 'ErrorComponent', 'selector': 'app-error'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoaderComponent', 'selector': 'app-loader'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'DetailsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'DetailsComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

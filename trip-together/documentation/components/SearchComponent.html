@@ -1,0 +1,1644 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>trip-together documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">trip-together documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  SearchComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/features/search/search.component.ts</code>
+</p>
+
+
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-search</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./search.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./search.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#errorMsgFromServer" >errorMsgFromServer</a>
+                            </li>
+                            <li>
+                                <a href="#hasResult" >hasResult</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#inputQuery" >inputQuery</a>
+                            </li>
+                            <li>
+                                <a href="#isLoading" >isLoading</a>
+                            </li>
+                            <li>
+                                <a href="#query" >query</a>
+                            </li>
+                            <li>
+                                <a href="#subscription$" >subscription$</a>
+                            </li>
+                            <li>
+                                <a href="#tripsFound" >tripsFound</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#onSearch" >onSearch</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#isLogged" >isLogged</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(tripService: <a href="../injectables/TripService.html" target="_self">TripService</a>, authService: <a href="../injectables/AuthService.html" target="_self">AuthService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/features/search/search.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>tripService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TripService.html" target="_self" >TripService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSearch"></a>
+                    <span class="name">
+                        <span ><b>onSearch</b></span>
+                        <a href="#onSearch"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSearch(searchStr: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/app/features/search/search.component.ts:29</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>searchStr</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="errorMsgFromServer"></a>
+                    <span class="name">
+                        <span ><b>errorMsgFromServer</b></span>
+                        <a href="#errorMsgFromServer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/features/search/search.component.ts:17</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hasResult"></a>
+                    <span class="name">
+                        <span ><b>hasResult</b></span>
+                        <a href="#hasResult"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/features/search/search.component.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="inputQuery"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>inputQuery</b></span>
+                        <a href="#inputQuery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>NgModel</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;inputQuery&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/features/search/search.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isLoading"></a>
+                    <span class="name">
+                        <span ><b>isLoading</b></span>
+                        <a href="#isLoading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/features/search/search.component.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="query"></a>
+                    <span class="name">
+                        <span ><b>query</b></span>
+                        <a href="#query"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/features/search/search.component.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="subscription$"></a>
+                    <span class="name">
+                        <span ><b>subscription$</b></span>
+                        <a href="#subscription$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Subscription</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/features/search/search.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="tripsFound"></a>
+                    <span class="name">
+                        <span ><b>tripsFound</b></span>
+                        <a href="#tripsFound"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Trip.html" target="_self" >Trip[]</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/features/search/search.component.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-accessors">
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isLogged"></a>
+                        <span class="name"><b>isLogged</b><a href="#isLogged"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>isLogged()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/features/search/search.component.ts:25</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, ViewChild } from &#x27;@angular/core&#x27;;
+import { Trip } from &#x27;src/app/shared/interfaces/trip&#x27;;
+import { TripService } from &#x27;../trip.service&#x27;;
+import { AuthService } from &#x27;src/app/auth/auth.service&#x27;;
+import { Subscription } from &#x27;rxjs&#x27;;
+import { NgModel } from &#x27;@angular/forms&#x27;;
+
+@Component({
+  selector: &#x27;app-search&#x27;,
+  templateUrl: &#x27;./search.component.html&#x27;,
+  styleUrls: [&#x27;./search.component.css&#x27;]
+})
+export class SearchComponent {
+  tripsFound!: Trip[];
+  query: string &#x3D; &#x27;&#x27;;
+  subscription$!: Subscription;
+  errorMsgFromServer!: string;
+  hasResult: boolean &#x3D; false;
+
+  @ViewChild(&#x27;inputQuery&#x27;) inputQuery!: NgModel;
+
+  constructor(private tripService: TripService, private authService: AuthService) { }
+  isLoading: boolean &#x3D; true;
+ 
+  get isLogged(): boolean {
+    return this.authService.isLogged
+  }
+
+  onSearch(searchStr: string): void {
+    this.isLoading &#x3D; true;
+    this.query &#x3D; searchStr;
+    this.subscription$ &#x3D; this.tripService.search(this.query).subscribe({
+      next: (data) &#x3D;&gt; {
+        this.tripsFound &#x3D; data;
+        this.hasResult &#x3D; this.tripsFound.length !&#x3D; 0;
+        this.inputQuery.reset();
+        this.isLoading &#x3D;false;
+      },
+      error: (error) &#x3D;&gt; {
+        this.errorMsgFromServer &#x3D; error.error.message;
+        this.isLoading &#x3D;false;
+      },
+      complete: () &#x3D;&gt; this.subscription$.unsubscribe(),
+    })
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;section id&#x3D;&quot;searchPage&quot;&gt;
+  &lt;h1&gt;Search trip by Start and End point&lt;/h1&gt;
+  &lt;div class&#x3D;&quot;error&quot; *ngIf&#x3D;&quot;errorMsgFromServer&quot;&gt;{{errorMsgFromServer}}&lt;/div&gt;
+  &lt;div class&#x3D;&quot;search&quot;&gt;
+    &lt;input id&#x3D;&quot;search-input&quot; type&#x3D;&quot;text&quot; ngModel #inputQuery&#x3D;&quot;ngModel&quot; name&#x3D;&quot;search&quot; placeholder&#x3D;&quot;Enter city name&quot;
+      required [minlength]&#x3D;&quot;3&quot;&gt;
+    &lt;ng-container *ngIf&#x3D;&quot;inputQuery.invalid &amp;&amp; inputQuery.touched&quot;&gt;
+      &lt;div class&#x3D;&quot;error&quot; *ngIf&#x3D;&quot;inputQuery.errors?.[&#x27;required&#x27;]&quot;&gt;Search is required!&lt;/div&gt;
+      &lt;div class&#x3D;&quot;error&quot; *ngIf&#x3D;&quot;inputQuery.errors?.[&#x27;minlength&#x27;]&quot;&gt;Search must be at least 3 characters long!
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+    &lt;button class&#x3D;&quot;button-list&quot; [disabled]&#x3D;&quot;inputQuery.invalid&quot; (click)&#x3D;&quot;onSearch(inputQuery.value)&quot;&gt;Search&lt;/button&gt;
+  &lt;/div&gt;
+
+&lt;ng-container *ngIf&#x3D;&quot;tripsFound&quot;&gt;  
+   
+    &lt;div *ngIf&#x3D;&quot;isLoading&quot;&gt;
+      &lt;app-loader class&#x3D;&quot;loading&quot;&gt;&lt;/app-loader&gt;
+    &lt;/div&gt;
+
+    &lt;h2&gt;Results:&lt;/h2&gt;
+    &lt;div class&#x3D;&quot;search-result&quot;&gt;
+      &lt;ng-container *ngIf&#x3D;&quot;hasResult; else noResult&quot;&gt;
+        &lt;div *ngFor&#x3D;&quot;let trip of tripsFound&quot; class&#x3D;&quot;card-box&quot;&gt;
+          &lt;img src&#x3D;&quot;{{trip.imageUrl}}&quot;&gt;
+          &lt;div&gt;
+            &lt;div class&#x3D;&quot;text-center&quot;&gt;
+              &lt;p class&#x3D;&quot;name&quot;&gt;&lt;i class&#x3D;&quot;fas fa-route&quot;&gt;&lt;/i&gt;&lt;span&gt;-From: {{trip.startPoint}} &lt;/span&gt; -&lt;span&gt;To:
+                  {{trip.endPoint}} &lt;/span&gt;&lt;/p&gt;
+              &lt;p class&#x3D;&quot;artist&quot;&gt;&lt;i class&#x3D;&quot;far fa-calendar-alt&quot;&gt;&lt;/i&gt; Date: &lt;span&gt;{{trip.date}}&lt;/span&gt;&lt;/p&gt;
+              &lt;p class&#x3D;&quot;genre&quot;&gt;&lt;i class&#x3D;&quot;far fa-clock&quot;&gt;&lt;/i&gt; Time: &lt;span&gt;{{trip.time}}&lt;/span&gt;&lt;/p&gt;
+              &lt;p class&#x3D;&quot;price&quot;&gt;&lt;i class&#x3D;&quot;fas fa-hand-holding-usd&quot;&gt;&lt;/i&gt; Price: &lt;span&gt;{{trip.price}}&lt;/span&gt; BGN&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;btn-group&quot; *ngIf&#x3D;&quot;isLogged&quot;&gt;
+              &lt;a [routerLink]&#x3D;&quot;[&#x27;/trip&#x27;,&#x27;details&#x27;, trip._id]&quot; id&#x3D;&quot;details&quot;&gt;Details&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/ng-container&gt;
+      &lt;ng-template #noResult&gt;
+        &lt;p class&#x3D;&quot;no-result&quot; #noResult&gt;Sorry, no matching results.&lt;/p&gt;
+      &lt;/ng-template&gt;
+    &lt;/div&gt;
+
+  &lt;/ng-container&gt;
+  &lt;!-- &lt;ng-template #loading&gt;
+    &lt;app-loader class&#x3D;&quot;loading&quot;&gt;&lt;/app-loader&gt;
+  &lt;/ng-template&gt; --&gt;
+&lt;/section&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./search.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">/* html {
+  font-family: &#x27;Lato&#x27;;
+  font-size: 16px;
+  box-sizing: border-box;
+} */
+
+/* *,
+*::before,
+*::after {
+  margin: auto;
+  padding: 0;
+  box-sizing: inherit;
+  line-height: 1.3;
+} */
+
+/* body {
+  background-image: url(&#x27;/assets/back.jpg&#x27;);
+  background-size: cover;
+  background-image: fixed;
+} */
+
+/* nav,
+footer {
+  background-color: #0B0C10;
+  width: 100%;
+  display: flex;
+  font-size: 16px;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 0;
+  padding: 0 5px 0 3px;
+  margin: 0%;
+  color: white;
+}
+
+nav a {
+  text-decoration: none;
+  color: #8f8f8f;
+  font-size: 20px;
+  font-weight: bolder;
+  position: relative;
+  margin: 20px;
+}
+
+nav ul {
+  margin: 0 0 0 auto;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 2px;
+}
+
+li::before {
+  display: inline;
+}
+
+nav a {
+  text-decoration: none;
+  border-radius: 50%;
+  padding: 0.5em;
+  color: white;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 15px;
+  text-align: center;
+  color: #c5c6c7;
+  font-weight: bold;
+}
+
+nav a:hover {
+  cursor: pointer;
+  color: #45a29e;
+  font-weight: bolder;
+}
+
+#welcomePage {
+  color: #45a29e;
+  font-size: 24px;
+  padding: 30px;
+  margin: 10px;
+}
+
+#welcomePage img {
+  width: 40%
+} */
+
+nav&gt;img {
+  width: 90px;
+  height: 80px;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+}
+
+.card-box {
+  box-shadow: 0px 0px 30px 0px;
+  padding: 20px;
+  margin-left: 120px;
+  background-position: right 35% bottom 45%;
+  box-sizing: border-box;
+  border-radius: 15px;
+  float: left;
+  height: 550px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 70px;
+  margin-top: 20px;
+}
+
+.btn-group&gt;a {
+  width: 200%;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  display: inline;
+  align-items: center;
+  justify-content: center;
+  background-color: #1b2845;
+  /* background-image: linear-gradient(315deg, #45a29e 0%, #0d324d 74%); */
+  background-size: 200% 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  transition: 500ms;
+  color: white;
+  font-family: &quot;Lato&quot;;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.btn-group&gt;a:hover {
+  background-position: right;
+}
+
+.btn-group&gt;a:before {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  font-weight: bold;
+  font-family: &#x27;Lato&#x27;;
+  position: absolute;
+  display: inline;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 40px;
+  background-color: #1b2845;
+  background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
+  transition: 500ms;
+}
+
+#catalogPage h1 {
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 26px;
+  font-family: &#x27;Lato&#x27;;
+  text-shadow: 5px 2px black;
+}
+
+.card-box&gt;img {
+  display: block;
+  width: 300px;
+  height: 188px;
+  border-radius: 15px;
+
+
+}
+
+.btn-group {
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+#catalogPage&gt;p {
+  font-size: 40px;
+  color: #45a29e;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 30px;
+  text-shadow: 2px 2px black solid;
+}
+
+/* &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; */
+#search&gt;input[type&#x3D;text] {
+  border-radius: 3px;
+  box-shadow: none;
+  border: 1px solid #384049;
+  background: #15171b;
+  display: block;
+  width: 100%;
+  color: white;
+  transition: all 0.3s ease;
+  font-size: 1.2em;
+  line-height: 1;
+  padding: 0.3em 0.4em;
+  margin: 0 0.5em 1em 0;
+}
+
+#search&gt;input[type&#x3D;text]::-webkit-input-placeholder {
+  color: #343b44;
+  line-height: 1.2;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+input[type&#x3D;text]:hover {
+  border-color: #4e5966;
+}
+
+.search {
+  margin: 1em auto;
+  padding: 2em;
+  width: 25em;
+  border-radius: 10px;
+  /* border-color: #2d333b; */
+  background: rgb(112, 150, 230);
+  /* box-shadow: 0 2px 2px #131518; */
+}
+
+.button-list {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  display: inline;
+  align-items: center;
+  justify-content: center;
+  background-color: #1b2845;
+  background-image: linear-gradient(315deg, #45a29e 0%, #0d324d 74%);
+  background-size: 200% 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  transition: 500ms;
+  color: white;
+  font-family: &quot;Lato&quot;;
+  font-size: 20px;
+  margin-bottom: 5px;
+  margin-top: 20px;
+  padding-left: 115px;
+  padding-right: 180px;
+}
+
+.search-result .no-result {
+  margin: 1em auto;
+  padding: 2em;
+  width: 25em;
+  align-items: center;
+}
+
+#search-albums h1,
+h2 {
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 30px;
+  font-family: &#x27;Roboto&#x27;;
+  /* text-shadow: 5px 2px black; */
+ 
+}
+
+.search-result .no-result {
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+  text-shadow: 2px 2px black solid;
+}
+
+.search-result .card-box {
+  box-shadow: 0px 0px 30px 0px;
+  background-position: right 35% bottom 45%;
+  box-sizing: border-box;
+  border-radius: 15px;
+  float: left;
+  height: 500px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 70px;
+  margin-top: 20px;
+
+}
+
+#searchPage&gt;h1 {
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  /* font-family: &#x27;Lato&#x27;; */
+  /* text-shadow: 5px 2px black; */
+  font-size: 30px;
+  font-family: &#x27;Roboto&#x27;;
+  font-weight: bold;
+}
+
+@import url(https://fonts.googleapis.com/css?family&#x3D;Lato:100,300,400,700);
+
+fieldset {
+  margin: 1em auto;
+  padding: 2em;
+  width: 25em;
+  border-radius: 2px;
+  border-color: #2d333b;
+  background: #1b1f24;
+  box-shadow: 0 2px 2px #131518;
+}
+
+fieldset legend {
+  font-weight: 700;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.5em;
+  color: white;
+  background: #171a1e;
+  -o-border-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #2d333b 50%) 1 round;
+  border-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #2d333b 50%) 1 round;
+  border-width: 1px;
+  border-style: solid;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+input,
+input+label&gt;i,
+textarea {
+  border-radius: 3px;
+  box-shadow: none;
+  border: 1px solid #384049;
+  background: #15171b;
+  display: block;
+  width: 100%;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+input[type&#x3D;text],
+input[type&#x3D;number],
+textarea {
+  font-size: 1.2em;
+  line-height: 1;
+  padding: 0.3em 0.4em;
+  margin: 0 0.5em 1em 0;
+  border-radius: 10px;
+}
+
+input[type&#x3D;text]::-webkit-input-placeholder,
+input[type&#x3D;number]::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #343b44;
+  line-height: 1.2;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+input[type&#x3D;text]:hover,
+textarea {
+  border-color: #4e5966;
+}
+
+input[type&#x3D;text]:focus,
+input[type&#x3D;number]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #39a086;
+}
+
+textarea {
+  height: 100px;
+  font-family: &quot;Lato&quot;;
+  color: #aab2bd;
+}
+
+.add-album,
+.edit-album {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  display: inline;
+  align-items: center;
+  justify-content: center;
+  background-color: #1b2845;
+  background-image: linear-gradient(315deg, #45a29e 0%, #0d324d 74%);
+  background-size: 200% 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  transition: 500ms;
+  color: white;
+  font-family: &quot;Lato&quot;;
+  font-size: 20px;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+.createPage,
+.editPage {
+  font-family: &quot;Lato&quot;;
+  font-size: 16px;
+  color: #aab2bd;
+  padding: 1em 0 10em;
+  width: 800px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.vhide {
+  opacity: 0;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+textarea::-webkit-scrollbar {
+  width: 12px;
+  background-color: black;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #39a086;
+}
+
+.wrapper {
+  height: 400px;
+  width: 1000px;
+  margin: 30px auto;
+  border-radius: 7px 7px 7px 7px;
+  box-shadow: 0px 0px 1.5px 3px gray;
+  margin-bottom: 200px;
+}
+
+.albumCover {
+  float: left;
+  height: 100%;
+  width: auto;
+  margin-right: 20px;
+}
+
+.albumCover img {
+  border-radius: 12px 0 0 7px;
+  height: 100%;
+}
+
+.albumText {
+  padding-left: 10px;
+  padding-top: 20px;
+}
+
+.albumText h1 {
+  color: gainsboro;
+  font-weight: bolder;
+  font-size: 28px;
+}
+
+.albumText h3 {
+  margin: 8px 0 47px 18px;
+  font-size: 18px;
+  color: gray;
+  letter-spacing: 0.2em;
+  margin-bottom: 0;
+}
+
+.albumText h4 {
+  margin: 8px 0 10px 18px;
+  font-size: 16px;
+  color: #9F9991;
+  letter-spacing: 0.2em;
+}
+
+.albumText h5 {
+  margin: 8px 0 10px 14px;
+  font-size: 16px;
+  color: white;
+}
+
+.albumText&gt;p {
+  height: auto;
+  width: 100%;
+  color: #9F9991;
+  line-height: 1.6em;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.actionBtn {
+  display: flex;
+  text-align: center;
+  left: auto;
+  top: auto;
+  right: 0;
+  bottom: 0;
+}
+
+.actionBtn&gt;a {
+  width: 200%;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  display: inline;
+  align-items: center;
+  justify-content: center;
+  background-color: #1b2845;
+  background-image: linear-gradient(315deg, #45a29e 0%, #0d324d 74%);
+  background-size: 200% 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  transition: 500ms;
+  color: white;
+  font-family: &quot;Lato&quot;;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  text-decoration: none;
+  margin-right: 50px;
+}
+
+.actionBtn&gt;a:hover {
+  background-position: right;
+}
+
+@import url(https://fonts.googleapis.com/css?family&#x3D;Lato:100,300,400,700);
+
+fieldset {
+  margin: 1em auto;
+  padding: 2em;
+  width: 25em;
+  border-radius: 2px;
+  border-color: #2d333b;
+  background: #1b1f24;
+  box-shadow: 0 2px 2px #131518;
+}
+
+fieldset legend {
+  font-weight: 700;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-align: center;
+  background: #171a1e;
+  -o-border-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #2d333b 50%) 1 round;
+  border-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #2d333b 50%) 1 round;
+  border-width: 1px;
+  border-style: solid;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+input,
+input+label&gt;i {
+  border-radius: 3px;
+  box-shadow: none;
+  border: 1px solid #384049;
+  background: #15171b;
+  display: block;
+  width: 100%;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+input[type&#x3D;text],
+input[type&#x3D;password] {
+  font-size: 1.2em;
+  line-height: 1;
+  padding: 0.3em 0.4em;
+  margin: 0 0.5em 1em 0;
+}
+
+input[type&#x3D;text]::-webkit-input-placeholder,
+input[type&#x3D;password]::-webkit-input-placeholder {
+  color: #343b44;
+  line-height: 1.2;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+input[type&#x3D;text]:hover,
+input[type&#x3D;password]:hover {
+  border-color: #4e5966;
+}
+
+input[type&#x3D;text]:focus,
+input[type&#x3D;password]:focus {
+  outline: none;
+  border-color: #39a086;
+}
+
+.login,
+.register {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  display: inline;
+  align-items: center;
+  justify-content: center;
+  background-color: #1b2845;
+  background-image: linear-gradient(315deg, #45a29e 0%, #0d324d 74%);
+  background-size: 200% 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  transition: 500ms;
+  color: white;
+  font-family: &quot;Lato&quot;;
+  font-size: 20px;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+#loginPage,
+#registerPage {
+  font-family: &quot;Lato&quot;;
+  font-size: 16px;
+  color: #aab2bd;
+  padding: 1em 0 10em;
+}
+
+.vhide {
+  opacity: 0;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  padding-top: 20px;
+}
+
+@import url(https://fonts.googleapis.com/css?family&#x3D;Lato:100,300,400,700);
+
+fieldset {
+  margin: 1em auto;
+  padding: 2em;
+  width: 25em;
+  border-radius: 2px;
+  border-color: #2d333b;
+  background: #1b1f24;
+  box-shadow: 0 2px 2px #131518;
+}
+
+fieldset legend {
+  font-weight: 700;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-align: center;
+  background: #171a1e;
+  -o-border-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #2d333b 50%) 1 round;
+  border-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #2d333b 50%) 1 round;
+  border-width: 1px;
+  border-style: solid;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+input,
+input+label&gt;i {
+  border-radius: 3px;
+  box-shadow: none;
+  border: 1px solid #384049;
+  background: #15171b;
+  display: block;
+  width: 100%;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+input[type&#x3D;text],
+input[type&#x3D;password] {
+  font-size: 1.2em;
+  line-height: 1;
+  padding: 0.3em 0.4em;
+  margin: 0 0.5em 1em 0;
+}
+
+input[type&#x3D;text]::-webkit-input-placeholder,
+input[type&#x3D;password]::-webkit-input-placeholder {
+  color: #343b44;
+  line-height: 1.2;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+input[type&#x3D;text]:hover,
+input[type&#x3D;password]:hover {
+  border-color: #4e5966;
+}
+
+input[type&#x3D;text]:focus,
+input[type&#x3D;password]:focus {
+  outline: none;
+  border-color: #39a086;
+}
+
+.login,
+.register {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  display: inline;
+  align-items: center;
+  justify-content: center;
+  background-color: #1b2845;
+  background-image: linear-gradient(315deg, #45a29e 0%, #0d324d 74%);
+  background-size: 200% 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  transition: 500ms;
+  color: white;
+  font-family: &quot;Lato&quot;;
+  font-size: 20px;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+#loginPage,
+#registerPage {
+  font-family: &quot;Lato&quot;;
+  font-size: 16px;
+  color: #aab2bd;
+  padding: 1em 0 10em;
+}
+
+.vhide {
+  opacity: 0;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  padding-top: 20px;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+body {
+  position: relative;
+
+}
+/* &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; */
+main {
+  position: relative;
+}
+
+#searchPage::before {
+  content: &quot;&quot;;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(&#x27;../../../assets/images/background2.jpg&#x27;);
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+
+}
+.profile-container button {
+  color: white;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.6em 1.2em;
+  outline: none;
+  background-color: rgb(112, 150, 230);
+}
+
+.loader-container {
+  /* Set the container to take the full height and width of the viewport */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Center the loader horizontally and vertically using Flexbox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lds-dual-ring {
+  /* Add styles for the loader */
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  border: 6px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 6px solid #3498db;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><section id="searchPage">  <h1>Search trip by Start and End point</h1>  <div class="error" *ngIf="errorMsgFromServer">{{errorMsgFromServer}}</div>  <div class="search">    <input id="search-input" type="text" ngModel #inputQuery="ngModel" name="search" placeholder="Enter city name"      required [minlength]="3">    <ng-container *ngIf="inputQuery.invalid && inputQuery.touched">      <div class="error" *ngIf="inputQuery.errors?.[\'required\']">Search is required!</div>      <div class="error" *ngIf="inputQuery.errors?.[\'minlength\']">Search must be at least 3 characters long!      </div>    </ng-container>    <button class="button-list" [disabled]="inputQuery.invalid" (click)="onSearch(inputQuery.value)">Search</button>  </div><ng-container *ngIf="tripsFound">         <div *ngIf="isLoading">      <app-loader class="loading"></app-loader>    </div>    <h2>Results:</h2>    <div class="search-result">      <ng-container *ngIf="hasResult; else noResult">        <div *ngFor="let trip of tripsFound" class="card-box">          <img src="{{trip.imageUrl}}">          <div>            <div class="text-center">              <p class="name"><i class="fas fa-route"></i><span>-From: {{trip.startPoint}} </span> -<span>To:                  {{trip.endPoint}} </span></p>              <p class="artist"><i class="far fa-calendar-alt"></i> Date: <span>{{trip.date}}</span></p>              <p class="genre"><i class="far fa-clock"></i> Time: <span>{{trip.time}}</span></p>              <p class="price"><i class="fas fa-hand-holding-usd"></i> Price: <span>{{trip.price}}</span> BGN</p>            </div>            <div class="btn-group" *ngIf="isLogged">              <a [routerLink]="[\'/trip\',\'details\', trip._id]" id="details">Details</a>            </div>          </div>        </div>      </ng-container>      <ng-template #noResult>        <p class="no-result" #noResult>Sorry, no matching results.</p>      </ng-template>    </div>  </ng-container>  <!-- <ng-template #loading>    <app-loader class="loading"></app-loader>  </ng-template> --></section></div>'
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthenticateComponent', 'selector': 'app-authenticate'},{'name': 'CatalogComponent', 'selector': 'app-catalog'},{'name': 'CreateComponent', 'selector': 'app-create'},{'name': 'DetailsComponent', 'selector': 'app-details'},{'name': 'EditComponent', 'selector': 'app-edit'},{'name': 'ErrorComponent', 'selector': 'app-error'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoaderComponent', 'selector': 'app-loader'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'SearchComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SearchComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
