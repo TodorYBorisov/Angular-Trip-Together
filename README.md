@@ -71,4 +71,13 @@ To run Trip Together locally, follow these steps:
 TODO!!
 
 ## Project architecture
-![App Modules](trip-together/src/assets/architecture/AppModule.JPG)
+- App Module
+![App Module](trip-together/src/assets/architecture/AppModule.JPG)
+- Auth Module
+![Auth Module](trip-together/src/assets/architecture/AuthModule.JPG)
+- Core Module
+![Core Module](trip-together/src/assets/architecture/CoreModule.JPG)
+- Features Module
+![Features Module](trip-together/src/assets/architecture/FeaturesModule.JPG)
+- Shared Module
+![Shared Module](trip-together/src/assets/architecture/SharedModule.JPG)
