@@ -71,4 +71,4 @@ To run Trip Together locally, follow these steps:
 TODO!!
 
 ## Project architecture
-![AppModules](/trip-together/src/assets/images/AppModule.JPG)
+![Alt text](trip-together/src/assets/images/AppModule.JPG)
