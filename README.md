@@ -57,6 +57,7 @@ The project incorporates several security enhancements:
 ## Additional libraries
 - Angular Material https://material.angular.io/
 - Font Awesome https://fontawesome.com/
+- Compodoc https://compodoc.app/ 
 
 ## Installation
 To run Trip Together locally, follow these steps:
