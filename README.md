@@ -22,7 +22,7 @@ The frontend is powered by Angular.
     - The password and the repeated password should match
 - **Login page** expect as input valid email and password
 
-<ins>Private part visible after successful authentication:</ins>
+<ins>Private part visible after successful authentication and authorization:</ins>
 - **Trips page** give access to all trip details information
     - if the user is not the creator of the trip, there is an option to <ins>join the particular trip</ins> if there are seats available
         - his username and email is dynamically visualized in the trip list of the details page 
