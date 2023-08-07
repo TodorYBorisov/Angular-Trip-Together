@@ -80,4 +80,5 @@ TODO!!
 - Features Module
 ![Features Module](trip-together/src/assets/architecture/FeaturesModule.JPG)
 - Shared Module
+
 ![Shared Module](trip-together/src/assets/architecture/SharedModule.JPG)
