@@ -68,7 +68,17 @@ To run Trip Together locally, follow these steps:
 5. Open your browser and go to `http://localhost:4200/` to access the application
 
 ## Deployment
-TODO!!
+- Backend Deployment
+
+The backend of Trip Together is deployed on [Render](https://render.com/). The backend handles the core functionalities, including user authentication, create trips, search, weather and ect.
+
+- Frontend Deployment
+
+The Angular frontend of Trip Together is deployed on [Netlify](https://www.netlify.com/). Netlify handles the user interface and provides a seamless browsing experience.
+
+- Database
+
+The MongoDB database used for Trip Together is hosted on [MongoDB Cloud](https://cloud.mongodb.com). MongoDB Cloud provides a dependable and expandable solutions for storing data for the application
 
 ## Project architecture
 - App Module
