@@ -1,10 +1,9 @@
 const env = process.env.NODE_ENV || 'development';
 
-let uri = 'mongodb+srv://toshko:toshko12345@cluster0.v7dgwod.mongodb.net/?retryWrites=true&w=majority';
 const config = {
     development: {
         port: process.env.PORT || 3000,
-        dbURL: uri,
+        dbURL: 'mongodb+srv://toshko:toshko12345@cluster0.v7dgwod.mongodb.net/?retryWrites=true&w=majority',
         origin: ['http://localhost:5555', 'http://localhost:4200']
     },
     production: {
