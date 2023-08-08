@@ -61,7 +61,7 @@ The project incorporates several security enhancements:
 
 ## Installation
 To run Trip Together locally, follow these steps:
-1. Clone the [repository](https://github.com/TodorYBorisov/Angular-Trip-Together-running-locally.git) to your local machine
+1. Clone the repository to your local machine
 2. Navigate to the project's root directory in your terminal
 3. Install the dependencies of both trip together app and rest server, using the package manager of your choice
 4. Install MongoDB Compass to store the data on your local machine
