@@ -92,5 +92,41 @@ The MongoDB database used for Trip Together is hosted on [MongoDB Cloud](https:/
 - Shared Module
 ![Shared Module](trip-together/src/assets/architecture/SharedModule.JPG)
 
-## Project screenshots
-TODO
+## Application Pages
+Header Guest
+![Alt text](trip-together/src/assets/screenshots/15.JPG)
+Header signed
+![Alt text](trip-together/src/assets/screenshots/16.JPG)
+Home page
+![Alt text](trip-together/src/assets/screenshots/1.JPG)
+Learn more page
+![Alt text](trip-together/src/assets/screenshots/2.JPG)
+Gatalog page Guest
+![Alt text](trip-together/src/assets/screenshots/3.JPG)
+![Alt text](trip-together/src/assets/screenshots/3.2.JPG)
+Register page
+![Alt text](trip-together/src/assets/screenshots/5.JPG)
+Login page
+![Alt text](trip-together/src/assets/screenshots/4.JPG)
+Gatalog page signed
+![Alt text](trip-together/src/assets/screenshots/3.1.JPG)
+Details page signed
+![Alt text](trip-together/src/assets/screenshots/8.JPG)
+![Alt text](trip-together/src/assets/screenshots/8.1.JPG)
+![Alt text](trip-together/src/assets/screenshots/8.2.JPG)
+![Alt text](trip-together/src/assets/screenshots/8.3.JPG)
+Weather page signed
+![Alt text](trip-together/src/assets/screenshots/9.JPG)
+Create page signed
+![Alt text](trip-together/src/assets/screenshots/10.JPG)
+Edit Page signed
+![Alt text](trip-together/src/assets/screenshots/11.JPG)
+Search page signed
+![Alt text](trip-together/src/assets/screenshots/12.JPG)
+![Alt text](trip-together/src/assets/screenshots/13.JPG)
+![Alt text](trip-together/src/assets/screenshots/14.JPG)
+Profile page signed
+![Alt text](trip-together/src/assets/screenshots/7.JPG)
+![Alt text](trip-together/src/assets/screenshots/7.1.JPG)
+Page not-found
+![Alt text](trip-together/src/assets/screenshots/17.JPG)
