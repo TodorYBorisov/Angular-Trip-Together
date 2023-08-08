@@ -32,7 +32,7 @@ The frontend is powered by Angular.
         - **Delete button** is displayed and the trip can be deleted
 
 -  **Weather page** gives logged in users access to search for weather conditions by city name, for example based on their final travel destination
-    - Weather API https://open-weather13.p.rapidapi.com
+    - The project incorporates an additional external [Weather API](https://open-weather13.p.rapidapi.com)
 
 - **Create page**, each user can create their own trips:
     - all fields in the form are required with different validations, if the form does not meet all the validations, the submit button is disabled
@@ -55,9 +55,9 @@ The project incorporates several security enhancements:
 - **JWT Blacklist**: To enhance security, a blacklist system stores every used JSON Web Token (JWT) after a user logs out
 
 ## Additional libraries
-- Angular Material https://material.angular.io/
-- Font Awesome https://fontawesome.com/
-- Compodoc https://compodoc.app/ 
+- [Angular Material](https://material.angular.io/)
+- [Font Awesome](https://fontawesome.com/)
+- [Compodoc](https://compodoc.app/)
 
 ## Installation
 To run Trip Together locally, follow these steps:
@@ -79,7 +79,9 @@ The Angular frontend of Trip Together is deployed on [Netlify](https://www.netli
 
 - Database
 
-The MongoDB database used for Trip Together is hosted on [MongoDB Cloud](https://cloud.mongodb.com). MongoDB Cloud provides a dependable and expandable solutions for storing data for the application
+The MongoDB database used for Trip Together is hosted on [MongoDB Cloud](https://cloud.mongodb.com). MongoDB Cloud provides a dependable and expandable solutions for storing data for the application.
+
+- Access to the already deployed application [Trip Together](https://triptogether1.netlify.app)
 
 ## Project architecture
 - App Module
