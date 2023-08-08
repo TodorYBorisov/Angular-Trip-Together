@@ -5,7 +5,7 @@ The Base URL is the root URL for all of the API, if you ever make a request to t
 
 The Base URL for the API is:
 
-```https://localhost:3000/api```
+```https://server1-8jki.onrender.com/api```
 
 The documentation below assumes you are prepending the Base URL to the endpoints in order to make requests.
 
