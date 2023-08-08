@@ -124,6 +124,7 @@ Edit Page signed
 ![Alt text](trip-together/src/assets/screenshots/11.JPG)
 Search page signed
 ![Alt text](trip-together/src/assets/screenshots/12.JPG)
+Search page results
 ![Alt text](trip-together/src/assets/screenshots/13.JPG)
 ![Alt text](trip-together/src/assets/screenshots/14.JPG)
 Profile page signed
