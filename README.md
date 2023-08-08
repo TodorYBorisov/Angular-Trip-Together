@@ -110,8 +110,9 @@ Login page
 ![Alt text](trip-together/src/assets/screenshots/4.JPG)
 Gatalog page signed
 ![Alt text](trip-together/src/assets/screenshots/3.1.JPG)
-Details page signed
+Details page owner signed
 ![Alt text](trip-together/src/assets/screenshots/8.JPG)
+Details page not owner signed
 ![Alt text](trip-together/src/assets/screenshots/8.1.JPG)
 ![Alt text](trip-together/src/assets/screenshots/8.2.JPG)
 ![Alt text](trip-together/src/assets/screenshots/8.3.JPG)
