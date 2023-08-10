@@ -481,7 +481,7 @@ export class CatalogComponent implements OnInit {
         <pre class="line-numbers"><code class="language-html">&lt;!--Catalog--&gt;
 &lt;ng-container&gt;&lt;/ng-container&gt;
 
-&lt;div *ngIf&#x3D;&quot;isLoading&quot;&gt;
+&lt;div *ngIf&#x3D;&quot;isLoading&quot; class&#x3D;&quot;loader&quot;&gt;
   &lt;app-loader&gt;&lt;/app-loader&gt;
 &lt;/div&gt;
 
@@ -765,6 +765,11 @@ main {
   left: 0px;
   z-index: -1;
 
+}
+.loader{
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }</code></pre>
     </div>
 
@@ -793,7 +798,7 @@ main {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!--Catalog--><ng-container></ng-container><div *ngIf="isLoading">  <app-loader></app-loader></div><section id="catalogPage" *ngIf="!isLoading">  <div *ngIf="!thereAreNoTtrips">    <h1>Welcome to your next trip!</h1>  </div>  <div *ngFor="let trip of tripList" class="card-box">    <img src="{{trip.imageUrl}}">    <div>      <div class="text-center">        <p class="name"><i class="fas fa-route"></i><span>-From: {{trip.startPoint}} </span> -<span>To:            {{trip.endPoint}} </span></p>        <p class="artist"><i class="far fa-calendar-alt"></i> Date: <span>{{trip.date}}</span></p>        <p class="genre"><i class="far fa-clock"></i> Time: <span>{{trip.time}}</span></p>        <p class="price"><i class="fas fa-hand-holding-usd"></i> Price: <span>{{trip.price}}</span> BGN</p>      </div>      <div class="btn-group" *ngIf="isLogged">        <!-- <a routerLink="/trip/details/{{trip._id}}" id="details">Details</a> -->        <a [routerLink]="[\'/trip\',\'details\', trip._id]" id="details">Details</a>      </div>    </div>  </div>  <div class="no-trips" *ngIf="thereAreNoTtrips">    <h3>No available trips at the moment!</h3>    <h2>Come back later.</h2>  </div></section></div>'
+        var COMPONENT_TEMPLATE = '<div><!--Catalog--><ng-container></ng-container><div *ngIf="isLoading" class="loader">  <app-loader></app-loader></div><section id="catalogPage" *ngIf="!isLoading">  <div *ngIf="!thereAreNoTtrips">    <h1>Welcome to your next trip!</h1>  </div>  <div *ngFor="let trip of tripList" class="card-box">    <img src="{{trip.imageUrl}}">    <div>      <div class="text-center">        <p class="name"><i class="fas fa-route"></i><span>-From: {{trip.startPoint}} </span> -<span>To:            {{trip.endPoint}} </span></p>        <p class="artist"><i class="far fa-calendar-alt"></i> Date: <span>{{trip.date}}</span></p>        <p class="genre"><i class="far fa-clock"></i> Time: <span>{{trip.time}}</span></p>        <p class="price"><i class="fas fa-hand-holding-usd"></i> Price: <span>{{trip.price}}</span> BGN</p>      </div>      <div class="btn-group" *ngIf="isLogged">        <!-- <a routerLink="/trip/details/{{trip._id}}" id="details">Details</a> -->        <a [routerLink]="[\'/trip\',\'details\', trip._id]" id="details">Details</a>      </div>    </div>  </div>  <div class="no-trips" *ngIf="thereAreNoTtrips">    <h3>No available trips at the moment!</h3>    <h2>Come back later.</h2>  </div></section></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthenticateComponent', 'selector': 'app-authenticate'},{'name': 'CatalogComponent', 'selector': 'app-catalog'},{'name': 'CreateComponent', 'selector': 'app-create'},{'name': 'DetailsComponent', 'selector': 'app-details'},{'name': 'EditComponent', 'selector': 'app-edit'},{'name': 'ErrorComponent', 'selector': 'app-error'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoaderComponent', 'selector': 'app-loader'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'CatalogComponent'};

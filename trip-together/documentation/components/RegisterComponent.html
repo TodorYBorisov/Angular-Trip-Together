@@ -151,6 +151,9 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#customEmailValidator" >customEmailValidator</a>
+                            </li>
+                            <li>
                                 <a href="#registerHandler" >registerHandler</a>
                             </li>
                         </ul>
@@ -251,6 +254,75 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="customEmailValidator"></a>
+                    <span class="name">
+                        <span ><b>customEmailValidator</b></span>
+                        <a href="#customEmailValidator"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>customEmailValidator(control: AbstractControl)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="40"
+                            class="link-to-prism">src/app/auth/register/register.component.ts:40</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>control</td>
+                                    <td>
+                                            <code>AbstractControl</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>ValidationErrors | null</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="registerHandler"></a>
                     <span class="name">
                         <span ><b>registerHandler</b></span>
@@ -305,7 +377,7 @@
                     <td class="col-md-4">
                         <i>Default value : </i><code>this.formBuilder.group({
     username: [&#x27;&#x27;, [Validators.required, Validators.minLength(5)]],
-    email: [&#x27;&#x27;, [Validators.required, Validators.email]],
+    email: [&#x27;&#x27;, [Validators.required, this.customEmailValidator]],
     tel: [&#x27;&#x27;, [Validators.required]],
     gender: [&#x27;&#x27;, [Validators.required]],
     passGroup: this.formBuilder.group({
@@ -336,7 +408,7 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
 import { AuthService } from &#x27;../auth.service&#x27;;
 import { Router } from &#x27;@angular/router&#x27;;
-import { FormBuilder, Validators } from &#x27;@angular/forms&#x27;;
+import { AbstractControl, FormBuilder, ValidationErrors, Validators } from &#x27;@angular/forms&#x27;;
 import { matchPasswordsValidator } from &#x27;src/app/shared/validators/match-password-validator&#x27;;
 
 @Component({
@@ -348,7 +420,7 @@ export class RegisterComponent {
 
   form &#x3D; this.formBuilder.group({
     username: [&#x27;&#x27;, [Validators.required, Validators.minLength(5)]],
-    email: [&#x27;&#x27;, [Validators.required, Validators.email]],
+    email: [&#x27;&#x27;, [Validators.required, this.customEmailValidator]],
     tel: [&#x27;&#x27;, [Validators.required]],
     gender: [&#x27;&#x27;, [Validators.required]],
     passGroup: this.formBuilder.group({
@@ -370,6 +442,14 @@ export class RegisterComponent {
     this.authService.register(username!, email!, tel!, gender!, password!, rePassword!).subscribe(() &#x3D;&gt; {
       this.router.navigate([&#x27;/&#x27;])
     });
+  }
+
+  customEmailValidator(control: AbstractControl): ValidationErrors | null {
+    const emailPattern &#x3D; /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (control.value &amp;&amp; !emailPattern.test(control.value)) {
+      return { invalidEmail: true };
+    }
+    return null;
   }
 }
 </code></pre>
@@ -397,7 +477,7 @@ export class RegisterComponent {
 
         &lt;ng-container *ngIf&#x3D;&quot;form.get(&#x27;email&#x27;)?.touched&quot;&gt;
             &lt;p class&#x3D;&quot;error_color&quot; *ngIf&#x3D;&quot;form.get(&#x27;email&#x27;)?.errors?.[&#x27;required&#x27;]&quot;&gt;Email is required!&lt;/p&gt;
-            &lt;p class&#x3D;&quot;error_color&quot; *ngIf&#x3D;&quot;form.get(&#x27;email&#x27;)?.errors?.[&#x27;email&#x27;]&quot;&gt;Email is not valid!&lt;/p&gt;
+            &lt;p class&#x3D;&quot;error_color&quot; *ngIf&#x3D;&quot;form.get(&#x27;email&#x27;)?.errors?.[&#x27;invalidEmail&#x27;]&quot;&gt;Email is not valid!&lt;/p&gt;
         &lt;/ng-container&gt;
 
 
@@ -615,7 +695,7 @@ input.ng-valid {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="register-box">    <h1>Register</h1>    <h4>It\'s free and only take a minute</h4>    <form [formGroup]="form" (ngSubmit)="registerHandler()">        <!-- username -->        <label for="username"><span><i class="fa-solid fa-user"></i></span>Username</label>        <input type="text" name="username" placeholder="Username.." formControlName="username">        <ng-container *ngIf="form.get(\'username\')?.touched">            <p class="error_color" *ngIf="form.get(\'username\')?.errors?.[\'required\']"> Username is required!</p>            <p class="error_color" *ngIf="form.get(\'username\')?.errors?.[\'minlength\']"> Username should be at least 5 characters!</p>        </ng-container>        <!-- email -->        <label for="email"><span><i class="fa-solid fa-envelope"></i></span>Email</label>        <input type="email" name="email" placeholder="Email.." formControlName="email">        <ng-container *ngIf="form.get(\'email\')?.touched">            <p class="error_color" *ngIf="form.get(\'email\')?.errors?.[\'required\']">Email is required!</p>            <p class="error_color" *ngIf="form.get(\'email\')?.errors?.[\'email\']">Email is not valid!</p>        </ng-container>        <!-- telephone -->        <label for="tel"><span><i class="fa-solid fa-phone-volume"></i></span>Phone</label>        <input type="text" name="tel" id="tel" placeholder="+359 88 888 888" formControlName="tel">        <ng-container *ngIf="form.get(\'tel\')?.touched">            <p class="error_color" *ngIf="form.get(\'tel\')?.errors?.[\'required\']">Phone is required!</p>        </ng-container>        <ng-container formGroupName="passGroup">            <!-- password -->            <label for="password"><span><i class="fa-solid fa-lock"></i></span>Password</label>            <input type="password" name="password" placeholder="Password.." formControlName="password">            <ng-container *ngIf="form.get(\'passGroup\')?.get(\'password\')?.touched">                <p class="error_color" *ngIf="form.get(\'passGroup\')?.get(\'password\')?.errors?.[\'required\']">Password is                    required!</p>                <p class="error_color" *ngIf="form.get(\'passGroup\')?.get(\'password\')?.errors?.[\'minlength\']">Password should be at least 5 characters!</p>            </ng-container>            <!-- rePassword -->            <label for="rePassword"><span><i class="fa-solid fa-lock"></i></span>Confirm Password</label>            <input type="password" name="rePassword" placeholder="Confirm Password.." formControlName="rePassword">            <ng-container *ngIf="form.get(\'passGroup\')?.get(\'rePassword\')?.touched">                <p class="error_color" *ngIf="                 form.get(\'passGroup\')?.errors?.[\'matchPasswordsValidator\'] ||                 form.get(\'passGroup\')?.get(\'rePassword\')?.errors?.[\'required\']">Repeat Password does not match                    password!</p>            </ng-container>        </ng-container>        <!-- gender -->        <label for="gender"><span><i class="fa-solid fa-venus-mars"></i></span>Gender</label>        <div class="gender">            <input type="radio" id="female" name="gender" value="female" formControlName="gender">            <label for="female">Female</label>            <input type="radio" id="male" name="gender" value="male" formControlName="gender" >            <label for="male">Male</label>        </div>        <ng-container *ngIf="form.get(\'gender\')?.touched">            <p class="error_color" *ngIf="form.get(\'gender\')?.errors?.[\'required\']">Gender is required!</p>        </ng-container>        <input type="submit" value="Register" [disabled]="form.invalid">    </form>    <p>Already have an account? <a routerLink="/auth/login">Login here</a></p></div><!-- <div class="gender">    <input type="radio" id="female" name="gender" value="female" [checked]="!isMale" (change)="onGenderChange(\'female\')" ngModel gender required #femaleInput="ngModel">    <label for="female">Female</label>    <input type="radio" id="male" name="gender" value="male" [checked]="isMale" (change)="onGenderChange(\'male\')" ngModel gender required #maleInput="ngModel">    <label for="male">Male</label>  </div> --></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="register-box">    <h1>Register</h1>    <h4>It\'s free and only take a minute</h4>    <form [formGroup]="form" (ngSubmit)="registerHandler()">        <!-- username -->        <label for="username"><span><i class="fa-solid fa-user"></i></span>Username</label>        <input type="text" name="username" placeholder="Username.." formControlName="username">        <ng-container *ngIf="form.get(\'username\')?.touched">            <p class="error_color" *ngIf="form.get(\'username\')?.errors?.[\'required\']"> Username is required!</p>            <p class="error_color" *ngIf="form.get(\'username\')?.errors?.[\'minlength\']"> Username should be at least 5 characters!</p>        </ng-container>        <!-- email -->        <label for="email"><span><i class="fa-solid fa-envelope"></i></span>Email</label>        <input type="email" name="email" placeholder="Email.." formControlName="email">        <ng-container *ngIf="form.get(\'email\')?.touched">            <p class="error_color" *ngIf="form.get(\'email\')?.errors?.[\'required\']">Email is required!</p>            <p class="error_color" *ngIf="form.get(\'email\')?.errors?.[\'invalidEmail\']">Email is not valid!</p>        </ng-container>        <!-- telephone -->        <label for="tel"><span><i class="fa-solid fa-phone-volume"></i></span>Phone</label>        <input type="text" name="tel" id="tel" placeholder="+359 88 888 888" formControlName="tel">        <ng-container *ngIf="form.get(\'tel\')?.touched">            <p class="error_color" *ngIf="form.get(\'tel\')?.errors?.[\'required\']">Phone is required!</p>        </ng-container>        <ng-container formGroupName="passGroup">            <!-- password -->            <label for="password"><span><i class="fa-solid fa-lock"></i></span>Password</label>            <input type="password" name="password" placeholder="Password.." formControlName="password">            <ng-container *ngIf="form.get(\'passGroup\')?.get(\'password\')?.touched">                <p class="error_color" *ngIf="form.get(\'passGroup\')?.get(\'password\')?.errors?.[\'required\']">Password is                    required!</p>                <p class="error_color" *ngIf="form.get(\'passGroup\')?.get(\'password\')?.errors?.[\'minlength\']">Password should be at least 5 characters!</p>            </ng-container>            <!-- rePassword -->            <label for="rePassword"><span><i class="fa-solid fa-lock"></i></span>Confirm Password</label>            <input type="password" name="rePassword" placeholder="Confirm Password.." formControlName="rePassword">            <ng-container *ngIf="form.get(\'passGroup\')?.get(\'rePassword\')?.touched">                <p class="error_color" *ngIf="                 form.get(\'passGroup\')?.errors?.[\'matchPasswordsValidator\'] ||                 form.get(\'passGroup\')?.get(\'rePassword\')?.errors?.[\'required\']">Repeat Password does not match                    password!</p>            </ng-container>        </ng-container>        <!-- gender -->        <label for="gender"><span><i class="fa-solid fa-venus-mars"></i></span>Gender</label>        <div class="gender">            <input type="radio" id="female" name="gender" value="female" formControlName="gender">            <label for="female">Female</label>            <input type="radio" id="male" name="gender" value="male" formControlName="gender" >            <label for="male">Male</label>        </div>        <ng-container *ngIf="form.get(\'gender\')?.touched">            <p class="error_color" *ngIf="form.get(\'gender\')?.errors?.[\'required\']">Gender is required!</p>        </ng-container>        <input type="submit" value="Register" [disabled]="form.invalid">    </form>    <p>Already have an account? <a routerLink="/auth/login">Login here</a></p></div><!-- <div class="gender">    <input type="radio" id="female" name="gender" value="female" [checked]="!isMale" (change)="onGenderChange(\'female\')" ngModel gender required #femaleInput="ngModel">    <label for="female">Female</label>    <input type="radio" id="male" name="gender" value="male" [checked]="isMale" (change)="onGenderChange(\'male\')" ngModel gender required #maleInput="ngModel">    <label for="male">Male</label>  </div> --></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthenticateComponent', 'selector': 'app-authenticate'},{'name': 'CatalogComponent', 'selector': 'app-catalog'},{'name': 'CreateComponent', 'selector': 'app-create'},{'name': 'DetailsComponent', 'selector': 'app-details'},{'name': 'EditComponent', 'selector': 'app-edit'},{'name': 'ErrorComponent', 'selector': 'app-error'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoaderComponent', 'selector': 'app-loader'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'RegisterComponent'};
