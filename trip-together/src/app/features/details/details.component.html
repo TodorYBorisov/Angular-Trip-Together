@@ -41,8 +41,8 @@
                 <!-- if there are no logged in user do not show div with class actions  -->
                 <div class="actions">
                     <!-- Only for logged user and creator to this trip -->
-                    <a *ngIf="isOwner" (click)="deleteTrip()" class="btn btn-danger"><i class="fa-solid fa-trash" style="color: #000000;"></i>Delete trip</a>
-                    <a *ngIf="isOwner" [routerLink]="['/trip','edit', trip._id]" class="btn btn-warning"><i class="fa-solid fa-user-pen" style="color: #000000;"></i>Edit trip</a>
+                    <a *ngIf="isOwner" (click)="deleteTrip()" class="btn btn-danger"><i class="fa-solid fa-trash" style="color: #000000;"></i> Delete trip</a>
+                    <a *ngIf="isOwner" [routerLink]="['/trip','edit', trip._id]" class="btn btn-warning"><i class="fa-solid fa-user-pen" style="color: #000000;"></i> Edit trip</a>
 
                     <!-- logged in user with available seats -->
                     <a *ngIf="!isOwner && !isSubcribe && hasAvailableSeats()" (click)="addBuddy()"
