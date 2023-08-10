@@ -19,7 +19,7 @@
 
         <ng-container *ngIf="form.get('email')?.touched">
             <p class="error_color" *ngIf="form.get('email')?.errors?.['required']">Email is required!</p>
-            <p class="error_color" *ngIf="form.get('email')?.errors?.['email']">Email is not valid!</p>
+            <p class="error_color" *ngIf="form.get('email')?.errors?.['invalidEmail']">Email is not valid!</p>
         </ng-container>
 
 
