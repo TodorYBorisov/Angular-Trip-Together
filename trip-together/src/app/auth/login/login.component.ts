@@ -11,18 +11,23 @@ import { Subscription } from 'rxjs';
 })
 export class LoginComponent {
   observe$!: Subscription;
+  errMessage!: string;
   constructor(private activatedRoute: ActivatedRoute, private authService: AuthService, private router: Router) { }
 
   loginHandler(form: NgForm): void {
     if (form.invalid) {
       return;
     }
-    
+
     const { email, password } = form.value;
 
-    this.authService.login(email!, password!).subscribe(() => {
-      //console.log(user);
-      this.router.navigate(['/'])
+    this.authService.login(email!, password!).subscribe({
+      next: () => {
+        this.router.navigate(['/'])
+      },
+      error: (err) =>{
+        this.errMessage = err.error.message
+      }
     });
   }
 
