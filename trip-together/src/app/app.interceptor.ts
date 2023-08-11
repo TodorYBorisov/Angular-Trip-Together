@@ -22,19 +22,7 @@ export class AppInterceptor implements HttpInterceptor {
                 withCredentials: true, // Cookie -> JWT
             });
         }
-
-        return next.handle(req).pipe(
-            catchError((err) => {
-                if (err.status === 401) {
-                    this.router.navigate(['/auth/login']);
-                } else {
-                    this.errorServie.setError(err);
-                    this.router.navigate(['/error']);
-                }
-
-                return [err];
-            })
-        );
+        return next.handle(req);
     }
 }
 
