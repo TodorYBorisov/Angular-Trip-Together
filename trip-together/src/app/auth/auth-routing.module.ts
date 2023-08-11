@@ -4,7 +4,6 @@ import { RegisterComponent } from "./register/register.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { LogoutComponent } from "./logout/logout.component";
 import { AuthActivate } from "../shared/guards/authActivate";
-import { NonAuthActivated } from "../shared/guards/nonAuthActivate";
 
 
 const routes: Routes = [
@@ -14,13 +13,11 @@ const routes: Routes = [
             {
                 path: 'login',
                 component: LoginComponent,
-                canActivate: [NonAuthActivated],
                 title: 'Login Page'
             },
             {
                 path: 'register',
                 component: RegisterComponent,
-                canActivate: [NonAuthActivated],
                 title: 'Sign Up',
             },
             {
